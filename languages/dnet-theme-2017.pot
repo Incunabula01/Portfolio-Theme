@@ -109,6 +109,14 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
+#: template-parts/content-landing.php:27, template-parts/content.php:34
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/content-landing.php:32, template-parts/content-page.php:22, template-parts/content.php:39
+msgid "Pages:"
+msgstr ""
+
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
@@ -123,12 +131,4 @@ msgstr ""
 
 #: template-parts/content-none.php:31
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr ""
-
-#: template-parts/content-page.php:22, template-parts/content.php:38
-msgid "Pages:"
-msgstr ""
-
-#: template-parts/content.php:33
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""

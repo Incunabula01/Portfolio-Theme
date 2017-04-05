@@ -8,8 +8,7 @@
  */
 
 ?>
-<div class="row">
-	<div class="columns small-12 medium-10 medium-offset-2">
+
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -17,14 +16,8 @@
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php dnet_theme_2017_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
 		endif; ?>
+		
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -46,6 +39,4 @@
 		<?php dnet_theme_2017_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-	</div>
-</div>
 
