@@ -21,7 +21,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="row">
-				<div class="columns small-12 medium-10 medium-offset-1">
+				<div class="columns small-12">
 					<?php
 					while ( have_posts() ) : the_post();
 
@@ -32,12 +32,12 @@ get_header(); ?>
 							comments_template();
 						endif;
 
-					endwhile; ?>// End of the loop.
+					endwhile; ?>
 				</div>	
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
-get_footer();
+
+get_footer(); ?>

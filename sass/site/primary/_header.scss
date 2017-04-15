@@ -1,0 +1,16 @@
+.site-header{
+	height: 75px;
+	background: $light-grey;
+	box-shadow: 0 4px 0 0 $dark-grey;
+	width: 100%;
+	.logo{
+		width: 150px;
+		height: auto;
+		display: block;
+		padding: 0.5em;
+	}
+}
+
+.site-branding{
+	float: left;
+}

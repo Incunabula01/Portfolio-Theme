@@ -23,27 +23,26 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dnet-theme-2017' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+	<header id="masthead" class="site-header" role="banner" data-sticky-container>
+		<div class="sticky" data-sticky data-margin-top="0">
+			<div class="site-branding">
+				<a href="/">
+					<span class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Dnet"></span>
+				</a>
+			</div><!-- .site-branding -->
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dnet-theme-2017' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dnet-theme-2017' ); ?></button>
+				<ul class="sub-nav">
+					<li><a href="mailto:info@dnetsecurity.com"><i class="fa fa-envelope"></i> info@dnetsecurity.com</a></li>
+					<li><a href="tel:1-888-638-7898"><i class="fa fa-phone"></i> 1-888-638-7898</a></li>
+					<li><a href="#" target="_blank">Careers</a></li>
+					<li><a href=""></a></li>
+				</ul>
+				
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+			</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
