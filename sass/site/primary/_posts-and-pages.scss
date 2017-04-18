@@ -2,6 +2,85 @@
 	display: block;
 }
 
+.entry-header{
+	min-height: 480px;
+	width: 100%;
+}
+
+/*---- Landing Page Styles ----*/
+.landing{
+	background: url('images/CTA-Image-1.jpg') 0 0 no-repeat fixed;
+	background-size: cover;
+	.entry-title{
+		@include font-size(5);
+		color: $white;
+	}
+}
+
+.landing-section-1{
+	background: $light-grey;
+	color: $mid-blue;
+	header{
+		background-color: $red;
+	}
+	h2{
+		margin: 0.5em 0;
+		color: $white;
+	}
+}
+
+.landing-section-2{
+	background: $light-grey;
+	color: $mid-blue;
+	header{
+		background-color: $blue;
+	}
+	h2{
+		margin: 0.5em 0;
+		color: $white;
+	}
+}
+
+.landing-section-3{
+	background: url('./CTA-Image-1.jpg') 0 0 no-repeat fixed;
+	background-size: cover;
+	p{
+		color: $white;
+	}
+	header{
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	h2{
+		margin: 0.5em 0;
+		color: $white;
+	}
+}
+
+.microsoft-section{
+	background-color: $light-grey;
+	padding: 0.5em 0;
+}
+
+.contact-section{
+	background: url('./CTA-Image-1.jpg') 0 0 no-repeat fixed;
+	background-size: cover;
+	input{
+		background-color: rgba(191, 30, 46, 0.8);
+		color: $white;
+	}
+	button{
+		background-color: rgba(191, 30, 46, 0.8);
+		color: $white;
+	}
+	header{
+		background-color: rgba(191, 30, 46, 0.8);
+	}
+	h2{
+		margin: 0.5em 0;
+		color: $white;
+	}
+}
+
 .hentry {
 	margin: 0 0 1.5em;
 }
