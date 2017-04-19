@@ -33,12 +33,7 @@
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dnet-theme-2017' ); ?></button>
-				<ul class="sub-nav">
-					<li><a href="mailto:info@dnetsecurity.com"><i class="fa fa-envelope"></i> info@dnetsecurity.com</a></li>
-					<li><a href="tel:1-888-638-7898"><i class="fa fa-phone"></i> 1-888-638-7898</a></li>
-					<li><a href="#" target="_blank">Careers</a></li>
-					<li><a href=""></a></li>
-				</ul>
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'secondary-menu', 'menu-class' => 'sub-menu' ) ); ?>
 				
 				<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->

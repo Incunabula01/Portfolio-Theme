@@ -45,7 +45,9 @@ function dnet_theme_2017_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'dnet-theme-2017' ),
+		'menu-2' => esc_html__( 'Secondary', 'dnet-theme-2017'),
 	) );
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -116,6 +118,14 @@ function dnet_theme_2017_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'dnet_theme_2017_scripts' );
+
+function add_search_to_wp_menu ( $items, $args ) {
+	if( (!'Secondary' === $args -> theme_location )) 
+		return $items;
+
+		return $items . '<li class="menu-item menu-item-search fa fa-search">' . get_search_form(false) . '</li>';		
+}
+add_filter('wp_nav_menu_items','add_search_to_wp_menu',10,2);
 
 /**
  * Implement the Custom Header feature.

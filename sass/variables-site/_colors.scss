@@ -20,19 +20,19 @@ $color__background-body: $light-grey;
 $color__background-screen: $grey;
 $color__background-hr: $red;
 $color__background-button: $dark-red;
-$color__background-pre: #eee;
+$color__background-pre: $white;
 $color__background-ins: #fff9c0;
 
 $color__text-screen: $dark-blue;
 $color__text-input: $light-red;
-$color__text-input-focus: $red;
+$color__text-input-focus: $dark-red;
 $color__link: $blue;
-$color__link-visited: $mid-blue;
-$color__link-hover: $dark-blue;
+$color__link-visited: $light-blue;
+$color__link-hover: $red;
 $color__text-main: $dark-blue;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
-$color__border-input: #ccc;
-$color__border-abbr: #666;
+$color__border-input: $light-grey;
+$color__border-abbr: $white;

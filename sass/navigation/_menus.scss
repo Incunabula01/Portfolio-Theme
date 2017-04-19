@@ -54,18 +54,89 @@
 		&:hover > a,
 		&.focus > a {
 		}
+		form{
+			input[type="search"]{
+				border-radius: 0px;
+				padding: 5px;
+				border: 1px solid $blue;
+				height: 24px;
+				float: left;
+				color: $dark-blue;
+				font-family: $font__main;
+			}
+			input[type="submit"]{
+				display: none;
+			}
+		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		@include font-size(1.25);
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		color: $red;
 	}
+	
+}
+
+.menu-main-nav-container{
+	float: right;
+}
+
+.menu-sub-nav-container{
+	@include clearfix;
+	li{
+		a{
+			font-family: $font__main;
+			@include font-size(0.6);
+			font-weight: 700;
+			float: right;
+			padding: 0.7rem 0.7rem 0.7rem 0.2rem;
+		}
+		form{
+			float: right;
+			padding: 0.3rem;
+			input[type="search"]{
+				border-radius: 0px;
+				padding: 5px;
+				border: 1px solid $blue;
+				height: 24px;
+				float: left;
+				color: $dark-blue;
+				font-family: $font__main;
+			}
+			input[type="submit"]{
+				display: none;
+			}
+		}
+		&:hover:before,
+		&:focus:before,
+		&:active:before{
+			color: $red;
+		}
+	}
+	.fa::before{
+		float: left;
+		padding: 0.5rem 0;
+		font-family: $font_icon;
+		color: $blue;
+	}
+	.current_page_item.fa::before,
+	.current-menu-item.fa::before,
+	.current_page_ancestor.fa::before,
+	.current-menu-ancestor.fa::before {
+		color: $red;
+	}
+}
+
+.menu-main-nav-container{
+	@include clearfix;
 }
 
 /* Small menu. */
@@ -80,6 +151,16 @@
 	}
 	.main-navigation ul {
 		display: block;
+	}
+	.menu-main-nav-container{
+		li{
+			&:last-child:before{
+				display: none;
+			}
+			form{
+				display: none;
+			}
+		}
 	}
 }
 

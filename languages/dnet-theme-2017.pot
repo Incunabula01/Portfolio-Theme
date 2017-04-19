@@ -58,11 +58,15 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: functions.php:93
-msgid "Sidebar"
+#: functions.php:48
+msgid "Secondary"
 msgstr ""
 
 #: functions.php:95
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:97
 msgid "Add widgets here."
 msgstr ""
 
@@ -109,10 +113,6 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: template-parts/content-landing.php:26, template-parts/content-page.php:22, template-parts/content.php:39
-msgid "Pages:"
-msgstr ""
-
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
@@ -127,6 +127,10 @@ msgstr ""
 
 #: template-parts/content-none.php:31
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:22, template-parts/content.php:39
+msgid "Pages:"
 msgstr ""
 
 #: template-parts/content.php:34

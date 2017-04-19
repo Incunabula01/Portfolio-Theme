@@ -1,7 +1,8 @@
 a {
 	color: $color__link;
 
-	&:visited {
+	&:visited,
+	&:visited:before {
 		color: $color__link-visited;
 	}
 	&:hover,
