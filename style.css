@@ -3234,6 +3234,7 @@ svg:not(:root) {
 }
 
 button,
+.clear-button,
 input,
 optgroup,
 select,
@@ -3244,11 +3245,13 @@ textarea {
   margin: 0;
 }
 
-button {
+button,
+.clear-button {
   overflow: visible;
 }
 
 button,
+.clear-button,
 select {
   text-transform: none;
 }
@@ -3256,6 +3259,7 @@ select {
 [type=reset],
 [type=submit],
 button,
+.clear-button,
 html [type=button] {
   -webkit-appearance: button;
 }
@@ -3263,7 +3267,8 @@ html [type=button] {
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner,
-button::-moz-focus-inner {
+button::-moz-focus-inner,
+.clear-button::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -3271,7 +3276,8 @@ button::-moz-focus-inner {
 [type=button]:-moz-focusring,
 [type=reset]:-moz-focusring,
 [type=submit]:-moz-focusring,
-button:-moz-focusring {
+button:-moz-focusring,
+.clear-button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -3406,7 +3412,8 @@ select {
   max-width: none !important;
 }
 
-button {
+button,
+.clear-button {
   padding: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3417,7 +3424,8 @@ button {
   line-height: 1;
 }
 
-[data-whatinput=mouse] button {
+[data-whatinput=mouse] button,
+[data-whatinput=mouse] .clear-button {
   outline: 0;
 }
 
@@ -3881,6 +3889,7 @@ label.middle {
 .input-group-button,
 .input-group-button a,
 .input-group-button button,
+.input-group-button .clear-button,
 .input-group-button input,
 .input-group-button label,
 .input-group-field,
@@ -3925,6 +3934,7 @@ label.middle {
 
 .input-group-button a,
 .input-group-button button,
+.input-group-button .clear-button,
 .input-group-button input,
 .input-group-button label {
   height: 2.5rem;
@@ -4707,6 +4717,7 @@ select[multiple] {
 
 .menu a,
 .menu button,
+.menu .clear-button,
 .menu input,
 .menu select {
   margin-bottom: 0;
@@ -5105,7 +5116,8 @@ select[multiple] {
 }
 
 .pagination a,
-.pagination button {
+.pagination button,
+.pagination .clear-button {
   display: block;
   padding: .1875rem .625rem;
   border-radius: 0;
@@ -5113,7 +5125,8 @@ select[multiple] {
 }
 
 .pagination a:hover,
-.pagination button:hover {
+.pagination button:hover,
+.pagination .clear-button:hover {
   background: #e6e6e6;
 }
 
@@ -6041,7 +6054,8 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   outline: 0;
 }
 
-.orbit-bullets button {
+.orbit-bullets button,
+.orbit-bullets .clear-button {
   width: 1.2rem;
   height: 1.2rem;
   margin: .1rem;
@@ -6050,7 +6064,9 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 }
 
 .orbit-bullets button.is-active,
-.orbit-bullets button:hover {
+.orbit-bullets .is-active.clear-button,
+.orbit-bullets button:hover,
+.orbit-bullets .clear-button:hover {
   background-color: #8a8a8a;
 }
 
@@ -7626,6 +7642,7 @@ samp {
 }
 
 button,
+.clear-button,
 input,
 optgroup,
 select,
@@ -7635,16 +7652,19 @@ textarea {
   margin: 0;
 }
 
-button {
+button,
+.clear-button {
   overflow: visible;
 }
 
 button,
+.clear-button,
 select {
   text-transform: none;
 }
 
 button,
+.clear-button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -7653,11 +7673,13 @@ input[type="submit"] {
 }
 
 button[disabled],
+[disabled].clear-button,
 html input[disabled] {
   cursor: default;
 }
 
 button::-moz-focus-inner,
+.clear-button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -7718,6 +7740,7 @@ th {
 
 body,
 button,
+.clear-button,
 input,
 select,
 textarea {
@@ -7862,6 +7885,17 @@ dd {
   margin: 0 1.5em 1.5em;
 }
 
+ul.check-list {
+  list-style: none;
+  margin: 0 0 1.5em 2rem;
+}
+
+ul.check-list li:before {
+  content: '\2713';
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -7884,6 +7918,7 @@ table {
 --------------------------------------------------------------*/
 
 button,
+.clear-button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -7895,10 +7930,11 @@ input[type="submit"] {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: .6em 1em .4em;
+  padding: 0.6em 1em 0.4em;
 }
 
 button:hover,
+.clear-button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
@@ -7906,7 +7942,9 @@ input[type="submit"]:hover {
 }
 
 button:active,
+.clear-button:active,
 button:focus,
+.clear-button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -7914,6 +7952,26 @@ input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
+}
+
+.clear-button {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 0.5em 1em 0.4em 1em;
+  border: 2px solid #ffffff;
+}
+
+.clear-button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: transparent;
+}
+
+.clear-button:active,
+.clear-button:focus {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: transparent;
 }
 
 input[type="text"],
@@ -8121,7 +8179,7 @@ a:active {
 .menu-sub-nav-container .fa::before {
   float: left;
   padding: 0.5rem 0;
-  font-family: "FontAwesome", sans-serif;
+  font-family: "FontAwesome";
   color: #283891;
 }
 
@@ -8281,7 +8339,7 @@ a:active {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-## Posts and pages
+## Header
 --------------------------------------------------------------*/
 
 .site-header {
@@ -8310,88 +8368,144 @@ a:active {
   display: block;
 }
 
-.entry-header {
-  min-height: 480px;
-  width: 100%;
-}
-
 /*---- Landing Page Styles ----*/
 
 .landing {
   background: url("images/CTA-Image-1.jpg") 0 0 no-repeat fixed;
   background-size: cover;
+  margin: 0;
 }
 
-.landing .entry-title {
+.landing .landing-caption {
+  margin: 3em 0;
+}
+
+.landing .landing-caption .entry-title {
   font-size: 80px;
   font-size: 5rem;
+  line-height: 5rem;
   color: #ffffff;
+  margin: 0;
 }
 
-.landing-section-1 {
+.landing .landing-caption p {
+  color: #ffffff;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.tag-security {
   background: #f2f2f2;
-  color: #3347b9;
+  color: #0c112d;
+  margin: 0;
 }
 
-.landing-section-1 header {
+.tag-security header {
   background-color: #BF1E2E;
 }
 
-.landing-section-1 h2 {
+.tag-security h2 {
   margin: 0.5em 0;
   color: #ffffff;
 }
 
-.landing-section-2 {
-  background: #f2f2f2;
-  color: #3347b9;
+.tag-security .entry-content {
+  padding: 2em 0;
 }
 
-.landing-section-2 header {
+.tag-services {
+  background: #b4bcea;
+  color: #3347b9;
+  margin: 0;
+}
+
+.tag-services header {
   background-color: #283891;
 }
 
-.landing-section-2 h2 {
+.tag-services h2 {
   margin: 0.5em 0;
   color: #ffffff;
 }
 
-.landing-section-3 {
-  background: url("./CTA-Image-1.jpg") 0 0 no-repeat fixed;
+.tag-services .entry-content {
+  padding: 2em 0;
+}
+
+.tag-services h4 {
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.tag-services img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tag-services .clear-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(12, 17, 45, 0.2);
+}
+
+.tag-services .clear-button:hover,
+.tag-services .clear-button.focus,
+.tag-services .clear-button:active {
+  background: rgba(12, 17, 45, 0.6);
+  border-color: transparent;
+}
+
+.tag-staffing,
+.tag-microsoft {
+  background: url("images/Staffing-Image.jpg") 0 0 no-repeat fixed;
   background-size: cover;
+  margin: 0;
 }
 
-.landing-section-3 p {
-  color: #ffffff;
-}
-
-.landing-section-3 header {
+.tag-staffing header,
+.tag-microsoft header {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.landing-section-3 h2 {
+.tag-staffing .entry-content,
+.tag-microsoft .entry-content {
+  padding: 2em 0;
+}
+
+.tag-staffing h2,
+.tag-microsoft h2 {
   margin: 0.5em 0;
   color: #ffffff;
 }
 
-.microsoft-section {
-  background-color: #f2f2f2;
-  padding: 0.5em 0;
+.tag-staffing p,
+.tag-microsoft p {
+  color: #ffffff;
+}
+
+.tag-staffing li,
+.tag-microsoft li {
+  color: #ffffff;
+}
+
+.tag-microsoft {
+  background: #f2f2f2;
+}
+
+.tag-microsoft .entry-content {
+  padding: 2em 0;
+}
+
+.tag-microsoft .entry-content p {
+  color: #0c112d;
 }
 
 .contact-section {
-  background: url("./CTA-Image-1.jpg") 0 0 no-repeat fixed;
+  background: url("images/Contact-Us-Image.jpg") 0 0 no-repeat fixed;
   background-size: cover;
-}
-
-.contact-section input {
-  background-color: rgba(191, 30, 46, 0.8);
-  color: #ffffff;
-}
-
-.contact-section button {
-  background-color: rgba(191, 30, 46, 0.8);
-  color: #ffffff;
 }
 
 .contact-section header {
@@ -8403,8 +8517,42 @@ a:active {
   color: #ffffff;
 }
 
+.contact-section .contact-form {
+  padding: 2em 0;
+}
+
+.contact-section .contact-form input {
+  background-color: rgba(191, 30, 46, 0.8);
+  color: #ffffff;
+}
+
+.contact-section .contact-form input:placeholder {
+  padding: 0.25em;
+}
+
+.contact-section .contact-form label {
+  color: #ffffff;
+}
+
+.contact-section .contact-form textarea {
+  min-height: 200px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.25em;
+}
+
+.contact-section .contact-form .clear-button {
+  background-color: rgba(191, 30, 46, 0.8);
+  margin: 0.5em 0;
+  float: right;
+}
+
 .hentry {
   margin: 0 0 1.5em;
+}
+
+.page-template-page-landing .hentry {
+  margin: 0;
 }
 
 .byline,
@@ -8429,6 +8577,16 @@ a:active {
 }
 
 /*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+  background-color: #0c112d;
+  min-height: 200px;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 
@@ -8438,6 +8596,19 @@ a:active {
 
 .bypostauthor {
   display: block;
+}
+
+/*--------------------------------------------------------------
+## Sidebar/Widget
+--------------------------------------------------------------*/
+
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+  max-width: 100%;
 }
 
 /*--------------------------------------------------------------

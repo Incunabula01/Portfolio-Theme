@@ -9,7 +9,7 @@ input[type="submit"] {
 	color: $white;
 	@include font-size(0.75);
 	line-height: 1;
-	padding: .6em 1em .4em;
+	padding: 0.6em 1em 0.4em;
 
 	&:hover {
 		border-color: $color__border-button-hover;
@@ -18,5 +18,24 @@ input[type="submit"] {
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
+	}
+}
+
+.clear-button{
+	@extend button;
+	background: rgba(255,255,255, 0.2);
+	border-radius: 0;
+	@include font-size(1);
+	padding: 0.5em 1em 0.4em 1em;
+	border: 2px solid $white;
+	&:hover {
+		background: rgba(255,255,255, 0.5);
+		border-color: transparent;
+	}
+
+	&:active,
+	&:focus {
+		background: rgba(255,255,255, 0.5);
+		border-color: transparent;
 	}
 }

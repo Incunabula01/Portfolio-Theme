@@ -21,19 +21,24 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 				<section class="landing">
-					
+					<!-- Updates CTA Section -->
 						<div class="row">
 							<div class="columns small-12">
-								<?php while ( have_posts() ) : the_post(); ?>
+								<div class="landing-caption">
+									<?php while ( have_posts() ) : the_post(); ?>
 									<?php the_title( '<h1 class="entry-title">', '</h1>' );  
 										  the_content();
 									?>
 								<?php endwhile; ?>	
-								<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Services' ) ) );  ?>"><button class="clear-button">Learn More</button></a>
+								<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Services' ) ) );  ?>">
+									<button class="clear-button">Learn More</button>
+								</a>
+								</div>
 							</div>
 						</div>
 					
-				</section>			
+				</section>
+				<!-- Display Posts with Landing category -->			
 					<?php
 
 					rewind_posts();
@@ -50,16 +55,7 @@ get_header(); ?>
 						get_template_part( 'template-parts/content', 'landing' );
 
 					endwhile; ?>
-				<section class="microsoft-section">
-					<div class="row">
-						<div class="columns small-12 medium-6 large-4">
-							<img src="" alt="">
-						</div>
-						<div class="columns small-12 medium-6 large-8">
-								<p>Dnet is a Microsoft certified reseller.  In addition, we also maintain partnership agreements with Splunk and Tech Data that afford us the opportunity to offer our clients a suite of security products.</p>
-						</div>
-					</div>
-				</section>
+			
 				<section class="contact-section">
 					<header>
 						<div class="row">
@@ -68,17 +64,27 @@ get_header(); ?>
 							</div>
 						</div>
 					</header>
-					<div class="row">
-						<div class="columns small-12 medium-offset-2">
-							<form action="" class="form-group">
-								<input type="text">
-								<input type="text">
-								<input type="text">
-								<input type="textarea">
-								<button><input type="submit"></button>
-							</form>
+					<form action="" class="contact-form">
+						<div class="row">
+							<div class="columns small-12 medium-8 medium-offset-2">
+									<label>Name
+										<input type="text" placeholder="Name">
+									</label>
+									<label>Email
+										<input type="text" placeholder="Email">
+									</label>
+									<label>Phone
+										<input type="text" placeholder="Phone">
+									</label>
+									<label>
+										How can we help you?
+										<textarea placeholder="Your message here" cols="30" rows="5"></textarea>
+									</label>
+									
+									<button class="clear-button" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+							</div>
 						</div>
-					</div>
+					</form>
 				</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->

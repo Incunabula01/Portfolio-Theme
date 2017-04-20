@@ -14,7 +14,17 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-	
+		<div class="row">
+			<div class="columns small-12 medium-6 large-4">
+				
+			</div>
+			<div class="columns small-12 medium-6 large-4">
+				
+			</div>
+			<div class="columns small-12 medium-6 large-4">
+				
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -2,24 +2,32 @@
 	display: block;
 }
 
-.entry-header{
-	min-height: 480px;
-	width: 100%;
-}
 
 /*---- Landing Page Styles ----*/
 .landing{
 	background: url('images/CTA-Image-1.jpg') 0 0 no-repeat fixed;
 	background-size: cover;
-	.entry-title{
-		@include font-size(5);
-		color: $white;
+	margin: 0;
+	.landing-caption{
+		margin: 3em 0;
+		.entry-title{
+			@include font-size(5);
+			line-height: 5rem;
+			color: $white;
+			margin: 0;
+		}
+		p{
+			color: $white;
+			@include font-size(1.5);
+			line-height: 1.5rem;
+		}
 	}
 }
 
-.landing-section-1{
-	background: $light-grey;
-	color: $mid-blue;
+.tag-security{
+	background: $color__background-body;
+	color: $color__text-screen;
+	margin: 0;
 	header{
 		background-color: $red;
 	}
@@ -27,11 +35,15 @@
 		margin: 0.5em 0;
 		color: $white;
 	}
+	.entry-content{
+		padding: 2em 0;
+	}
 }
 
-.landing-section-2{
-	background: $light-grey;
+.tag-services{
+	background: lighten($light-blue, 25%);
 	color: $mid-blue;
+	margin: 0;
 	header{
 		background-color: $blue;
 	}
@@ -39,50 +51,103 @@
 		margin: 0.5em 0;
 		color: $white;
 	}
+	.entry-content{
+		padding: 2em 0;
+	}
+	h4{
+		text-align: center;
+		line-height: 1.5rem;
+	}
+	img{
+		@include center-block;
+	}
+	.clear-button{
+		@include center-block;
+		background: rgba(12, 17, 45, 0.2);
+		&:hover,
+		&.focus,
+		&:active{
+			background: rgba(12, 17, 45, 0.6);
+			border-color: transparent;
+		}
+	}
 }
 
-.landing-section-3{
-	background: url('./CTA-Image-1.jpg') 0 0 no-repeat fixed;
+.tag-staffing{
+	background: url('images/Staffing-Image.jpg') 0 0 no-repeat fixed;
 	background-size: cover;
-	p{
-		color: $white;
-	}
+	margin: 0;
 	header{
 		background-color: rgba(0, 0, 0, 0.8);
 	}
+	.entry-content{
+		padding: 2em 0;
+	}
 	h2{
 		margin: 0.5em 0;
 		color: $white;
 	}
+	p{
+		color: $white;
+	}
+	li{
+		color: $white;
+	}
 }
 
-.microsoft-section{
-	background-color: $light-grey;
-	padding: 0.5em 0;
+.tag-microsoft{
+	@extend .tag-staffing;
+	background: $color__background-body;
+	.entry-content{
+		padding: 2em 0;
+		p{
+			color: $color__text-screen;
+		}
+	}
 }
 
 .contact-section{
-	background: url('./CTA-Image-1.jpg') 0 0 no-repeat fixed;
+	background: url('images/Contact-Us-Image.jpg') 0 0 no-repeat fixed;
 	background-size: cover;
-	input{
-		background-color: rgba(191, 30, 46, 0.8);
-		color: $white;
-	}
-	button{
-		background-color: rgba(191, 30, 46, 0.8);
-		color: $white;
-	}
 	header{
 		background-color: rgba(191, 30, 46, 0.8);
 	}
 	h2{
 		margin: 0.5em 0;
 		color: $white;
+	}
+	.contact-form{
+		padding: 2em 0;
+		input{
+			background-color: rgba(191, 30, 46, 0.8);
+			color: $white;
+			&:placeholder{
+				padding: 0.25em;
+			}
+		}
+		label{
+			color: $white;
+		}
+		textarea{
+			min-height: 200px;
+			width: 100%;
+			background: rgba(255,255,255, 0.8);
+			padding: 0.25em;
+		}
+		.clear-button{
+			background-color: rgba(191, 30, 46, 0.8);
+			margin: 0.5em 0;
+			float: right;
+		}
 	}
 }
 
 .hentry {
 	margin: 0 0 1.5em;
+}
+
+.page-template-page-landing .hentry{
+	margin: 0;
 }
 
 .byline,
