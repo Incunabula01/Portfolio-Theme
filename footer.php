@@ -16,13 +16,25 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="row">
 			<div class="columns small-12 medium-6 large-4">
-				
+				<?php
+					if(is_active_sidebar('footer-sidebar-1')){
+						dynamic_sidebar('footer-sidebar-1');
+					}
+				?>
 			</div>
 			<div class="columns small-12 medium-6 large-4">
-				
+				<?php
+					if(is_active_sidebar('footer-sidebar-2')){
+						dynamic_sidebar('footer-sidebar-2');
+					}
+				?>
 			</div>
 			<div class="columns small-12 medium-6 large-4">
-				
+				<?php
+					if(is_active_sidebar('footer-sidebar-3')){
+						dynamic_sidebar('footer-sidebar-3');
+					}
+				?>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

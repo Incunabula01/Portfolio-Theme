@@ -62,12 +62,24 @@ msgstr ""
 msgid "Secondary"
 msgstr ""
 
-#: functions.php:95
+#: functions.php:94
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:97
+#: functions.php:96, functions.php:105, functions.php:114, functions.php:123
 msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:103
+msgid "Footer-Sidebar-1"
+msgstr ""
+
+#: functions.php:112
+msgid "Footer-Sidebar-2"
+msgstr ""
+
+#: functions.php:121
+msgid "Footer-Sidebar-3"
 msgstr ""
 
 #: header.php:24

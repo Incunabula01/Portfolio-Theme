@@ -33,9 +33,9 @@
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dnet-theme-2017' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'secondary-menu', 'menu-class' => 'sub-menu' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'secondary-menu', 'container_class' => 'sub-nav-menu') ); ?>
 				
-				<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'container_class' => 'main-nav-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->

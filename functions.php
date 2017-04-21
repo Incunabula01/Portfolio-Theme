@@ -72,7 +72,6 @@ function dnet_theme_2017_setup() {
 }
 endif;
 add_action( 'after_setup_theme', 'dnet_theme_2017_setup' );
-
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -100,6 +99,33 @@ function dnet_theme_2017_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer-Sidebar-1', 'dnet-theme-2017' ),
+		'id'            => 'footer-sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'dnet-theme-2017' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer-Sidebar-2', 'dnet-theme-2017' ),
+		'id'            => 'footer-sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'dnet-theme-2017' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer-Sidebar-3', 'dnet-theme-2017' ),
+		'id'            => 'footer-sidebar-3',
+		'description'   => esc_html__( 'Add widgets here.', 'dnet-theme-2017' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'dnet_theme_2017_widgets_init' );
 
@@ -108,6 +134,8 @@ add_action( 'widgets_init', 'dnet_theme_2017_widgets_init' );
  */
 function dnet_theme_2017_scripts() {
 	wp_enqueue_style( 'dnet-theme-2017-style', get_stylesheet_uri() );
+
+	wp_enqueue_script("jquery");
 
 	wp_enqueue_script( 'dnet-theme-2017-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -120,10 +148,10 @@ function dnet_theme_2017_scripts() {
 add_action( 'wp_enqueue_scripts', 'dnet_theme_2017_scripts' );
 
 function add_search_to_wp_menu ( $items, $args ) {
-	if( (!'Secondary' === $args -> theme_location )) 
+	if( (!'Secondary' == $args -> theme_location )) 
 		return $items;
 
-		return $items . '<li class="menu-item menu-item-search fa fa-search">' . get_search_form(false) . '</li>';		
+		return $items . '<li class="menu-item menu-item-search search">' . get_search_form(false) . '</li>';		
 }
 add_filter('wp_nav_menu_items','add_search_to_wp_menu',10,2);
 

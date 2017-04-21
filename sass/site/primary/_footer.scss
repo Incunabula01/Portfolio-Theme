@@ -2,4 +2,53 @@
 	background-color: $dark-blue;
 	min-height: 200px;
 	width: 100%;
+	.widget{
+		margin: 2em 0 0 0;
+		ul{
+			padding-left: 2px;
+			// Social Media Icons 
+			.facebook > a:before{
+				content: '\f082';
+			}
+			.linkedin > a:before{
+				content: '\f08c';
+			}
+			.twitter > a:before{
+				content: '\f081';
+			}
+			.email > a:before{
+				content: '\f199';
+			}
+			li{
+				display: inline;
+				font-family: $font__main;
+				text-indent: -1px;
+				transition: all 0.25e ease-in;
+				a{
+					color: $white;
+					padding: 0.5rem 0;
+					width: 150px;
+					&:hover,
+					&:focus,
+					&:active{
+						color: $light-blue;
+					}
+					&:before{
+						color: $white;
+						font-family: $font_icon;
+						float: left;
+						position: relative;
+						top: -5px;
+						padding-right: 0.5em;
+						@include font-size(1.5);
+					}
+					&:hover:before,
+					&:focus:before,
+					&:active:before{
+						color: $light-blue;
+					}
+				}
+			}
+		}
+	}
 }

@@ -81,63 +81,83 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 		color: $red;
+		&:before{
+			color: $red;
+		}
 	}
 	
 }
 
-.menu-main-nav-container{
+.main-nav-menu{
 	float: right;
+	@include clearfix;
 }
 
-.menu-sub-nav-container{
+.sub-nav-menu{
 	@include clearfix;
+	.email > a:before{
+		content: '\f0e0';
+	}
+	.phone > a:before{
+		content: '\f095';
+	}
+	.careers > a:before{
+		content: '\f0b1';
+	}
 	li{
 		a{
 			font-family: $font__main;
-			@include font-size(0.6);
+			@include font-size(0.8);
 			font-weight: 700;
 			float: right;
 			padding: 0.7rem 0.7rem 0.7rem 0.2rem;
+			&:before{
+				float: left;
+				position: relative;
+				top: -2px;
+				padding-right: 0.25em;
+				font-family: $font_icon;
+				color: $blue;
+				@include font-size(1);
+			}
+			&:hover:before,
+			&:focus:before,
+			&:active:before{
+				color: $red;
+			}
 		}
 		form{
-			float: right;
+			// float: right;
 			padding: 0.3rem;
 			input[type="search"]{
 				border-radius: 0px;
 				padding: 5px;
 				border: 1px solid $blue;
 				height: 24px;
+				width: 90%;
 				float: left;
 				color: $dark-blue;
 				font-family: $font__main;
+				margin-left: 1.5em;
 			}
 			input[type="submit"]{
 				display: none;
 			}
+			&:before{
+				content: '\f002';
+				float: left;
+				position: absolute;
+				padding-right: 0.25em;
+				font-family: $font_icon;
+				color: $blue;
+				@include font-size(1);
+			}
 		}
-		&:hover:before,
-		&:focus:before,
-		&:active:before{
-			color: $red;
-		}
-	}
-	.fa::before{
-		float: left;
-		padding: 0.5rem 0;
-		font-family: $font_icon;
-		color: $blue;
-	}
-	.current_page_item.fa::before,
-	.current-menu-item.fa::before,
-	.current_page_ancestor.fa::before,
-	.current-menu-ancestor.fa::before {
-		color: $red;
+		
 	}
 }
 
-.menu-main-nav-container{
-	@include clearfix;
-}
+
 
 /* Small menu. */
 .menu-toggle,
@@ -152,7 +172,7 @@
 	.main-navigation ul {
 		display: block;
 	}
-	.menu-main-nav-container{
+	.main-nav-menu{
 		li{
 			&:last-child:before{
 				display: none;

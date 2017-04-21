@@ -64,6 +64,7 @@
 	.clear-button{
 		@include center-block;
 		background: rgba(12, 17, 45, 0.2);
+		border-color: $blue;
 		&:hover,
 		&.focus,
 		&:active{
@@ -121,9 +122,9 @@
 		input{
 			background-color: rgba(191, 30, 46, 0.8);
 			color: $white;
-			&:placeholder{
-				padding: 0.25em;
-			}
+		}
+		input::placeholder{
+				padding: 0.5em;
 		}
 		label{
 			color: $white;
@@ -141,6 +142,8 @@
 		}
 	}
 }
+
+/*-- Universal Styles ---*/
 
 .hentry {
 	margin: 0 0 1.5em;
