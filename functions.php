@@ -213,7 +213,7 @@ class top_bar_walker extends Walker_Nav_Menu {
 		$output .= $item_html;
 	}
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
-		$output .= "\n<ul class=\"sub-menu dropdown menu\" data-dropdown-menu >\n";
+		$output .= "\n<ul class=\"sub-menu dropdown menu vertical\" data-dropdown-menu >\n";
 	}
 }
  ?>

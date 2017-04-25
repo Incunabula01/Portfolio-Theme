@@ -24,19 +24,28 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dnet-theme-2017' ); ?></a>
 	<div class="sticky-container" data-sticky-container>
 		<header id="masthead" class="site-header sticky" role="banner"  data-sticky data-margin-top="0">
-			<div class="row">
-				<div class="columns small-12 medium-4">
+			<div class="top-bar">
+				<div class="top-bar-left">
 					<div class="site-branding">
-					<a href="/">
-						<span class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Dnet"></span>
-					</a>
+						<a href="/">
+							<span class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Dnet"></span>
+						</a>
 					</div><!-- .site-branding -->
+					<div class="title-bar" data-responsive-toggle="primary-menu" data-hide-for="large">
+						<div class="title-bar-title">
+							<a href="/">
+								<span class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Dnet"></span>
+							</a>
+						</div>
+						<button class="menu-toggle" type="button" data-toggle="primary-menu"><i class="fa fa-navicon"></i></button>
+					</div>
 				</div>
-				<div class="columns small-12 medium-8">
+				<div class="top-bar-right">
 					<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-navicon"></i></button>
+					<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-navicon"></i></button> -->
 					<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 
-											  'menu_id' => 'secondary-menu', 
+											  'menu_id' => 'secondary-menu',
+											  'menu_class' => 'menu', 
 											  'container_class' => 'sub-nav-menu') ); ?>
 					
 					<?php wp_nav_menu( array( 'theme_location' => 'menu-1',

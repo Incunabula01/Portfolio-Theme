@@ -1,17 +1,26 @@
+.top-bar{
+	background-color: $dark-blue;
+	padding: 0;
+	.site-branding{
+		display: none;
+	}
+	.title-bar{
+		background-color: $light-grey;
+		height: 50px;
+		padding: 0.5em;
+	}
+	ul{
+		background-color: $dark-blue;
+	}
+}
+
 .main-navigation {
-	float: right;
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 		ul {
-			// box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			// float: left;
-			// position: absolute;
-			// top: 1.5em;
-			// left: -999em;
-			// z-index: 99999;
 			background-color: $mid-blue;
 			ul {
 				left: -999em;
@@ -78,32 +87,31 @@
 }
 
 .main-nav-menu{
-	float: right;
-	@include clearfix;
-	background-color: $dark-blue;
 	position: relative;
-	top: -20px;
-	li{
-		form{
-			display: block;
-			padding: 0.5em 0;
-			input[type="search"]{
-				width: 80%;
-				margin-left: 15%;
-				border-radius: 0;
-			}
-			input[type="submit"]{
-				display: none;
-			}
-			&:before{
-				content: '\f002';
-				float: left;
-				left: 5%;
-				position: relative;
-				padding-right: 0.25em;
-				font-family: $font_icon;
-				color: $white;
-				@include font-size(1.5);
+	top: 0px;
+	ul{
+		li{
+			form{
+				display: block;
+				padding: 0.5em 0;
+				width: 250px;
+				@include center-block;
+				input[type="search"]{
+					margin-left: 15%;
+					border-radius: 0;
+				}
+				input[type="submit"]{
+					display: none;
+				}
+				&:before{
+					content: '\f002';
+					float: left;
+					left: -5px;
+					position: relative;
+					font-family: $font_icon;
+					color: $white;
+					@include font-size(1.5);
+				}
 			}
 		}
 	}
@@ -118,9 +126,9 @@
 }
 
 .is-stuck{
-	.site-header{
-		height: 50px;
-	}
+	// .site-header{
+	// 	height: 50px;
+	// }
 	.sub-nav-menu{
 		display: none;
 	}
@@ -133,9 +141,9 @@
 .menu-toggle{
 	background-color: transparent;
 	position: relative;
-	top: -40px;
 	border-color: transparent;
 	float: right;
+	vertical-align: middle;
 	&:focus{
 		border-color: transparent;
 	}
@@ -144,18 +152,40 @@
 		@include font-size(1.5);
 	}
 }
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
+// .menu-toggle,
+// .main-navigation.toggled ul {
+// 	display: block;
+// }
 
-@media screen and (min-width: 37.5em){
-	.menu-toggle{
-		top: 20px;
+@media print, screen and (min-width: 40em){
+
+	.top-bar .top-bar-left{
+		width: 100%;
 	}
-} 
+	.top-bar .top-bar-right{
+		width: 100%;
+	}
+}
 /*--- Desktop Styles ---*/
 @media screen and (min-width: 49em) {
+	.top-bar{
+		background: $light-grey;
+		.site-branding{
+			display: block;
+		}
+		ul{
+			background-color: $light-grey;
+		}
+		.main-navigation{
+			background-color: $light-grey;
+		}
+		.top-bar-left{
+			width: auto;
+		}
+		.top-bar-right{
+			width: auto;
+		}
+	}
 	.menu-toggle {
 		display: none;
 	}
@@ -172,10 +202,10 @@
 			}
 			a{
 				color: $blue;
-				width: 200px;
 			}
 			ul{
 				background-color: $light-grey;
+				display: inline;
 				li{
 					border-bottom: 1px solid $dark-grey;
 					a{
@@ -191,8 +221,9 @@
 	.main-nav-menu{
 		background-color: transparent;
 		top: 0px;
+		float: right;
 		li{
-			form{
+			&:last-child{
 				display: none;
 			}
 		}
