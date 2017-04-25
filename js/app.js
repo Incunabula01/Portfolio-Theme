@@ -1,8 +1,9 @@
 var $ = jQuery.noConflict();
 
-$(document).foundation();
+
 
 $(document).ready(function(){
+	$(document).foundation();
 	// $(window).on('scroll', function(e){
 	
 	// })

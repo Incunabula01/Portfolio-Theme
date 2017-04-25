@@ -52,7 +52,7 @@
 					                           'menu_id' => 'primary-menu', 
 					                           'container_class' => 'main-nav-menu',
 					                           'menu_class' => 'dropdown menu',
-					                           'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion large-dropdown">%3$s</ul>',
+					                           'items_wrap' => '<ul id="%1$s" class="%2$s dropdown" data-responsive-menu="large-dropdown">%3$s</ul>',
 					                           'walker' => new top_bar_walker()
 					                           )); ?>
 					</nav><!-- #site-navigation -->

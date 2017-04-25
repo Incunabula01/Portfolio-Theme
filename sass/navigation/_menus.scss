@@ -16,12 +16,11 @@
 
 .main-navigation {
 	ul {
-		display: none;
+		display: inline;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 		ul {
-			background-color: $mid-blue;
 			ul {
 				left: -999em;
 				top: 0;
@@ -38,6 +37,7 @@
 			a {
 				width: 100%;
 				text-align: center;
+				background: darken($mid-blue, 25%);
 			}
 
 			:hover > a,
@@ -78,21 +78,28 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		color: $red;
+		color: $white;
 		&:before{
-			color: $red;
+			color: $white;
 		}
 	}
 	
+}
+
+.menu > .active > a{
+	background-color: $mid-blue;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a{
+	border-bottom: 1px solid $white;
 }
 
 .main-nav-menu{
 	position: relative;
 	top: 0px;
 	ul{
-		li{
-			form{
-				display: block;
+		li.search{
+			form {
 				padding: 0.5em 0;
 				width: 250px;
 				@include center-block;
@@ -118,7 +125,7 @@
 }
 
 .dropdown.menu > li.is-dropdown-submenu-parent > a:after{
-	border-color: $white transparent transparent;
+	border-color: $white transparent  transparent ;
 }
 
 .sub-nav-menu{
@@ -193,23 +200,29 @@
 		display: block;
 	}
 	.main-navigation{
-		display: inline-block;
 		li{
 			border-bottom: none;
 			width: auto;
-			&:last-child:before{
-				display: none;
-			}
 			a{
 				color: $blue;
 			}
 			ul{
-				background-color: $light-grey;
-				display: inline;
+				background-color: lighten($light-blue, 25%);
+				display: none;
 				li{
-					border-bottom: 1px solid $dark-grey;
+					border-bottom: 1px solid $white;
+					width: 100%;
+					&:last-child{
+						border-bottom: 0px;
+					}
 					a{
 						text-align: left;
+						color: $white;
+						&:hover,
+						&:focus,
+						&:active{
+							color: $light-red;
+						}
 					}
 				}
 			}
@@ -218,14 +231,24 @@
 	.dropdown.menu > li.is-dropdown-submenu-parent > a:after{
 		border-color: $dark-blue transparent transparent;
 	}
+	.is-dropdown-submenu{
+		min-width: auto;
+	}
+	.menu > .active> a{
+		background: transparent;
+		color: $red;
+		&:hover,
+		&:focus,
+		&:active{
+			color: $dark-red;
+		}
+	}
 	.main-nav-menu{
 		background-color: transparent;
 		top: 0px;
 		float: right;
-		li{
-			&:last-child{
-				display: none;
-			}
+		li.search{
+			display: none;
 		}
 	}
 	.sub-nav-menu{
