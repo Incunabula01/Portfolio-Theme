@@ -144,6 +144,9 @@ function dnet_theme_2017_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script( 'foundation-6', get_template_directory_uri() . '/js/vendor/foundation.js', array('jquery'), '6', true );
+	wp_enqueue_script( 'dnet-theme-2017-js', get_template_directory_uri() . '/js/app.js', array('jquery'), '1', true );
 }
 add_action( 'wp_enqueue_scripts', 'dnet_theme_2017_scripts' );
 
@@ -154,6 +157,7 @@ function add_search_to_wp_menu ( $items, $args ) {
 		return $items . '<li class="menu-item menu-item-search search">' . get_search_form(false) . '</li>';		
 }
 add_filter('wp_nav_menu_items','add_search_to_wp_menu',10,2);
+
 
 /**
  * Implement the Custom Header feature.
@@ -179,3 +183,37 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+?>
+
+<?php 
+
+/**
+* Foundation 6 Primary Menu 
+**/
+
+class top_bar_walker extends Walker_Nav_Menu {
+	function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
+		$element->has_children = !empty( $children_elements[$element->ID] );
+		$element->classes[] = ( $element->current || $element->current_item_ancestor ) ? 'active' : '';
+		$element->classes[] = ( $element->has_children ) ? 'has-dropdown not-click is-dropdown-submenu-parent' : '';
+		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+	}
+	function start_el( &$output, $object, $depth = 0, $args = array(), $current_object_id = 0 ) {
+		$item_html = '';
+		parent::start_el( $item_html, $object, $depth, $args );
+		$output .= ( $depth == 0 ) ? '<li class="divider"></li>' : '';
+		$classes = empty( $object->classes ) ? array() : (array) $object->classes;
+		if ( in_array('label', $classes) ) {
+			$output .= '<li class="divider"></li>';
+			$item_html = preg_replace( '/<a[^>]*>(.*)<\/a>/iU', '<label>$1</label>', $item_html );
+		}
+		if ( in_array('divider', $classes) ) {
+			$item_html = preg_replace( '/<a[^>]*>( .* )<\/a>/iU', '', $item_html );
+		}
+		$output .= $item_html;
+	}
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$output .= "\n<ul class=\"sub-menu dropdown menu\" data-dropdown-menu >\n";
+	}
+}
+ ?>

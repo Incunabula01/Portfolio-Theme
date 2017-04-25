@@ -86,10 +86,6 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:35
-msgid "Primary Menu"
-msgstr ""
-
 #: search.php:19
 msgid "Search Results for: %s"
 msgstr ""
