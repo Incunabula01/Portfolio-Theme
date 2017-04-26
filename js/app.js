@@ -4,6 +4,7 @@ var $ = jQuery.noConflict();
 
 $(document).ready(function(){
 	$(document).foundation();
+	Foundation.Abide.defaults.patterns['dashes_only'] = /^[0-9-]*$/;
 	// $(window).on('scroll', function(e){
 	
 	// })

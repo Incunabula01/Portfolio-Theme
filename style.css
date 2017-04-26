@@ -3235,6 +3235,8 @@ svg:not(:root) {
 
 button,
 .clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"],
 input,
 optgroup,
 select,
@@ -3246,12 +3248,16 @@ textarea {
 }
 
 button,
-.clear-button {
+.clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"] {
   overflow: visible;
 }
 
 button,
 .clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"],
 select {
   text-transform: none;
 }
@@ -3260,6 +3266,8 @@ select {
 [type=submit],
 button,
 .clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"],
 html [type=button] {
   -webkit-appearance: button;
 }
@@ -3268,7 +3276,9 @@ html [type=button] {
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner,
 button::-moz-focus-inner,
-.clear-button::-moz-focus-inner {
+.clear-button::-moz-focus-inner,
+.search .page-content input[type="submit"]::-moz-focus-inner,
+.archive .page-content input[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -3277,7 +3287,9 @@ button::-moz-focus-inner,
 [type=reset]:-moz-focusring,
 [type=submit]:-moz-focusring,
 button:-moz-focusring,
-.clear-button:-moz-focusring {
+.clear-button:-moz-focusring,
+.search .page-content input[type="submit"]:-moz-focusring,
+.archive .page-content input[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -3416,7 +3428,9 @@ select {
 }
 
 button,
-.clear-button {
+.clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"] {
   padding: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3428,7 +3442,11 @@ button,
 }
 
 [data-whatinput=mouse] button,
-[data-whatinput=mouse] .clear-button {
+[data-whatinput=mouse] .clear-button,
+[data-whatinput=mouse] .search .page-content input[type="submit"],
+.search .page-content [data-whatinput=mouse] input[type="submit"],
+[data-whatinput=mouse] .archive .page-content input[type="submit"],
+.archive .page-content [data-whatinput=mouse] input[type="submit"] {
   outline: 0;
 }
 
@@ -3897,6 +3915,10 @@ label.middle {
 .input-group-button a,
 .input-group-button button,
 .input-group-button .clear-button,
+.input-group-button .search .page-content input[type="submit"],
+.search .page-content .input-group-button input[type="submit"],
+.input-group-button .archive .page-content input[type="submit"],
+.archive .page-content .input-group-button input[type="submit"],
 .input-group-button input,
 .input-group-button label,
 .input-group-field,
@@ -3942,6 +3964,10 @@ label.middle {
 .input-group-button a,
 .input-group-button button,
 .input-group-button .clear-button,
+.input-group-button .search .page-content input[type="submit"],
+.search .page-content .input-group-button input[type="submit"],
+.input-group-button .archive .page-content input[type="submit"],
+.archive .page-content .input-group-button input[type="submit"],
 .input-group-button input,
 .input-group-button label {
   height: 2.5rem;
@@ -4749,6 +4775,10 @@ select[multiple] {
 .menu a,
 .menu button,
 .menu .clear-button,
+.menu .search .page-content input[type="submit"],
+.search .page-content .menu input[type="submit"],
+.menu .archive .page-content input[type="submit"],
+.archive .page-content .menu input[type="submit"],
 .menu input,
 .menu select {
   margin-bottom: 0;
@@ -5687,7 +5717,11 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 }
 
 .orbit-bullets button,
-.orbit-bullets .clear-button {
+.orbit-bullets .clear-button,
+.orbit-bullets .search .page-content input[type="submit"],
+.search .page-content .orbit-bullets input[type="submit"],
+.orbit-bullets .archive .page-content input[type="submit"],
+.archive .page-content .orbit-bullets input[type="submit"] {
   width: 1.2rem;
   height: 1.2rem;
   margin: .1rem;
@@ -5697,8 +5731,16 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 
 .orbit-bullets button.is-active,
 .orbit-bullets .is-active.clear-button,
+.orbit-bullets .search .page-content input.is-active[type="submit"],
+.search .page-content .orbit-bullets input.is-active[type="submit"],
+.orbit-bullets .archive .page-content input.is-active[type="submit"],
+.archive .page-content .orbit-bullets input.is-active[type="submit"],
 .orbit-bullets button:hover,
-.orbit-bullets .clear-button:hover {
+.orbit-bullets .clear-button:hover,
+.orbit-bullets .search .page-content input[type="submit"]:hover,
+.search .page-content .orbit-bullets input[type="submit"]:hover,
+.orbit-bullets .archive .page-content input[type="submit"]:hover,
+.archive .page-content .orbit-bullets input[type="submit"]:hover {
   background-color: #8a8a8a;
 }
 
@@ -7275,6 +7317,8 @@ samp {
 
 button,
 .clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"],
 input,
 optgroup,
 select,
@@ -7285,18 +7329,24 @@ textarea {
 }
 
 button,
-.clear-button {
+.clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"] {
   overflow: visible;
 }
 
 button,
 .clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"],
 select {
   text-transform: none;
 }
 
 button,
 .clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"],
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -7306,12 +7356,16 @@ input[type="submit"] {
 
 button[disabled],
 [disabled].clear-button,
+.search .page-content input[disabled][type="submit"],
+.archive .page-content input[disabled][type="submit"],
 html input[disabled] {
   cursor: default;
 }
 
 button::-moz-focus-inner,
 .clear-button::-moz-focus-inner,
+.search .page-content input[type="submit"]::-moz-focus-inner,
+.archive .page-content input[type="submit"]::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -7373,6 +7427,8 @@ th {
 body,
 button,
 .clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"],
 input,
 select,
 textarea {
@@ -7552,6 +7608,8 @@ table {
 
 button,
 .clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"],
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -7568,6 +7626,8 @@ input[type="submit"] {
 
 button:hover,
 .clear-button:hover,
+.search .page-content input[type="submit"]:hover,
+.archive .page-content input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
@@ -7576,8 +7636,12 @@ input[type="submit"]:hover {
 
 button:active,
 .clear-button:active,
+.search .page-content input[type="submit"]:active,
+.archive .page-content input[type="submit"]:active,
 button:focus,
 .clear-button:focus,
+.search .page-content input[type="submit"]:focus,
+.archive .page-content input[type="submit"]:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -7587,7 +7651,9 @@ input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
 }
 
-.clear-button {
+.clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"] {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 0;
   font-size: 16px;
@@ -7598,14 +7664,20 @@ input[type="submit"]:focus {
   transition: all 0.25s ease-in;
 }
 
-.clear-button:hover {
+.clear-button:hover,
+.search .page-content input[type="submit"]:hover,
+.archive .page-content input[type="submit"]:hover {
   background: rgba(255, 255, 255, 0.5);
   border-color: transparent;
   border: 2px solid #f2f2f2;
 }
 
 .clear-button:active,
-.clear-button:focus {
+.search .page-content input[type="submit"]:active,
+.archive .page-content input[type="submit"]:active,
+.clear-button:focus,
+.search .page-content input[type="submit"]:focus,
+.archive .page-content input[type="submit"]:focus {
   background: rgba(255, 255, 255, 0.5);
   border-color: transparent;
   border: 2px solid #f2f2f2;
@@ -8020,7 +8092,7 @@ a:active {
 --------------------------------------------------------------*/
 
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0.5em 0 1em 0;
   /* Make sure select elements fit in widgets. */
 }
 
@@ -8040,6 +8112,7 @@ a:active {
   background: #f2f2f2;
   box-shadow: 0 4px 0 0 #7f7f7f;
   width: 100%;
+  z-index: 9000;
 }
 
 .site-header .logo {
@@ -8087,60 +8160,64 @@ a:active {
   line-height: 1.5rem;
 }
 
-.tag-security {
+.page-template-page-landing .tag-security {
   background: #f2f2f2;
   color: #0c112d;
   margin: 0;
 }
 
-.tag-security header {
+.page-template-page-landing .tag-security header {
   background-color: #BF1E2E;
 }
 
-.tag-security h2 {
+.page-template-page-landing .tag-security h2 {
   margin: 0.5em 0;
   color: #ffffff;
 }
 
-.tag-security .entry-content {
+.page-template-page-landing .tag-security .entry-content {
   padding: 2em 0;
 }
 
-.tag-security img {
+.page-template-page-landing .tag-security img {
   margin: 0 auto;
 }
 
-.tag-services {
+.page-template-page-landing .tag-services {
   background: #b4bcea;
   color: #3347b9;
   margin: 0;
 }
 
-.tag-services header {
+.page-template-page-landing .tag-services header {
   background-color: #283891;
 }
 
-.tag-services h2 {
+.page-template-page-landing .tag-services h2 {
   margin: 0.5em 0;
   color: #ffffff;
 }
 
-.tag-services .entry-content {
+.page-template-page-landing .tag-services .entry-content {
   padding: 2em 0;
 }
 
-.tag-services h4 {
+.page-template-page-landing .tag-services h4 {
   text-align: center;
   line-height: 1.5rem;
 }
 
-.tag-services img {
+.page-template-page-landing .tag-services img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.tag-services .clear-button {
+.page-template-page-landing .tag-services .clear-button,
+.page-template-page-landing .tag-services .search .page-content input[type="submit"],
+.search .page-content .page-template-page-landing .tag-services input[type="submit"],
+.page-template-page-landing .tag-services .archive .page-content input[type="submit"],
+.archive .page-content .page-template-page-landing .tag-services input[type="submit"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -8148,59 +8225,71 @@ a:active {
   border-color: #283891;
 }
 
-.tag-services .clear-button:hover,
-.tag-services .clear-button.focus,
-.tag-services .clear-button:active {
+.page-template-page-landing .tag-services .clear-button:hover,
+.page-template-page-landing .tag-services .search .page-content input[type="submit"]:hover,
+.search .page-content .page-template-page-landing .tag-services input[type="submit"]:hover,
+.page-template-page-landing .tag-services .archive .page-content input[type="submit"]:hover,
+.archive .page-content .page-template-page-landing .tag-services input[type="submit"]:hover,
+.page-template-page-landing .tag-services .clear-button.focus,
+.page-template-page-landing .tag-services .search .page-content input.focus[type="submit"],
+.search .page-content .page-template-page-landing .tag-services input.focus[type="submit"],
+.page-template-page-landing .tag-services .archive .page-content input.focus[type="submit"],
+.archive .page-content .page-template-page-landing .tag-services input.focus[type="submit"],
+.page-template-page-landing .tag-services .clear-button:active,
+.page-template-page-landing .tag-services .search .page-content input[type="submit"]:active,
+.search .page-content .page-template-page-landing .tag-services input[type="submit"]:active,
+.page-template-page-landing .tag-services .archive .page-content input[type="submit"]:active,
+.archive .page-content .page-template-page-landing .tag-services input[type="submit"]:active {
   background: rgba(12, 17, 45, 0.6);
   border-color: transparent;
 }
 
-.tag-staffing,
-.tag-microsoft {
+.page-template-page-landing .tag-staffing,
+.page-template-page-landing .tag-microsoft {
   background: url("images/Staffing-Image.jpg") 0 0 no-repeat fixed;
   background-size: cover;
   margin: 0;
 }
 
-.tag-staffing header,
-.tag-microsoft header {
+.page-template-page-landing .tag-staffing header,
+.page-template-page-landing .tag-microsoft header {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.tag-staffing .entry-content,
-.tag-microsoft .entry-content {
+.page-template-page-landing .tag-staffing .entry-content,
+.page-template-page-landing .tag-microsoft .entry-content {
   padding: 2em 0;
 }
 
-.tag-staffing h2,
-.tag-microsoft h2 {
+.page-template-page-landing .tag-staffing h2,
+.page-template-page-landing .tag-microsoft h2 {
   margin: 0.5em 0;
   color: #ffffff;
 }
 
-.tag-staffing p,
-.tag-microsoft p {
+.page-template-page-landing .tag-staffing p,
+.page-template-page-landing .tag-microsoft p {
   color: #ffffff;
 }
 
-.tag-staffing li,
-.tag-microsoft li {
+.page-template-page-landing .tag-staffing li,
+.page-template-page-landing .tag-microsoft li {
   color: #ffffff;
 }
 
-.tag-microsoft {
+.page-template-page-landing .tag-microsoft {
   background: #f2f2f2;
 }
 
-.tag-microsoft .entry-content {
+.page-template-page-landing .tag-microsoft .entry-content {
   padding: 2em 0;
 }
 
-.tag-microsoft .entry-content img {
+.page-template-page-landing .tag-microsoft .entry-content img {
   margin: 0 auto;
 }
 
-.tag-microsoft .entry-content p {
+.page-template-page-landing .tag-microsoft .entry-content p {
   color: #0c112d;
 }
 
@@ -8250,7 +8339,11 @@ a:active {
   padding: 0.25em;
 }
 
-.contact-section .contact-form .clear-button {
+.contact-section .contact-form .clear-button,
+.contact-section .contact-form .search .page-content input[type="submit"],
+.search .page-content .contact-section .contact-form input[type="submit"],
+.contact-section .contact-form .archive .page-content input[type="submit"],
+.archive .page-content .contact-section .contact-form input[type="submit"] {
   background-color: rgba(191, 30, 46, 0.8);
   margin: 0.5em 0;
   float: right;
@@ -8264,6 +8357,7 @@ a:active {
   background: 50% 50px no-repeat fixed;
   background-size: 100%;
   position: relative;
+  z-index: 1;
 }
 
 .page-header .page-caption {
@@ -8291,6 +8385,112 @@ a:active {
 
 .career-list li:first-child {
   border-top: 1px solid #BFBFBF;
+}
+
+.callout {
+  background: #df3143;
+  padding: 0.5em 0;
+  border: 1px solid #ffffff;
+  margin-top: 0.5em;
+}
+
+.callout i {
+  color: #ffffff;
+  padding-right: 0.5em;
+}
+
+.callout p {
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+
+.contact-wrapper {
+  background-color: #BF1E2E;
+  padding: 0.5em 1em;
+}
+
+.contact-wrapper label {
+  color: #ffffff;
+}
+
+.contact-wrapper input {
+  border-radius: 0px;
+  color: #283891;
+}
+
+.contact-wrapper .is-invalid-input:not(:focus) {
+  background-color: #f0a0a8;
+}
+
+.contact-wrapper textarea {
+  border-radius: 0px;
+}
+
+.contact-wrapper small {
+  color: #ffffff;
+  font-style: italic;
+}
+
+.contact-wrapper .clear-button,
+.contact-wrapper .search .page-content input[type="submit"],
+.search .page-content .contact-wrapper input[type="submit"],
+.contact-wrapper .archive .page-content input[type="submit"],
+.archive .page-content .contact-wrapper input[type="submit"] {
+  background-color: #510d13;
+  margin: 1em 0 0.5em 0;
+  width: 100%;
+}
+
+.search .page-header,
+.archive .page-header {
+  min-height: auto;
+  background-color: #283891;
+  margin-bottom: 1em;
+}
+
+.search .page-header h1,
+.archive .page-header h1 {
+  color: #ffffff;
+}
+
+.search .hentry,
+.archive .hentry {
+  border-bottom: 1px solid #0c112d;
+  padding: 0.5em 0;
+}
+
+.search span,
+.archive span {
+  margin: 0.5em;
+}
+
+.search .page-content,
+.archive .page-content {
+  margin-bottom: 1em;
+}
+
+.search .page-content input[type="search"],
+.archive .page-content input[type="search"] {
+  width: 75%;
+  float: left;
+}
+
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"] {
+  background-color: #510d13;
+  width: 25%;
+  padding: 0.65em 0;
+  float: right;
+}
+
+.search .page-content input[type="submit"]:hover,
+.search .page-content input[type="submit"]:active,
+.search .page-content input[type="submit"]:focus,
+.archive .page-content input[type="submit"]:hover,
+.archive .page-content input[type="submit"]:active,
+.archive .page-content input[type="submit"]:focus {
+  background-color: black;
 }
 
 /*-- Universal Styles ---*/
@@ -8363,7 +8563,11 @@ a:active {
 }
 
 .contact-footer .contact-right a button,
-.contact-footer .contact-right a .clear-button {
+.contact-footer .contact-right a .clear-button,
+.contact-footer .contact-right a .search .page-content input[type="submit"],
+.search .page-content .contact-footer .contact-right a input[type="submit"],
+.contact-footer .contact-right a .archive .page-content input[type="submit"],
+.archive .page-content .contact-footer .contact-right a input[type="submit"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -8458,7 +8662,7 @@ a:active {
 --------------------------------------------------------------*/
 
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0.5em 0 1em 0;
   /* Make sure select elements fit in widgets. */
 }
 
@@ -8629,7 +8833,11 @@ object {
   }
 
   .contact-footer .contact-right a button,
-  .contact-footer .contact-right a .clear-button {
+  .contact-footer .contact-right a .clear-button,
+  .contact-footer .contact-right a .search .page-content input[type="submit"],
+  .search .page-content .contact-footer .contact-right a input[type="submit"],
+  .contact-footer .contact-right a .archive .page-content input[type="submit"],
+  .archive .page-content .contact-footer .contact-right a input[type="submit"] {
     display: block;
     margin-left: auto;
     margin-right: auto;

@@ -15,19 +15,19 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: 404.php:17
+#: 404.php:19
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:21
+#: 404.php:27
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: 404.php:33
+#: 404.php:40
 msgid "Most Used Categories"
 msgstr ""
 
-#: 404.php:51
+#: 404.php:61
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
@@ -94,7 +94,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: search.php:19
+#: search.php:20
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:72, template-parts/content-breadcrumb-page.php:30, template-parts/content-contact-page.php:51, template-parts/content-page-sidebar.php:34, template-parts/content-page.php:34
+#: inc/template-tags.php:72, template-parts/content-breadcrumb-page.php:30, template-parts/content-contact-page.php:70, template-parts/content-page-sidebar.php:34, template-parts/content-page.php:34
 msgid "Edit %s"
 msgstr ""
 
@@ -133,19 +133,19 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: template-parts/content-none.php:14
+#: template-parts/content-none.php:16
 msgid "Nothing Found"
 msgstr ""
 
-#: template-parts/content-none.php:21
+#: template-parts/content-none.php:27
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-none.php:25
+#: template-parts/content-none.php:31
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:31
+#: template-parts/content-none.php:37
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 

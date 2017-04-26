@@ -2,6 +2,7 @@
 	background: $light-grey;
 	box-shadow: 0 4px 0 0 $dark-grey;
 	width: 100%;
+	z-index: 9000;
 	.logo{
 		width: 80px;
 		height: auto;

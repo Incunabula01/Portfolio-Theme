@@ -64,24 +64,45 @@ get_header(); ?>
 							</div>
 						</div>
 					</header>
-					<form action="" class="contact-form">
+					<form action="" method="post" class="contact-form" data-abide novalidate>
 						<div class="row">
 							<div class="columns small-12 medium-8 medium-offset-2">
-									<label>Name
-										<input type="text" placeholder="Name">
+								<div class="alert callout" data-abide-error style="display: none;">
+									<p><i class="fa fa-exclamation-triangle"></i>There are some errors in your form</p>
+								</div>
+								<div class="name-field">
+									<label for="name">Name 
+										<input type="text" placeholder="Name" required >
 									</label>
-									<label>Email
-										<input type="text" placeholder="Email">
+									<span class="form-error">
+										<small>Name is requrired and must be letters.</small>
+									</span>
+								</div>
+								<div class="email-field">
+									<label for="email">Email 
+										<input type="email" placeholder="Email" required >
 									</label>
-									<label>Phone
-										<input type="text" placeholder="Phone">
+									<span class="form-error">
+										<small>An email address is required.</small>
+									</span>
+								</div>
+								<div class="phone-field">
+									<label for="phone">Phone 
+										<input type="tel" placeholder="Phone" required pattern="dashes_only">
 									</label>
-									<label>
-										How can we help you?
+									<span class="form-error">
+										<small>An phone number is required.</small>
+									</span>
+								</div>
+								<div>
+									<label for="textarea">
+									How can we help you?
 										<textarea placeholder="Your message here" cols="30" rows="5"></textarea>
 									</label>
-									
+								</div>
+								<div>
 									<button class="clear-button" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+								</div>		
 							</div>
 						</div>
 					</form>

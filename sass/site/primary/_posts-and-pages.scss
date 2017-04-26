@@ -23,95 +23,97 @@
 		}
 	}
 }
-
-.tag-security{
-	background: $color__background-body;
-	color: $color__text-screen;
-	margin: 0;
-	header{
-		background-color: $red;
-	}
-	h2{
-		margin: 0.5em 0;
-		color: $white;
-	}
-	.entry-content{
-		padding: 2em 0;
-	}
-	img{
-		margin: 0 auto;
-	}
-}
-
-.tag-services{
-	background: lighten($light-blue, 25%);
-	color: $mid-blue;
-	margin: 0;
-	header{
-		background-color: $blue;
-	}
-	h2{
-		margin: 0.5em 0;
-		color: $white;
-	}
-	.entry-content{
-		padding: 2em 0;
-	}
-	h4{
-		text-align: center;
-		line-height: 1.5rem;
-	}
-	img{
-		@include center-block;
-	}
-	.clear-button{
-		@include center-block;
-		background: rgba(12, 17, 45, 0.2);
-		border-color: $blue;
-		&:hover,
-		&.focus,
-		&:active{
-			background: rgba(12, 17, 45, 0.6);
-			border-color: transparent;
+.page-template-page-landing{
+	.tag-security{
+		background: $color__background-body;
+		color: $color__text-screen;
+		margin: 0;
+		header{
+			background-color: $red;
 		}
-	}
-}
-
-.tag-staffing{
-	background: url('images/Staffing-Image.jpg') 0 0 no-repeat fixed;
-	background-size: cover;
-	margin: 0;
-	header{
-		background-color: rgba(0, 0, 0, 0.8);
-	}
-	.entry-content{
-		padding: 2em 0;
-	}
-	h2{
-		margin: 0.5em 0;
-		color: $white;
-	}
-	p{
-		color: $white;
-	}
-	li{
-		color: $white;
-	}
-}
-
-.tag-microsoft{
-	@extend .tag-staffing;
-	background: $color__background-body;
-	.entry-content{
-		padding: 2em 0;
+		h2{
+			margin: 0.5em 0;
+			color: $white;
+		}
+		.entry-content{
+			padding: 2em 0;
+		}
 		img{
 			margin: 0 auto;
 		}
+	}
+
+	.tag-services{
+		background: lighten($light-blue, 25%);
+		color: $mid-blue;
+		margin: 0;
+		header{
+			background-color: $blue;
+		}
+		h2{
+			margin: 0.5em 0;
+			color: $white;
+		}
+		.entry-content{
+			padding: 2em 0;
+		}
+		h4{
+			text-align: center;
+			line-height: 1.5rem;
+		}
+		img{
+			@include center-block;
+		}
+		.clear-button{
+			@include center-block;
+			background: rgba(12, 17, 45, 0.2);
+			border-color: $blue;
+			&:hover,
+			&.focus,
+			&:active{
+				background: rgba(12, 17, 45, 0.6);
+				border-color: transparent;
+			}
+		}
+	}
+
+	.tag-staffing{
+		background: url('images/Staffing-Image.jpg') 0 0 no-repeat fixed;
+		background-size: cover;
+		margin: 0;
+		header{
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+		.entry-content{
+			padding: 2em 0;
+		}
+		h2{
+			margin: 0.5em 0;
+			color: $white;
+		}
 		p{
-			color: $color__text-screen;
+			color: $white;
+		}
+		li{
+			color: $white;
+		}
+	}
+
+	.tag-microsoft{
+		@extend .tag-staffing;
+		background: $color__background-body;
+		.entry-content{
+			padding: 2em 0;
+			img{
+				margin: 0 auto;
+			}
+			p{
+				color: $color__text-screen;
+			}
 		}
 	}
 }
+
 
 .contact-section{
 	background: url('images/Contact-Us-Image.jpg') 0 0 no-repeat fixed;
@@ -155,6 +157,7 @@
 	background: 50% 50px no-repeat fixed;
 	background-size: 100%;
 	position: relative;
+	z-index: 1;
 	.page-caption{
 		position: absolute;
 		bottom: 0px;
@@ -175,6 +178,86 @@
 		border-bottom: 1px solid $grey;
 		&:first-child{
 			border-top: 1px solid $grey;
+		}
+	}
+}
+
+.callout{
+		background: $light-red;
+		padding: 0.5em 0;
+		border: 1px solid $white;
+		margin-top: 0.5em;
+		i{
+			color: $white;
+			padding-right: 0.5em;
+		}
+		p{
+			text-align: center;
+			color: $white;
+			margin: 0;
+		}
+	}
+
+.contact-wrapper{
+	background-color: $red;
+	padding: 0.5em 1em;
+	label{
+		color: $white;
+	}
+	input{
+		border-radius: 0px;
+		color: $blue;
+	}
+	.is-invalid-input:not(:focus){
+		background-color: lighten($light-red, 25%);
+	}
+	textarea{
+		border-radius: 0px;
+	}
+	small{
+		color: $white;
+		font-style: italic;
+	}
+	.clear-button{
+		background-color: $dark-red;
+		margin: 1em 0 0.5em 0;
+		width: 100%;
+	}
+}
+
+.search, .archive{
+	.page-header{
+		min-height: auto;
+		background-color: $blue;
+		margin-bottom: 1em;
+		h1{
+			color: $white;
+		}
+	}
+	.hentry{
+		border-bottom: 1px solid $dark-blue;
+		padding: 0.5em 0;
+	}
+	span{
+		margin: 0.5em;
+	}
+	.page-content{
+		margin-bottom: 1em;
+		input[type="search"]{
+			width: 75%;
+			float: left;
+		}
+		input[type="submit"]{
+			@extend .clear-button;
+			background-color: $dark-red;
+			width: 25%;
+			padding: 0.65em 0;
+			float: right;
+			&:hover,
+			&:active,
+			&:focus{
+				background-color: darken($dark-red, 25%);
+			}
 		}
 	}
 }
