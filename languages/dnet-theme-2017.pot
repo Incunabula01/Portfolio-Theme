@@ -66,19 +66,27 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:96, functions.php:105, functions.php:114, functions.php:123
+#: functions.php:96, functions.php:105, functions.php:114, functions.php:123, functions.php:132, functions.php:141
 msgid "Add widgets here."
 msgstr ""
 
 #: functions.php:103
-msgid "Footer-Sidebar-1"
+msgid "Contact-Sidebar"
 msgstr ""
 
 #: functions.php:112
-msgid "Footer-Sidebar-2"
+msgid "Careers-Sidebar"
 msgstr ""
 
 #: functions.php:121
+msgid "Footer-Sidebar-1"
+msgstr ""
+
+#: functions.php:130
+msgid "Footer-Sidebar-2"
+msgstr ""
+
+#: functions.php:139
 msgid "Footer-Sidebar-3"
 msgstr ""
 
@@ -117,8 +125,12 @@ msgstr ""
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:72, template-parts/content-page.php:34
+#: inc/template-tags.php:72, template-parts/content-breadcrumb-page.php:30, template-parts/content-contact-page.php:51, template-parts/content-page-sidebar.php:34, template-parts/content-page.php:34
 msgid "Edit %s"
+msgstr ""
+
+#: template-parts/content-jobs.php:33, template-parts/content.php:34
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -137,10 +149,6 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:22, template-parts/content.php:39
+#: template-parts/content-page-sidebar.php:22, template-parts/content-page.php:22, template-parts/content.php:39
 msgid "Pages:"
-msgstr ""
-
-#: template-parts/content.php:34
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
