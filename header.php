@@ -42,7 +42,7 @@
 				</div>
 				<div class="top-bar-right">
 					<nav id="site-navigation" class="main-navigation" role="navigation">
-					<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-navicon"></i></button> -->
+					
 					<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 
 											  'menu_id' => 'secondary-menu',
 											  'menu_class' => 'menu', 

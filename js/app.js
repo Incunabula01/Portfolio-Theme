@@ -1,15 +1,15 @@
 var $ = jQuery.noConflict();
 
-
+$(document).foundation();
 
 $(document).ready(function(){
-	$(document).foundation();
-	Foundation.Abide.defaults.patterns['dashes_only'] = /^[0-9-]*$/;
+	
+	// Foundation.Abide.defaults.patterns['dashes_only'] = /^[0-9-]*$/;
+
 	// $(window).on('scroll', function(e){
 	
 	// })
-	var primaryMenu = $('#primary-menu');
-	var el = primaryMenu.children();
+	
 
 	// primaryMenu.each( function(el){
 	// 	if( el.hasClass('menu-item-has-children')){

@@ -33,13 +33,13 @@ get_header(); ?>
 							</div>
 						</section>
 						<div class="row">
-								<div class="columns small-12 medium-7">
+								<div class="columns small-12 medium-8">
 
 							<?php get_template_part( 'template-parts/content', 'contact-page' ); ?>
 		
 								</div>
 						<?php	endwhile; // End of the loop. ?>
-								<div class="columns small-12 medium-5">
+								<div class="columns small-12 medium-4">
 									<?php get_sidebar('contact');  ?>
 								</div>
 						</div>

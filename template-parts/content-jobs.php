@@ -10,6 +10,7 @@
 ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
@@ -19,6 +20,9 @@
 		endif;
 
 		if ( 'post' === get_post_type() ) : ?>
+		<nav aria-label="Home:" role="navigation">
+			<?php foundation_breadcrumbs(); ?>
+		</nav>
 		<div class="entry-meta">
 			<?php dnet_theme_2017_posted_on(); ?>
 		</div><!-- .entry-meta -->
@@ -26,6 +30,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
+	
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(

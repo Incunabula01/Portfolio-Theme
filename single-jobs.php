@@ -17,8 +17,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<div class="row">
-			<div class="columns">
-				<div class="small-12 medium-8">
+			<div class="columns small-12 medium-8">
 					<?php
 						while ( have_posts() ) : the_post();
 
@@ -28,12 +27,12 @@ get_header(); ?>
 
 						endwhile; // End of the loop.
 						?>
-				</div>
-				<div class="small-12 medium-4">
-					<?php get_sidebar('Application-Sidebar'); ?>
-				</div>
+			</div>
+			<div class="columns small-12 medium-4">
+					<?php get_sidebar('careers'); ?>
 			</div>
 		</div>
+	
 		
 
 		</main><!-- #main -->

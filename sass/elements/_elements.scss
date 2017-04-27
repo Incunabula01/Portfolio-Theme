@@ -36,6 +36,12 @@ img {
 	display: block;
 }
 
+.circle{
+	border-radius: 50%;
+	margin: 0 auto 1em auto;
+	width: 200px;
+}
+
 figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }

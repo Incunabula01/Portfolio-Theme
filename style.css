@@ -7592,6 +7592,12 @@ img {
   display: block;
 }
 
+.circle {
+  border-radius: 50%;
+  margin: 0 auto 1em auto;
+  width: 200px;
+}
+
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */
@@ -8096,8 +8102,130 @@ a:active {
   /* Make sure select elements fit in widgets. */
 }
 
+.widget .widget-title {
+  font-size: 2em;
+}
+
 .widget select {
   max-width: 100%;
+}
+
+.widget p {
+  margin-bottom: 1em;
+}
+
+.widget form {
+  background-color: #BF1E2E;
+  padding: 0.5em;
+}
+
+.widget form .cb_contact_field label {
+  color: #ffffff;
+  padding: 0;
+}
+
+.widget form .cb_contact_field input {
+  border-radius: 0px;
+  color: #283891;
+}
+
+.widget form .cb_contact_field input[type="text"] {
+  margin: 0;
+}
+
+.widget form .cb_contact_field .is-invalid-input:not(:focus) {
+  background-color: #f0a0a8;
+}
+
+.widget form .cb_contact_field textarea {
+  border-radius: 0px;
+}
+
+.widget form .cb_contact_field small {
+  color: #ffffff;
+  font-style: italic;
+}
+
+.widget form input[type="submit"] {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 0.5em 1em 0.4em 1em;
+  width: 100%;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  background-color: #510d13;
+  margin: 1em 0 0.5em 0;
+}
+
+.widget form input[type="submit"]:hover {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: transparent;
+  border: 2px solid #f2f2f2;
+}
+
+.widget form input[type="submit"]:active,
+.widget form input[type="submit"]:focus {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: transparent;
+  border: 2px solid #f2f2f2;
+}
+
+.widget .menu {
+  display: inline;
+}
+
+.widget .menu .facebook > a:before {
+  content: '\f082';
+}
+
+.widget .menu .linkedin > a:before {
+  content: '\f08c';
+}
+
+.widget .menu .twitter > a:before {
+  content: '\f081';
+}
+
+.widget .menu .email > a:before {
+  content: '\f199';
+}
+
+.widget .menu li {
+  display: block;
+}
+
+.widget .menu li a {
+  padding: 0.5rem 0;
+  width: 150px;
+}
+
+.widget .menu li a:hover,
+.widget .menu li a:focus,
+.widget .menu li a:active {
+  color: #BF1E2E;
+}
+
+.widget .menu li a:before {
+  color: #283891;
+  font-family: "FontAwesome";
+  float: left;
+  position: relative;
+  top: -5px;
+  padding-right: 0.5em;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.widget .menu li a:hover:before,
+.widget .menu li a:focus:before,
+.widget .menu li a:active:before {
+  color: #BF1E2E;
+}
+
+.post-template-single-jobs .widget {
+  margin-top: 2em;
 }
 
 /*--------------------------------------------------------------
@@ -8370,8 +8498,8 @@ a:active {
   color: #ffffff;
 }
 
-.page-template-page-careers p {
-  margin-top: 0.5em;
+.page-template-page-careers .page-header {
+  margin-bottom: 1.5em;
 }
 
 .career-list {
@@ -8491,6 +8619,35 @@ a:active {
 .archive .page-content input[type="submit"]:active,
 .archive .page-content input[type="submit"]:focus {
   background-color: black;
+}
+
+#services-tabs a {
+  color: #283891;
+}
+
+#services-tabs .tabs-title a[aria-selected="true"] {
+  background-color: #b4bcea;
+}
+
+#services-tabs img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#services-tabs h2 {
+  text-align: center;
+}
+
+.tabs-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabs-content h2 {
+  text-align: center;
+  line-height: 1em;
 }
 
 /*-- Universal Styles ---*/
@@ -8666,8 +8823,130 @@ a:active {
   /* Make sure select elements fit in widgets. */
 }
 
+.widget .widget-title {
+  font-size: 2em;
+}
+
 .widget select {
   max-width: 100%;
+}
+
+.widget p {
+  margin-bottom: 1em;
+}
+
+.widget form {
+  background-color: #BF1E2E;
+  padding: 0.5em;
+}
+
+.widget form .cb_contact_field label {
+  color: #ffffff;
+  padding: 0;
+}
+
+.widget form .cb_contact_field input {
+  border-radius: 0px;
+  color: #283891;
+}
+
+.widget form .cb_contact_field input[type="text"] {
+  margin: 0;
+}
+
+.widget form .cb_contact_field .is-invalid-input:not(:focus) {
+  background-color: #f0a0a8;
+}
+
+.widget form .cb_contact_field textarea {
+  border-radius: 0px;
+}
+
+.widget form .cb_contact_field small {
+  color: #ffffff;
+  font-style: italic;
+}
+
+.widget form input[type="submit"] {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 0.5em 1em 0.4em 1em;
+  width: 100%;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  background-color: #510d13;
+  margin: 1em 0 0.5em 0;
+}
+
+.widget form input[type="submit"]:hover {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: transparent;
+  border: 2px solid #f2f2f2;
+}
+
+.widget form input[type="submit"]:active,
+.widget form input[type="submit"]:focus {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: transparent;
+  border: 2px solid #f2f2f2;
+}
+
+.widget .menu {
+  display: inline;
+}
+
+.widget .menu .facebook > a:before {
+  content: '\f082';
+}
+
+.widget .menu .linkedin > a:before {
+  content: '\f08c';
+}
+
+.widget .menu .twitter > a:before {
+  content: '\f081';
+}
+
+.widget .menu .email > a:before {
+  content: '\f199';
+}
+
+.widget .menu li {
+  display: block;
+}
+
+.widget .menu li a {
+  padding: 0.5rem 0;
+  width: 150px;
+}
+
+.widget .menu li a:hover,
+.widget .menu li a:focus,
+.widget .menu li a:active {
+  color: #BF1E2E;
+}
+
+.widget .menu li a:before {
+  color: #283891;
+  font-family: "FontAwesome";
+  float: left;
+  position: relative;
+  top: -5px;
+  padding-right: 0.5em;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.widget .menu li a:hover:before,
+.widget .menu li a:focus:before,
+.widget .menu li a:active:before {
+  color: #BF1E2E;
+}
+
+.post-template-single-jobs .widget {
+  margin-top: 2em;
 }
 
 /*--------------------------------------------------------------
@@ -8802,6 +9081,10 @@ object {
 
   .page-header .page-caption .entry-title {
     color: #ffffff;
+  }
+
+  #services-tabs p {
+    display: none;
   }
 
   .contact-footer .contact-left {
