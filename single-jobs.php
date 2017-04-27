@@ -23,7 +23,12 @@ get_header(); ?>
 
 							get_template_part( 'template-parts/content', 'jobs' );
 
-							the_post_navigation(array('taxonomy' => 'jobs'));
+							$args = array(
+									'in_same_term' => true,
+									'screen_reader_text' => 'Job Navigation'
+								);
+							
+							the_post_navigation($args);
 
 						endwhile; // End of the loop.
 						?>

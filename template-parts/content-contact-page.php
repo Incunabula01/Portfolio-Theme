@@ -20,44 +20,9 @@
 			the_content();
 		?>
 		<div class="contact-wrapper">
-			<form action="" method="post" class="contact-form" data-abide novalidate>
-				<div class="alert callout" data-abide-error style="display: none;">
-					<p><i class="fa fa-exclamation-triangle"></i>There are some errors in your form</p>
-				</div>
-					<div class="name-field">
-						<label for="name">Name 
-							<input type="text" placeholder="Name" required >
-						</label>
-						<span class="form-error">
-							<small>Name is requrired and must be letters.</small>
-						</span>
-					</div>
-					<div class="email-field">
-						<label for="email">Email 
-							<input type="email" placeholder="Email" required >
-						</label>
-						<span class="form-error">
-							<small>An email address is required.</small>
-						</span>
-					</div>
-					<div class="phone-field">
-						<label for="phone">Phone 
-							<input type="tel" placeholder="Phone" required pattern="dashes_only">
-						</label>
-						<span class="form-error">
-							<small>An phone number is required.</small>
-						</span>
-					</div>
-					<div>
-						<label for="textarea">
-						How can we help you?
-							<textarea placeholder="Your message here" cols="30" rows="5"></textarea>
-						</label>
-					</div>
-					<div>
-						<button class="clear-button" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
-					</div>				
-				</form>
+			
+			<?php echo do_shortcode("[ninja_form id=1]") ?>
+			
 		</div>
 	</div><!-- .entry-content -->
 

@@ -56,7 +56,7 @@ get_header(); ?>
 										<li><a href="<?php the_permalink(); ?>" target="_blank">
 											<h4><?php the_title(); ?></h4>
 											</a>
-											<p><strong><?php $content = get_the_content(); echo mb_strimwidth($content, 0, 80, '...');?></strong></p>
+											<p><?php $content = get_the_content(); echo mb_strimwidth($content, 0, 80, '...');?></p>
 										</li>
 
 

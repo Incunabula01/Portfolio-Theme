@@ -5,7 +5,7 @@
 
 /*---- Landing Page Styles ----*/
 .landing{
-	background: url('images/CTA-Image-1.jpg') 0 0 no-repeat fixed;
+	background: 0 0 no-repeat fixed;
 	background-size: cover;
 	margin: 0;
 	.landing-caption{
@@ -20,6 +20,9 @@
 			color: $white;
 			@include font-size(1.5);
 			line-height: 1.5rem;
+		}
+		.clear-button{
+			width: 100%
 		}
 	}
 }
@@ -127,6 +130,7 @@
 	}
 	.contact-form{
 		padding: 2em 0;
+		color: $white;
 		input{
 			background-color: rgba(191, 30, 46, 0.8);
 			color: $white;
@@ -143,10 +147,9 @@
 			background: rgba(255,255,255, 0.8);
 			padding: 0.25em;
 		}
-		.clear-button{
+		.input[type="button"]{
 			background-color: rgba(191, 30, 46, 0.8);
 			margin: 0.5em 0;
-			float: right;
 		}
 	}
 }
@@ -178,6 +181,7 @@
 	margin: 0 0 1.5em 0;
 	li{
 		border-bottom: 1px solid $grey;
+		padding-top: 0.5em;
 		&:first-child{
 			border-top: 1px solid $grey;
 		}
@@ -201,8 +205,12 @@
 	}
 
 .contact-wrapper{
-	background-color: $red;
+	background-color: $grey;
 	padding: 0.5em 1em;
+	color: $white;
+	h3{
+		color: $red;
+	}
 	label{
 		color: $white;
 	}
@@ -220,10 +228,28 @@
 		color: $white;
 		font-style: italic;
 	}
-	.clear-button{
-		background-color: $dark-red;
-		margin: 1em 0 0.5em 0;
+	input[type="button"]{
+		background: $red;
+		color: $white;
+		border-radius: 0;
+		@include font-size(1);
+		padding: 0.5em 1em 0.4em 1em;
+		border: 2px solid $white;
+		transition: all 0.25s ease-in;
 		width: 100%;
+		margin: 1em 0 0.5em 0;
+		&:hover {
+			background: $dark-red;
+			border-color: transparent;
+			border: 2px solid $light-grey;
+		}
+
+		&:active,
+		&:focus {
+			background: $dark-red;
+			border-color: transparent;
+			border: 2px solid $light-grey;
+		}
 	}
 }
 
@@ -289,10 +315,16 @@
 	}
 }
 @media screen and (min-width: 39.9375em) {
+	.landing{
+		background-size: 100%;
+		.landing-caption .clear-button{
+			width: auto;
+		}
+	}
 	.page-header{
-		min-height: 300px;
-		background: center center no-repeat fixed;
-		background-size: cover;
+		min-height: 400px;
+		background: 0 0 no-repeat fixed;
+		background-size: 100%;
 		.page-caption{
 			bottom: 0px;
 			.entry-title{

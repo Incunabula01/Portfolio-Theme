@@ -103,29 +103,24 @@ msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:33
-msgctxt "post author"
-msgid "by %s"
-msgstr ""
-
-#: inc/template-tags.php:50, inc/template-tags.php:56
+#: inc/template-tags.php:45, inc/template-tags.php:51
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:52
+#: inc/template-tags.php:47
 msgid "Posted in %1$s"
 msgstr ""
 
-#: inc/template-tags.php:58
+#: inc/template-tags.php:53
 msgid "Tagged %1$s"
 msgstr ""
 
 #. translators: %s: post title
-#: inc/template-tags.php:65
+#: inc/template-tags.php:60
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:72, template-parts/content-breadcrumb-page.php:30, template-parts/content-contact-page.php:70, template-parts/content-page-sidebar.php:34, template-parts/content-page.php:34
+#: inc/template-tags.php:67, template-parts/content-breadcrumb-page.php:30, template-parts/content-contact-page.php:35, template-parts/content-page-sidebar.php:34, template-parts/content-page.php:34
 msgid "Edit %s"
 msgstr ""
 

@@ -20,12 +20,13 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-				<section class="landing">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php $background_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+				<section class="landing" style="background-image: url('<?php echo $background_img[0]; ?>');">
 					<!-- Updates CTA Section -->
 						<div class="row">
 							<div class="columns small-12">
 								<div class="landing-caption">
-									<?php while ( have_posts() ) : the_post(); ?>
 									<?php the_title( '<h1 class="entry-title">', '</h1>' );  
 										  the_content();
 									?>
@@ -64,48 +65,13 @@ get_header(); ?>
 							</div>
 						</div>
 					</header>
-					<form action="" method="post" class="contact-form" data-abide novalidate>
-						<div class="row">
-							<div class="columns small-12 medium-8 medium-offset-2">
-								<div class="alert callout" data-abide-error style="display: none;">
-									<p><i class="fa fa-exclamation-triangle"></i>There are some errors in your form</p>
-								</div>
-								<div class="name-field">
-									<label for="name">Name 
-										<input type="text" placeholder="Name" required >
-									</label>
-									<span class="form-error">
-										<small>Name is requrired and must be letters.</small>
-									</span>
-								</div>
-								<div class="email-field">
-									<label for="email">Email 
-										<input type="email" placeholder="Email" required >
-									</label>
-									<span class="form-error">
-										<small>An email address is required.</small>
-									</span>
-								</div>
-								<div class="phone-field">
-									<label for="phone">Phone 
-										<input type="tel" placeholder="Phone" required pattern="dashes_only">
-									</label>
-									<span class="form-error">
-										<small>An phone number is required.</small>
-									</span>
-								</div>
-								<div>
-									<label for="textarea">
-									How can we help you?
-										<textarea placeholder="Your message here" cols="30" rows="5"></textarea>
-									</label>
-								</div>
-								<div>
-									<button class="clear-button" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
-								</div>		
+					<div class="contact-form">
+						<div class="row columns">
+							<div class="small-12 medium-8 medium-offset-2">
+								<?php echo do_shortcode("[ninja_form id=2]") ?>
 							</div>
 						</div>
-					</form>
+					</div>
 				</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->

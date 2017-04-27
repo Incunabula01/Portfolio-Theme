@@ -21,7 +21,7 @@ input[type="submit"] {
 	}
 }
 
-.clear-button{
+input[type="button"], .clear-button{
 	@extend button;
 	background: rgba(255,255,255, 0.2);
 	border-radius: 0;

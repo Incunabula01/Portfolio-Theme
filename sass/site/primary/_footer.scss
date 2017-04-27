@@ -30,6 +30,11 @@
 	
 }
 
+.nav-links{
+	border-top: 1px solid $red;
+	padding: 0.5em 0;
+}
+
 .site-footer{
 	background-color: $dark-blue;
 	min-height: 200px;
@@ -54,13 +59,13 @@
 			li{
 				display: inline;
 				font-family: $font__main;
-				text-indent: -1px;
 				text-align: center;
 				transition: all 0.25e ease-in;
 				a{
 					color: $white;
-					padding: 0.5rem 0;
 					width: 150px;
+					padding: 0.25em 0;
+					line-height: 1em;
 					@include center-block;
 					&:hover,
 					&:focus,
