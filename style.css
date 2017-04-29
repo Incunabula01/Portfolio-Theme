@@ -8254,6 +8254,10 @@ a:active {
   content: '\f199';
 }
 
+.widget .menu .blog > a:before {
+  content: '\f02d';
+}
+
 .widget .menu li {
   display: block;
 }
@@ -8396,7 +8400,7 @@ a:active {
 }
 
 .page-template-page-landing .tag-services {
-  background: #b4bcea;
+  background: #f0f2fb;
   color: #3347b9;
   margin: 0;
 }
@@ -9070,6 +9074,10 @@ a:active {
 
 .widget .menu .email > a:before {
   content: '\f199';
+}
+
+.widget .menu .blog > a:before {
+  content: '\f02d';
 }
 
 .widget .menu li {

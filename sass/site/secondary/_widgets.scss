@@ -83,15 +83,18 @@
 		.facebook > a:before{
 				content: '\f082';
 			}
-			.linkedin > a:before{
+		.linkedin > a:before{
 				content: '\f08c';
 			}
-			.twitter > a:before{
+		.twitter > a:before{
 				content: '\f081';
 			}
-			.email > a:before{
+		.email > a:before{
 				content: '\f199';
 			}
+		.blog > a:before{
+				content: '\f02d';
+		}
 		li{
 			display: block;
 			a{
