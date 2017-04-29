@@ -8,8 +8,7 @@
  */
 
 ?>
-<div class="row">
-	<div class="columns small-12 medium-10 medium-offset-2">
+
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -46,6 +45,5 @@
 		<?php dnet_theme_2017_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-	</div>
-</div>
+
 

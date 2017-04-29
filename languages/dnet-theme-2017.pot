@@ -120,7 +120,7 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: template-parts/content-jobs.php:38, template-parts/content.php:34
+#: template-parts/content-jobs.php:38, template-parts/content.php:33
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
@@ -140,6 +140,6 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts/content-page-sidebar.php:22, template-parts/content-page.php:22, template-parts/content.php:39
+#: template-parts/content-page-sidebar.php:22, template-parts/content-page.php:22, template-parts/content.php:38
 msgid "Pages:"
 msgstr ""

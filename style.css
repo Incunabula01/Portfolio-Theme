@@ -7882,7 +7882,6 @@ a:active {
 .main-navigation ul ul a {
   width: 100%;
   text-align: center;
-  background: #3347b9;
 }
 
 .main-navigation ul li:hover > ul,
@@ -7912,25 +7911,33 @@ a:active {
 }
 
 .main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
+.main-navigation .current-menu-item > a {
   color: #ffffff;
+  background-color: #3347b9;
 }
 
 .main-navigation .current_page_item > a:before,
-.main-navigation .current-menu-item > a:before,
+.main-navigation .current-menu-item > a:before {
+  color: #ffffff;
+}
+
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+  color: #ffffff;
+  background-color: #1d2969;
+}
+
 .main-navigation .current_page_ancestor > a:before,
 .main-navigation .current-menu-ancestor > a:before {
   color: #ffffff;
 }
 
-.menu > .active > a {
-  background-color: #3347b9;
-}
-
 .dropdown.menu > li.is-dropdown-submenu-parent > a {
   border-bottom: 1px solid #ffffff;
+}
+
+.menu > .active > a {
+  background: #3347b9;
 }
 
 .main-nav-menu {
@@ -8390,9 +8397,9 @@ a:active {
 }
 
 .landing .landing-caption .entry-title {
-  font-size: 80px;
-  font-size: 5rem;
-  line-height: 5rem;
+  font-size: 56px;
+  font-size: 3.5rem;
+  line-height: 1;
   color: #ffffff;
   margin: 0;
 }
@@ -8934,7 +8941,7 @@ a:active {
 }
 
 .site-footer .widget {
-  margin: 2em 0 0 0;
+  margin: 0;
 }
 
 .site-footer .widget ul {
@@ -9297,7 +9304,7 @@ object {
 
 @media screen and (min-width: 39.9375em) {
   .landing {
-    background-size: 100%;
+    background-size: cover;
   }
 
   .landing .landing-caption .clear-button,
@@ -9308,6 +9315,11 @@ object {
   .landing .landing-caption .error404 .page-content input[type="submit"],
   .error404 .page-content .landing .landing-caption input[type="submit"] {
     width: auto;
+  }
+
+  .landing .landing-caption .entry-title {
+    font-size: 80px;
+    font-size: 5rem;
   }
 
   .page-header {
@@ -9387,6 +9399,10 @@ object {
     border-style: solid;
     border-width: 32px 0 32px 48.5px;
     border-color: transparent transparent transparent #510d13;
+  }
+
+  .site-footer .widget {
+    margin: 2em 0 0 0;
   }
 
   .site-footer .widget ul li a {
@@ -10074,6 +10090,7 @@ object {
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,
   .main-navigation .current-menu-ancestor > a {
+    background: #f2f2f2;
     color: #BF1E2E;
   }
 

@@ -53,7 +53,7 @@ get_header(); ?>
 
 										while ( $the_query -> have_posts() ) : $the_query -> the_post(); ?>
 
-										<li><a href="<?php the_permalink(); ?>" target="_blank">
+										<li><a href="<?php the_permalink(); ?>">
 											<h4><?php the_title(); ?></h4>
 											</a>
 											<p><?php $content = get_the_content(); echo mb_strimwidth($content, 0, 80, '...');?></p>

@@ -11,8 +11,8 @@
 	.landing-caption{
 		margin: 3em 0;
 		.entry-title{
-			@include font-size(5);
-			line-height: 5rem;
+			@include font-size(3.5);
+			line-height: 1;
 			color: $white;
 			margin: 0;
 		}
@@ -335,9 +335,12 @@
 
 @media screen and (min-width: 39.9375em) {
 	.landing{
-		background-size: 100%;
+		background-size: cover;
 		.landing-caption .clear-button{
 			width: auto;
+		}
+		.landing-caption .entry-title{
+			@include font-size(5);
 		}
 	}
 	.page-header{

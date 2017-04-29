@@ -34,7 +34,6 @@
 			a {
 				width: 100%;
 				text-align: center;
-				background: $mid-blue;
 			}
 
 			:hover > a,
@@ -72,23 +71,31 @@
 	}
 
 	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+	.current-menu-item > a{
 		color: $white;
+		background-color: $mid-blue;
 		&:before{
 			color: $white;
 		}
 	}
-	
-}
 
-.menu > .active > a{
-	background-color: $mid-blue;
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a{
+		color: $white;
+		background-color: darken($mid-blue, 20%);
+		&:before{
+			color: $white;
+		}
+	} 
+	
 }
 
 .dropdown.menu > li.is-dropdown-submenu-parent > a{
 	border-bottom: 1px solid $white;
+}
+
+.menu > .active > a{
+	background: $mid-blue;
 }
 
 .main-nav-menu{
@@ -225,6 +232,7 @@
 		.current-menu-item > a,
 		.current_page_ancestor > a,
 		.current-menu-ancestor > a {
+			background: $light-grey;
 			color: $red;
 			&:before{
 				color: $red;

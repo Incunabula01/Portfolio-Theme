@@ -40,7 +40,7 @@
 	min-height: 200px;
 	width: 100%;
 	.widget{
-		margin: 2em 0 0 0;
+		margin: 0;
 		ul{
 			padding-left: 2px;
 			// Social Media Icons 
@@ -140,9 +140,13 @@
 		}
 	}
 	.site-footer{
-		.widget ul li a{
+		.widget{
+			margin: 2em 0 0 0;
+			ul li a{
 			text-align: left;
-		}
+			}
+		} 
+			
 	}
 }
 

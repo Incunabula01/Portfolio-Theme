@@ -210,7 +210,6 @@ require get_template_directory() . '/inc/jetpack.php';
 class top_bar_walker extends Walker_Nav_Menu {
 	function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
 		$element->has_children = !empty( $children_elements[$element->ID] );
-		$element->classes[] = ( $element->current || $element->current_item_ancestor ) ? 'active' : '';
 		$element->classes[] = ( $element->has_children ) ? 'has-dropdown not-click is-dropdown-submenu-parent' : '';
 		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
 	}
