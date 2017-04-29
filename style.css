@@ -7472,6 +7472,10 @@ h6 {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+h4 {
+  line-height: 1;
+}
+
 p {
   margin-bottom: 1.5em;
 }
@@ -7686,7 +7690,7 @@ input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
 .archive .page-content input[type="submit"] {
-  background: rgba(255, 255, 255, 0.2);
+  background: #BF1E2E;
   border-radius: 0;
   font-size: 16px;
   font-size: 1rem;
@@ -7700,7 +7704,7 @@ input[type="button"]:hover,
 .clear-button:hover,
 .search .page-content input[type="submit"]:hover,
 .archive .page-content input[type="submit"]:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: #510d13;
   border-color: transparent;
   border: 2px solid #f2f2f2;
 }
@@ -7713,7 +7717,7 @@ input[type="button"]:focus,
 .clear-button:focus,
 .search .page-content input[type="submit"]:focus,
 .archive .page-content input[type="submit"]:focus {
-  background: rgba(255, 255, 255, 0.5);
+  background: #510d13;
   border-color: transparent;
   border: 2px solid #f2f2f2;
 }
@@ -7734,7 +7738,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: #df3143;
+  color: #D97882;
   border: 1px solid #f2f2f2;
   border-radius: 3px;
   padding: 3px;
@@ -7806,10 +7810,6 @@ a:active {
 .top-bar {
   background-color: #0c112d;
   padding: 0;
-}
-
-.top-bar .site-branding {
-  display: none;
 }
 
 .top-bar .title-bar {
@@ -7942,14 +7942,25 @@ a:active {
 
 .menu-toggle {
   background-color: transparent;
-  position: relative;
+  position: absolute;
+  top: 5px;
+  right: 0;
   border-color: transparent;
   float: right;
   vertical-align: middle;
+  outline-color: #f2f2f2;
 }
 
-.menu-toggle:focus {
+.menu-toggle:focus,
+.menu-toggle:active {
+  background-color: #d9d9d9;
   border-color: transparent;
+  outline-color: #f2f2f2;
+}
+
+.menu-toggle:visited {
+  background-color: #f2f2f2;
+  outline-color: transparent;
 }
 
 .menu-toggle i {
@@ -8127,7 +8138,7 @@ a:active {
 --------------------------------------------------------------*/
 
 .widget {
-  margin: 0.5em 0 1em 0;
+  margin: 1.5em 0 1em 0;
   /* Make sure select elements fit in widgets. */
 }
 
@@ -8143,62 +8154,84 @@ a:active {
   margin-bottom: 1em;
 }
 
-.widget form {
-  background-color: #BF1E2E;
+.widget .textwidget form {
+  background-color: #BFBFBF;
   padding: 0.5em;
 }
 
-.widget form .cb_contact_field label {
-  color: #ffffff;
+.widget .textwidget form p {
+  margin-bottom: 0;
+}
+
+.widget .textwidget form label {
+  color: #BF1E2E;
+}
+
+.widget .textwidget form label small {
+  color: #BF1E2E;
   padding: 0;
 }
 
-.widget form .cb_contact_field input {
+.widget .textwidget form input {
   border-radius: 0px;
   color: #283891;
 }
 
-.widget form .cb_contact_field input[type="text"] {
+.widget .textwidget form input[type="text"] {
   margin: 0;
 }
 
-.widget form .cb_contact_field .is-invalid-input:not(:focus) {
-  background-color: #f0a0a8;
+.widget .textwidget form input[type="file"] {
+  width: 100%;
+  color: #BF1E2E;
 }
 
-.widget form .cb_contact_field textarea {
+.widget .textwidget form .is-invalid-input:not(:focus) {
+  background-color: #f5dbde;
+}
+
+.widget .textwidget form textarea {
   border-radius: 0px;
 }
 
-.widget form .cb_contact_field small {
+.widget .textwidget form small {
   color: #ffffff;
   font-style: italic;
 }
 
-.widget form input[type="submit"] {
+.widget .textwidget form input[type="submit"] {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 0;
+  color: #ffffff;
   font-size: 16px;
   font-size: 1rem;
   padding: 0.5em 1em 0.4em 1em;
   width: 100%;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
-  background-color: #510d13;
-  margin: 1em 0 0.5em 0;
+  background-color: #BF1E2E;
+  margin: 0;
+  border: 2px solid #ffffff;
 }
 
-.widget form input[type="submit"]:hover {
-  background: rgba(255, 255, 255, 0.5);
+.widget .textwidget form input[type="submit"]:hover {
+  background: #510d13;
   border-color: transparent;
   border: 2px solid #f2f2f2;
 }
 
-.widget form input[type="submit"]:active,
-.widget form input[type="submit"]:focus {
-  background: rgba(255, 255, 255, 0.5);
+.widget .textwidget form input[type="submit"]:active,
+.widget .textwidget form input[type="submit"]:focus {
+  background: #510d13;
   border-color: transparent;
   border: 2px solid #f2f2f2;
+}
+
+.widget .textwidget form div:last-child {
+  border: 0;
+  background-color: #f2f2f2;
+  margin: 0.5em 0;
+  color: #BF1E2E;
 }
 
 .widget .menu {
@@ -8270,12 +8303,26 @@ a:active {
   box-shadow: 0 4px 0 0 #7f7f7f;
   width: 100%;
   z-index: 9000;
+  min-height: 50px;
 }
 
 .site-header .logo {
-  width: 80px;
-  height: auto;
+  position: relative;
   display: block;
+  min-height: 20px;
+  width: 80px;
+}
+
+.no-js .top-bar {
+  display: none;
+}
+
+.no-js .top-bar .main-navigation {
+  display: none;
+}
+
+.sticky {
+  position: relative;
 }
 
 .site-branding {
@@ -8458,54 +8505,54 @@ a:active {
   color: #0c112d;
 }
 
-.contact-section {
+.page-template-page-landing .tag-contact {
   background: url("images/Contact-Us-Image.jpg") 0 0 no-repeat fixed;
   background-size: cover;
 }
 
-.contact-section header {
+.page-template-page-landing .tag-contact header {
   background-color: rgba(191, 30, 46, 0.8);
 }
 
-.contact-section h2 {
+.page-template-page-landing .tag-contact h2 {
   margin: 0.5em 0;
   color: #ffffff;
 }
 
-.contact-section .contact-form {
+.page-template-page-landing .tag-contact .contact-form {
   padding: 2em 0;
   color: #ffffff;
 }
 
-.contact-section .contact-form input {
+.page-template-page-landing .tag-contact .contact-form input {
   background-color: rgba(191, 30, 46, 0.8);
   color: #ffffff;
 }
 
-.contact-section .contact-form input::-webkit-input-placeholder {
+.page-template-page-landing .tag-contact .contact-form input::-webkit-input-placeholder {
   padding: 0.5em;
 }
 
-.contact-section .contact-form input:-ms-input-placeholder {
+.page-template-page-landing .tag-contact .contact-form input:-ms-input-placeholder {
   padding: 0.5em;
 }
 
-.contact-section .contact-form input::placeholder {
+.page-template-page-landing .tag-contact .contact-form input::placeholder {
   padding: 0.5em;
 }
 
-.contact-section .contact-form label {
+.page-template-page-landing .tag-contact .contact-form label {
   color: #ffffff;
 }
 
-.contact-section .contact-form textarea {
+.page-template-page-landing .tag-contact .contact-form textarea {
   min-height: 200px;
   width: 100%;
   background: rgba(255, 255, 255, 0.8);
   padding: 0.25em;
 }
 
-.contact-section .contact-form .input[type="button"] {
+.page-template-page-landing .tag-contact .contact-form .input[type="button"] {
   background-color: rgba(191, 30, 46, 0.8);
   margin: 0.5em 0;
 }
@@ -8550,7 +8597,7 @@ a:active {
 }
 
 .callout {
-  background: #df3143;
+  background: #D97882;
   padding: 0.5em 0;
   border: 1px solid #ffffff;
   margin-top: 0.5em;
@@ -8587,7 +8634,7 @@ a:active {
 }
 
 .contact-wrapper .is-invalid-input:not(:focus) {
-  background-color: #f0a0a8;
+  background-color: #f5dbde;
 }
 
 .contact-wrapper textarea {
@@ -8599,7 +8646,7 @@ a:active {
   font-style: italic;
 }
 
-.contact-wrapper input[type="button"] {
+.contact-wrapper input[type="submit"] {
   background: #BF1E2E;
   color: #ffffff;
   border-radius: 0;
@@ -8609,18 +8656,18 @@ a:active {
   border: 2px solid #ffffff;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
-  width: 100%;
-  margin: 1em 0 0.5em 0;
+  width: auto;
+  margin: 0.25em 0;
 }
 
-.contact-wrapper input[type="button"]:hover {
+.contact-wrapper input[type="submit"]:hover {
   background: #510d13;
   border-color: transparent;
   border: 2px solid #f2f2f2;
 }
 
-.contact-wrapper input[type="button"]:active,
-.contact-wrapper input[type="button"]:focus {
+.contact-wrapper input[type="submit"]:active,
+.contact-wrapper input[type="submit"]:focus {
   background: #510d13;
   border-color: transparent;
   border: 2px solid #f2f2f2;
@@ -8706,7 +8753,27 @@ a:active {
   line-height: 1em;
 }
 
+.client-list li > a img {
+  max-width: 100px;
+}
+
+.partner-list li > a img {
+  max-width: 200px;
+}
+
+#e-commerce .clear-button,
+#e-commerce .search .page-content input[type="submit"],
+.search .page-content #e-commerce input[type="submit"],
+#e-commerce .archive .page-content input[type="submit"],
+.archive .page-content #e-commerce input[type="submit"] {
+  background-color: #283891;
+}
+
 /*-- Universal Styles ---*/
+
+.breadcrumbs {
+  margin: 0.5rem 0;
+}
 
 .hentry {
   margin: 0 0 1.5em;
@@ -8753,7 +8820,7 @@ a:active {
   width: 100%;
   height: 60px;
   display: inline-table;
-  background-color: #BF1E2E;
+  background-color: #510d13;
 }
 
 .contact-footer .contact-left h2 {
@@ -8771,7 +8838,7 @@ a:active {
   display: inline-table;
   position: relative;
   height: 60px;
-  background-color: #df3143;
+  background-color: #BF1E2E;
   padding: 15px 0;
 }
 
@@ -8823,8 +8890,12 @@ a:active {
   content: '\f199';
 }
 
+.site-footer .widget ul .blog > a:before {
+  content: '\f02d';
+}
+
 .site-footer .widget ul li {
-  display: inline;
+  display: block;
   font-family: "Lato", Verdana, sans-serif;
   text-align: center;
   -webkit-transition: all 0.25e ease-in;
@@ -8834,8 +8905,9 @@ a:active {
 .site-footer .widget ul li a {
   color: #ffffff;
   width: 150px;
-  padding: 0.25em 0;
-  line-height: 1em;
+  padding: 0.5em 0;
+  display: block;
+  line-height: 1;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -8881,7 +8953,7 @@ a:active {
 --------------------------------------------------------------*/
 
 .widget {
-  margin: 0.5em 0 1em 0;
+  margin: 1.5em 0 1em 0;
   /* Make sure select elements fit in widgets. */
 }
 
@@ -8897,62 +8969,84 @@ a:active {
   margin-bottom: 1em;
 }
 
-.widget form {
-  background-color: #BF1E2E;
+.widget .textwidget form {
+  background-color: #BFBFBF;
   padding: 0.5em;
 }
 
-.widget form .cb_contact_field label {
-  color: #ffffff;
+.widget .textwidget form p {
+  margin-bottom: 0;
+}
+
+.widget .textwidget form label {
+  color: #BF1E2E;
+}
+
+.widget .textwidget form label small {
+  color: #BF1E2E;
   padding: 0;
 }
 
-.widget form .cb_contact_field input {
+.widget .textwidget form input {
   border-radius: 0px;
   color: #283891;
 }
 
-.widget form .cb_contact_field input[type="text"] {
+.widget .textwidget form input[type="text"] {
   margin: 0;
 }
 
-.widget form .cb_contact_field .is-invalid-input:not(:focus) {
-  background-color: #f0a0a8;
+.widget .textwidget form input[type="file"] {
+  width: 100%;
+  color: #BF1E2E;
 }
 
-.widget form .cb_contact_field textarea {
+.widget .textwidget form .is-invalid-input:not(:focus) {
+  background-color: #f5dbde;
+}
+
+.widget .textwidget form textarea {
   border-radius: 0px;
 }
 
-.widget form .cb_contact_field small {
+.widget .textwidget form small {
   color: #ffffff;
   font-style: italic;
 }
 
-.widget form input[type="submit"] {
+.widget .textwidget form input[type="submit"] {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 0;
+  color: #ffffff;
   font-size: 16px;
   font-size: 1rem;
   padding: 0.5em 1em 0.4em 1em;
   width: 100%;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
-  background-color: #510d13;
-  margin: 1em 0 0.5em 0;
+  background-color: #BF1E2E;
+  margin: 0;
+  border: 2px solid #ffffff;
 }
 
-.widget form input[type="submit"]:hover {
-  background: rgba(255, 255, 255, 0.5);
+.widget .textwidget form input[type="submit"]:hover {
+  background: #510d13;
   border-color: transparent;
   border: 2px solid #f2f2f2;
 }
 
-.widget form input[type="submit"]:active,
-.widget form input[type="submit"]:focus {
-  background: rgba(255, 255, 255, 0.5);
+.widget .textwidget form input[type="submit"]:active,
+.widget .textwidget form input[type="submit"]:focus {
+  background: #510d13;
   border-color: transparent;
   border: 2px solid #f2f2f2;
+}
+
+.widget .textwidget form div:last-child {
+  border: 0;
+  background-color: #f2f2f2;
+  margin: 0.5em 0;
+  color: #BF1E2E;
 }
 
 .widget .menu {
@@ -9161,11 +9255,15 @@ object {
     display: none;
   }
 
+  .breadcrumbs {
+    margin: 1rem 0;
+  }
+
   .contact-footer .contact-left {
     width: 50%;
     height: 60px;
     display: inline-table;
-    background-color: #BF1E2E;
+    background-color: #510d13;
     float: left;
   }
 
@@ -9185,7 +9283,7 @@ object {
     display: inline-table;
     position: relative;
     height: 60px;
-    background-color: #df3143;
+    background-color: #BF1E2E;
     padding: 15px 0;
   }
 
@@ -9213,7 +9311,7 @@ object {
     height: 0;
     border-style: solid;
     border-width: 32px 0 32px 48.5px;
-    border-color: transparent transparent transparent #BF1E2E;
+    border-color: transparent transparent transparent #510d13;
   }
 
   .site-footer .widget ul li a {
@@ -9820,6 +9918,16 @@ object {
   }
 }
 
+@media screen and (min-width: 40em) {
+  .no-js .top-bar {
+    display: block;
+  }
+
+  .no-js .title-bar {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 49em) {
   .top-bar {
     background: #f2f2f2;
@@ -9884,7 +9992,7 @@ object {
   .main-navigation li ul li a:hover,
   .main-navigation li ul li a:focus,
   .main-navigation li ul li a:active {
-    color: #df3143;
+    color: #D97882;
   }
 
   .main-navigation .current_page_item > a,
@@ -9942,7 +10050,7 @@ object {
   }
 
   .is-stuck .main-nav-menu {
-    padding: 9px 0;
+    padding: 1em 0;
   }
 
   .is-stuck .sub-nav-menu {
@@ -10024,11 +10132,23 @@ object {
     display: none;
   }
 
+  .site-header {
+    min-height: 80px;
+  }
+
   .site-header .logo {
-    width: 150px;
-    height: auto;
-    display: block;
-    padding: 0.5em;
+    min-height: 45px;
+    width: 134px;
+    overflow: hidden;
+    padding-bottom: 30%;
+  }
+
+  .site-header .logo a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 

@@ -3,11 +3,34 @@
 	box-shadow: 0 4px 0 0 $dark-grey;
 	width: 100%;
 	z-index: 9000;
+	min-height: 50px;
 	.logo{
-		width: 80px;
-		height: auto;
+		position: relative;
 		display: block;
+		min-height: 20px;
+		width: 80px;
 	}
+}
+
+.no-js .top-bar {
+  display: none;
+  .main-navigation{
+  	display: none;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .no-js .top-bar {
+    display: block;
+  }
+
+  .no-js .title-bar {
+    display: none;
+  }
+}
+
+.sticky{
+	position: relative;
 }
 
 .site-branding{
@@ -16,11 +39,19 @@
 
 @media screen and (min-width: 49em) {
 	.site-header{
+		min-height: 80px;
 		.logo{
-			width: 150px;
-			height: auto;
-			display: block;
-			padding: 0.5em;
+			min-height: 45px;
+			width: 134px;
+			overflow: hidden;
+			padding-bottom: 30%;
+			a img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
 		}
 	}
 }

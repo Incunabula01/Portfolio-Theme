@@ -1,5 +1,5 @@
 .widget {
-	margin: 0.5em 0 1em 0;
+	margin: 1.5em 0 1em 0;
 	.widget-title{
 		font-size: 2em;
 	}
@@ -10,55 +10,74 @@
 	p{
 		margin-bottom: 1em;
 	}
-	form{
-		background-color: $red;
-		padding: 0.5em;
-		.cb_contact_field{
-			
-			label{
-				color: $white;
-				padding: 0;
+	.textwidget{
+		form{
+			background-color: $grey;
+			padding: 0.5em;
+			p{
+				margin-bottom: 0;
 			}
-			input{
-				border-radius: 0px;
-				color: $blue;
-			}
-			input[type="text"]{
-				margin: 0;
-			}
-			.is-invalid-input:not(:focus){
-				background-color: lighten($light-red, 25%);
-			}
-			textarea{
-				border-radius: 0px;
-			}
-			small{
-				color: $white;
-				font-style: italic;
-			}
-		}
-		input[type="submit"]{
+				label{
+					color: $red;
+					small{
+						color: $red;
+						padding: 0;
+					}
+				} 
+				input{
+					border-radius: 0px;
+					color: $blue;
+				}
+				input[type="text"]{
+					margin: 0;
+				}
+				input[type="file"]{
+					width: 100%;
+					color: $red;
+				}
+				.is-invalid-input:not(:focus){
+					background-color: lighten($light-red, 25%);
+				}
+				textarea{
+					border-radius: 0px;
+				}
+				small{
+					color: $white;
+					font-style: italic;
+				}
+			input[type="submit"]{
 				background: rgba(255,255,255, 0.2);
 				border-radius: 0;
+				color: $white;
 				@include font-size(1);
 				padding: 0.5em 1em 0.4em 1em;
 				width: 100%;
 				transition: all 0.25s ease-in;
+				background-color: $red;
+				margin: 0;
+				border: 2px solid $white;
 				&:hover {
-					background: rgba(255,255,255, 0.5);
+					background: $dark-red;
 					border-color: transparent;
 					border: 2px solid $light-grey;
 				}
 				&:active,
 				&:focus {
-					background: rgba(255,255,255, 0.5);
+					background: $dark-red;
 					border-color: transparent;
 					border: 2px solid $light-grey;
 				}
-				background-color: $dark-red;
-				margin: 1em 0 0.5em 0;
+			}
+			div:last-child{
+				border: 0;
+				background-color: $light-grey;
+				margin: 0.5em 0;
+				color: $red;
+			}
+			
 		}
 	}
+	
 	.menu{
 		display: inline;
 		.facebook > a:before{

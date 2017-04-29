@@ -115,44 +115,47 @@
 			}
 		}
 	}
-}
-
-
-.contact-section{
-	background: url('images/Contact-Us-Image.jpg') 0 0 no-repeat fixed;
-	background-size: cover;
-	header{
-		background-color: rgba(191, 30, 46, 0.8);
-	}
-	h2{
-		margin: 0.5em 0;
-		color: $white;
-	}
-	.contact-form{
-		padding: 2em 0;
-		color: $white;
-		input{
+	.tag-contact{
+		background: url('images/Contact-Us-Image.jpg') 0 0 no-repeat fixed;
+		background-size: cover;
+		header{
 			background-color: rgba(191, 30, 46, 0.8);
-			color: $white;
 		}
-		input::placeholder{
-				padding: 0.5em;
-		}
-		label{
-			color: $white;
-		}
-		textarea{
-			min-height: 200px;
-			width: 100%;
-			background: rgba(255,255,255, 0.8);
-			padding: 0.25em;
-		}
-		.input[type="button"]{
-			background-color: rgba(191, 30, 46, 0.8);
+		h2{
 			margin: 0.5em 0;
+			color: $white;
+		}
+		.contact-form{
+			padding: 2em 0;
+			color: $white;
+			input{
+				background-color: rgba(191, 30, 46, 0.8);
+				color: $white;
+			}
+			input::placeholder{
+					padding: 0.5em;
+			}
+			label{
+				color: $white;
+			}
+			textarea{
+				min-height: 200px;
+				width: 100%;
+				background: rgba(255,255,255, 0.8);
+				padding: 0.25em;
+			}
+			.input[type="button"]{
+				background-color: rgba(191, 30, 46, 0.8);
+				margin: 0.5em 0;
+			}
 		}
 	}
 }
+
+
+
+
+
 /*-- Page Styles ---*/
 .page-header{
 	min-height: 200px;
@@ -228,7 +231,7 @@
 		color: $white;
 		font-style: italic;
 	}
-	input[type="button"]{
+	input[type="submit"]{
 		background: $red;
 		color: $white;
 		border-radius: 0;
@@ -236,8 +239,8 @@
 		padding: 0.5em 1em 0.4em 1em;
 		border: 2px solid $white;
 		transition: all 0.25s ease-in;
-		width: 100%;
-		margin: 1em 0 0.5em 0;
+		width: auto;
+		margin: 0.25em 0;
 		&:hover {
 			background: $dark-red;
 			border-color: transparent;
@@ -314,6 +317,19 @@
 		line-height: 1em;
 	}
 }
+
+.client-list li > a img{
+	max-width: 100px;
+}
+
+.partner-list li > a img{
+	max-width: 200px;
+}
+
+#e-commerce .clear-button{
+	background-color: #283891;
+}
+
 @media screen and (min-width: 39.9375em) {
 	.landing{
 		background-size: 100%;
@@ -337,9 +353,15 @@
 			display: none;
 		}
 	}
+	.breadcrumbs{
+		margin: 1rem 0;
+	}
 }
 /*-- Universal Styles ---*/
 
+.breadcrumbs{
+	margin: 0.5rem 0;
+}
 .hentry {
 	margin: 0 0 1.5em;
 }

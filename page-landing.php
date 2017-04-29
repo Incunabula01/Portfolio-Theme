@@ -57,22 +57,6 @@ get_header(); ?>
 
 					endwhile; ?>
 			
-				<section class="contact-section">
-					<header>
-						<div class="row">
-							<div class="columns small-12">
-								<h2>Contact Us</h2>
-							</div>
-						</div>
-					</header>
-					<div class="contact-form">
-						<div class="row columns">
-							<div class="small-12 medium-8 medium-offset-2">
-								<?php echo do_shortcode("[ninja_form id=2]") ?>
-							</div>
-						</div>
-					</div>
-				</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

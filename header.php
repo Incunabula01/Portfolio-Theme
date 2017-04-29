@@ -10,7 +10,7 @@
  */
 
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="no-js" dir="ltr">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,18 +26,15 @@
 		<header id="masthead" class="site-header sticky" role="banner"  data-sticky data-margin-top="0" data-options="stickyOn:small;">
 			<div class="top-bar" data-topbar>
 				<div class="top-bar-left">
-					<div class="site-branding">
-						<a href="/">
-							<span class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Dnet"></span>
-						</a>
-					</div><!-- .site-branding -->
-					<div class="title-bar" data-responsive-toggle="primary-menu" data-hide-for="large">
+					<div class="title-bar">
 						<div class="title-bar-title">
 							<a href="/">
-								<span class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Dnet"></span>
+								<div class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Dnet"></div>
 							</a>
 						</div>
-						<button class="menu-toggle" type="button" data-toggle="primary-menu"><i class="fa fa-navicon"></i></button>
+						<div data-responsive-toggle="primary-menu" data-hide-for="large">
+							<button class="menu-toggle" type="button" data-toggle="primary-menu"><i class="fa fa-navicon"></i></button>
+						</div>
 					</div>
 				</div>
 				<div class="top-bar-right">

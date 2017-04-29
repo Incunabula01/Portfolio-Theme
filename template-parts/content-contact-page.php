@@ -19,11 +19,7 @@
 		<?php
 			the_content();
 		?>
-		<div class="contact-wrapper">
-			
-			<?php echo do_shortcode("[ninja_form id=1]") ?>
-			
-		</div>
+		
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
