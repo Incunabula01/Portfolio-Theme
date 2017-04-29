@@ -144,9 +144,12 @@
 				background: rgba(255,255,255, 0.8);
 				padding: 0.25em;
 			}
-			.input[type="button"]{
+			input[type="submit"]{
 				background-color: rgba(191, 30, 46, 0.8);
 				margin: 0.5em 0;
+				border: 2px solid $white;
+				padding: 0.5em 1em 0.5em 1em;
+				width: 100%;
 			}
 		}
 	}

@@ -7846,7 +7846,7 @@ a:active {
 .main-navigation ul ul a {
   width: 100%;
   text-align: center;
-  background: #172155;
+  background: #3347b9;
 }
 
 .main-navigation ul li:hover > ul,
@@ -7863,7 +7863,7 @@ a:active {
 
 .main-navigation li:hover > a,
 .main-navigation li:focus > a {
-  color: #BF1E2E;
+  color: #df3143;
 }
 
 .main-navigation a {
@@ -8552,9 +8552,12 @@ a:active {
   padding: 0.25em;
 }
 
-.page-template-page-landing .tag-contact .contact-form .input[type="button"] {
+.page-template-page-landing .tag-contact .contact-form input[type="submit"] {
   background-color: rgba(191, 30, 46, 0.8);
   margin: 0.5em 0;
+  border: 2px solid #ffffff;
+  padding: 0.5em 1em 0.5em 1em;
+  width: 100%;
 }
 
 /*-- Page Styles ---*/
@@ -9971,7 +9974,7 @@ object {
   }
 
   .main-navigation li ul {
-    background-color: #b4bcea;
+    background-color: #7887da;
     display: none;
   }
 
@@ -9992,7 +9995,7 @@ object {
   .main-navigation li ul li a:hover,
   .main-navigation li ul li a:focus,
   .main-navigation li ul li a:active {
-    color: #D97882;
+    color: #e13f4f;
   }
 
   .main-navigation .current_page_item > a,

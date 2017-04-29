@@ -34,7 +34,7 @@
 			a {
 				width: 100%;
 				text-align: center;
-				background: darken($mid-blue, 25%);
+				background: $mid-blue;
 			}
 
 			:hover > a,
@@ -59,7 +59,7 @@
 		border-bottom: 1px solid $white;
 		&:hover > a,
 		&:focus > a {
-			color: $red;
+			color: lighten($red, 10%);
 		}
 	}
 	
@@ -201,7 +201,7 @@
 				color: $blue;
 			}
 			ul{
-				background-color: lighten($light-blue, 25%);
+				background-color: lighten($light-blue, 10%);
 				display: none;
 				li{
 					border-bottom: 1px solid $white;
@@ -215,7 +215,7 @@
 						&:hover,
 						&:focus,
 						&:active{
-							color: $light-red;
+							color: lighten($red, 13%);
 						}
 					}
 				}
