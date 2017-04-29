@@ -26,10 +26,9 @@ get_header(); ?>
 						<div class="columns small-12 medium-8">
 							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'dnet-theme-2017' ); ?></p>
 
-							<?php
-								get_search_form();
-
-								the_widget( 'WP_Widget_Recent_Posts' );
+							<?php get_search_form(); ?>
+							<hr>
+							<?php the_widget( 'WP_Widget_Recent_Posts' );
 
 								// Only show the widget if site has multiple categories.
 								if ( dnet_theme_2017_categorized_blog() ) :
@@ -47,22 +46,11 @@ get_header(); ?>
 										'title_li'   => '',
 										'number'     => 10,
 									) );
+
+									endif;
 								?>
 								</ul>
 							</div><!-- .widget -->
-						</div>
-					</div>
-					<div class="row">
-						<div class="columns small-12">
-							<?php
-								endif;
-
-								/* translators: %1$s: smiley */
-								$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'dnet-theme-2017' ), convert_smilies( ':)' ) ) . '</p>';
-								the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-								the_widget( 'WP_Widget_Tag_Cloud' );
-							?>
 						</div>
 					</div>
 				</div><!-- .page-content -->

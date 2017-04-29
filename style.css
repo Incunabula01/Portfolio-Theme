@@ -3238,6 +3238,7 @@ input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
 .archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"],
 input,
 optgroup,
 select,
@@ -3252,7 +3253,8 @@ button,
 input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
-.archive .page-content input[type="submit"] {
+.archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"] {
   overflow: visible;
 }
 
@@ -3261,6 +3263,7 @@ input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
 .archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"],
 select {
   text-transform: none;
 }
@@ -3272,6 +3275,7 @@ input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
 .archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"],
 html [type=button] {
   -webkit-appearance: button;
 }
@@ -3283,7 +3287,8 @@ button::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
 .clear-button::-moz-focus-inner,
 .search .page-content input[type="submit"]::-moz-focus-inner,
-.archive .page-content input[type="submit"]::-moz-focus-inner {
+.archive .page-content input[type="submit"]::-moz-focus-inner,
+.error404 .page-content input[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -3295,7 +3300,8 @@ button:-moz-focusring,
 input[type="button"]:-moz-focusring,
 .clear-button:-moz-focusring,
 .search .page-content input[type="submit"]:-moz-focusring,
-.archive .page-content input[type="submit"]:-moz-focusring {
+.archive .page-content input[type="submit"]:-moz-focusring,
+.error404 .page-content input[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -3437,7 +3443,8 @@ button,
 input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
-.archive .page-content input[type="submit"] {
+.archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"] {
   padding: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3454,7 +3461,9 @@ input[type="button"],
 [data-whatinput=mouse] .search .page-content input[type="submit"],
 .search .page-content [data-whatinput=mouse] input[type="submit"],
 [data-whatinput=mouse] .archive .page-content input[type="submit"],
-.archive .page-content [data-whatinput=mouse] input[type="submit"] {
+.archive .page-content [data-whatinput=mouse] input[type="submit"],
+[data-whatinput=mouse] .error404 .page-content input[type="submit"],
+.error404 .page-content [data-whatinput=mouse] input[type="submit"] {
   outline: 0;
 }
 
@@ -3928,6 +3937,8 @@ label.middle {
 .search .page-content .input-group-button input[type="submit"],
 .input-group-button .archive .page-content input[type="submit"],
 .archive .page-content .input-group-button input[type="submit"],
+.input-group-button .error404 .page-content input[type="submit"],
+.error404 .page-content .input-group-button input[type="submit"],
 .input-group-button input,
 .input-group-button label,
 .input-group-field,
@@ -3978,6 +3989,8 @@ label.middle {
 .search .page-content .input-group-button input[type="submit"],
 .input-group-button .archive .page-content input[type="submit"],
 .archive .page-content .input-group-button input[type="submit"],
+.input-group-button .error404 .page-content input[type="submit"],
+.error404 .page-content .input-group-button input[type="submit"],
 .input-group-button input,
 .input-group-button label {
   height: 2.5rem;
@@ -4790,6 +4803,8 @@ select[multiple] {
 .search .page-content .menu input[type="submit"],
 .menu .archive .page-content input[type="submit"],
 .archive .page-content .menu input[type="submit"],
+.menu .error404 .page-content input[type="submit"],
+.error404 .page-content .menu input[type="submit"],
 .menu input,
 .menu select {
   margin-bottom: 0;
@@ -5733,7 +5748,9 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 .orbit-bullets .search .page-content input[type="submit"],
 .search .page-content .orbit-bullets input[type="submit"],
 .orbit-bullets .archive .page-content input[type="submit"],
-.archive .page-content .orbit-bullets input[type="submit"] {
+.archive .page-content .orbit-bullets input[type="submit"],
+.orbit-bullets .error404 .page-content input[type="submit"],
+.error404 .page-content .orbit-bullets input[type="submit"] {
   width: 1.2rem;
   height: 1.2rem;
   margin: .1rem;
@@ -5748,13 +5765,17 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 .search .page-content .orbit-bullets input.is-active[type="submit"],
 .orbit-bullets .archive .page-content input.is-active[type="submit"],
 .archive .page-content .orbit-bullets input.is-active[type="submit"],
+.orbit-bullets .error404 .page-content input.is-active[type="submit"],
+.error404 .page-content .orbit-bullets input.is-active[type="submit"],
 .orbit-bullets button:hover,
 .orbit-bullets input[type="button"]:hover,
 .orbit-bullets .clear-button:hover,
 .orbit-bullets .search .page-content input[type="submit"]:hover,
 .search .page-content .orbit-bullets input[type="submit"]:hover,
 .orbit-bullets .archive .page-content input[type="submit"]:hover,
-.archive .page-content .orbit-bullets input[type="submit"]:hover {
+.archive .page-content .orbit-bullets input[type="submit"]:hover,
+.orbit-bullets .error404 .page-content input[type="submit"]:hover,
+.error404 .page-content .orbit-bullets input[type="submit"]:hover {
   background-color: #8a8a8a;
 }
 
@@ -7334,6 +7355,7 @@ input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
 .archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"],
 input,
 optgroup,
 select,
@@ -7347,7 +7369,8 @@ button,
 input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
-.archive .page-content input[type="submit"] {
+.archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"] {
   overflow: visible;
 }
 
@@ -7356,6 +7379,7 @@ input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
 .archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"],
 select {
   text-transform: none;
 }
@@ -7365,6 +7389,7 @@ input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
 .archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"],
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -7377,6 +7402,7 @@ input[disabled][type="button"],
 [disabled].clear-button,
 .search .page-content input[disabled][type="submit"],
 .archive .page-content input[disabled][type="submit"],
+.error404 .page-content input[disabled][type="submit"],
 html input[disabled] {
   cursor: default;
 }
@@ -7386,6 +7412,7 @@ input[type="button"]::-moz-focus-inner,
 .clear-button::-moz-focus-inner,
 .search .page-content input[type="submit"]::-moz-focus-inner,
 .archive .page-content input[type="submit"]::-moz-focus-inner,
+.error404 .page-content input[type="submit"]::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -7450,6 +7477,7 @@ input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
 .archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"],
 input,
 select,
 textarea {
@@ -7642,6 +7670,7 @@ input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
 .archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"],
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -7661,6 +7690,7 @@ input[type="button"]:hover,
 .clear-button:hover,
 .search .page-content input[type="submit"]:hover,
 .archive .page-content input[type="submit"]:hover,
+.error404 .page-content input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
@@ -7672,11 +7702,13 @@ input[type="button"]:active,
 .clear-button:active,
 .search .page-content input[type="submit"]:active,
 .archive .page-content input[type="submit"]:active,
+.error404 .page-content input[type="submit"]:active,
 button:focus,
 input[type="button"]:focus,
 .clear-button:focus,
 .search .page-content input[type="submit"]:focus,
 .archive .page-content input[type="submit"]:focus,
+.error404 .page-content input[type="submit"]:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -7689,7 +7721,8 @@ input[type="submit"]:focus {
 input[type="button"],
 .clear-button,
 .search .page-content input[type="submit"],
-.archive .page-content input[type="submit"] {
+.archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"] {
   background: #BF1E2E;
   border-radius: 0;
   font-size: 16px;
@@ -7703,7 +7736,8 @@ input[type="button"],
 input[type="button"]:hover,
 .clear-button:hover,
 .search .page-content input[type="submit"]:hover,
-.archive .page-content input[type="submit"]:hover {
+.archive .page-content input[type="submit"]:hover,
+.error404 .page-content input[type="submit"]:hover {
   background: #510d13;
   border-color: transparent;
   border: 2px solid #f2f2f2;
@@ -7714,9 +7748,11 @@ input[type="button"]:focus,
 .clear-button:active,
 .search .page-content input[type="submit"]:active,
 .archive .page-content input[type="submit"]:active,
+.error404 .page-content input[type="submit"]:active,
 .clear-button:focus,
 .search .page-content input[type="submit"]:focus,
-.archive .page-content input[type="submit"]:focus {
+.archive .page-content input[type="submit"]:focus,
+.error404 .page-content input[type="submit"]:focus {
   background: #510d13;
   border-color: transparent;
   border: 2px solid #f2f2f2;
@@ -8372,7 +8408,9 @@ a:active {
 .landing .landing-caption .search .page-content input[type="submit"],
 .search .page-content .landing .landing-caption input[type="submit"],
 .landing .landing-caption .archive .page-content input[type="submit"],
-.archive .page-content .landing .landing-caption input[type="submit"] {
+.archive .page-content .landing .landing-caption input[type="submit"],
+.landing .landing-caption .error404 .page-content input[type="submit"],
+.error404 .page-content .landing .landing-caption input[type="submit"] {
   width: 100%;
 }
 
@@ -8433,7 +8471,9 @@ a:active {
 .page-template-page-landing .tag-services .search .page-content input[type="submit"],
 .search .page-content .page-template-page-landing .tag-services input[type="submit"],
 .page-template-page-landing .tag-services .archive .page-content input[type="submit"],
-.archive .page-content .page-template-page-landing .tag-services input[type="submit"] {
+.archive .page-content .page-template-page-landing .tag-services input[type="submit"],
+.page-template-page-landing .tag-services .error404 .page-content input[type="submit"],
+.error404 .page-content .page-template-page-landing .tag-services input[type="submit"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -8446,16 +8486,22 @@ a:active {
 .search .page-content .page-template-page-landing .tag-services input[type="submit"]:hover,
 .page-template-page-landing .tag-services .archive .page-content input[type="submit"]:hover,
 .archive .page-content .page-template-page-landing .tag-services input[type="submit"]:hover,
+.page-template-page-landing .tag-services .error404 .page-content input[type="submit"]:hover,
+.error404 .page-content .page-template-page-landing .tag-services input[type="submit"]:hover,
 .page-template-page-landing .tag-services .clear-button.focus,
 .page-template-page-landing .tag-services .search .page-content input.focus[type="submit"],
 .search .page-content .page-template-page-landing .tag-services input.focus[type="submit"],
 .page-template-page-landing .tag-services .archive .page-content input.focus[type="submit"],
 .archive .page-content .page-template-page-landing .tag-services input.focus[type="submit"],
+.page-template-page-landing .tag-services .error404 .page-content input.focus[type="submit"],
+.error404 .page-content .page-template-page-landing .tag-services input.focus[type="submit"],
 .page-template-page-landing .tag-services .clear-button:active,
 .page-template-page-landing .tag-services .search .page-content input[type="submit"]:active,
 .search .page-content .page-template-page-landing .tag-services input[type="submit"]:active,
 .page-template-page-landing .tag-services .archive .page-content input[type="submit"]:active,
-.archive .page-content .page-template-page-landing .tag-services input[type="submit"]:active {
+.archive .page-content .page-template-page-landing .tag-services input[type="submit"]:active,
+.page-template-page-landing .tag-services .error404 .page-content input[type="submit"]:active,
+.error404 .page-content .page-template-page-landing .tag-services input[type="submit"]:active {
   background: rgba(12, 17, 45, 0.6);
   border-color: transparent;
 }
@@ -8681,41 +8727,48 @@ a:active {
 }
 
 .search .page-header,
-.archive .page-header {
+.archive .page-header,
+.error404 .page-header {
   min-height: auto;
   background-color: #283891;
   margin-bottom: 1em;
 }
 
 .search .page-header h1,
-.archive .page-header h1 {
+.archive .page-header h1,
+.error404 .page-header h1 {
   color: #ffffff;
 }
 
 .search .hentry,
-.archive .hentry {
+.archive .hentry,
+.error404 .hentry {
   border-bottom: 1px solid #0c112d;
   padding: 0.5em 0;
 }
 
 .search span,
-.archive span {
+.archive span,
+.error404 span {
   margin: 0.5em;
 }
 
 .search .page-content,
-.archive .page-content {
+.archive .page-content,
+.error404 .page-content {
   margin-bottom: 1em;
 }
 
 .search .page-content input[type="search"],
-.archive .page-content input[type="search"] {
+.archive .page-content input[type="search"],
+.error404 .page-content input[type="search"] {
   width: 75%;
   float: left;
 }
 
 .search .page-content input[type="submit"],
-.archive .page-content input[type="submit"] {
+.archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"] {
   background-color: #510d13;
   width: 25%;
   padding: 0.65em 0;
@@ -8727,7 +8780,10 @@ a:active {
 .search .page-content input[type="submit"]:focus,
 .archive .page-content input[type="submit"]:hover,
 .archive .page-content input[type="submit"]:active,
-.archive .page-content input[type="submit"]:focus {
+.archive .page-content input[type="submit"]:focus,
+.error404 .page-content input[type="submit"]:hover,
+.error404 .page-content input[type="submit"]:active,
+.error404 .page-content input[type="submit"]:focus {
   background-color: black;
 }
 
@@ -8772,7 +8828,9 @@ a:active {
 #e-commerce .search .page-content input[type="submit"],
 .search .page-content #e-commerce input[type="submit"],
 #e-commerce .archive .page-content input[type="submit"],
-.archive .page-content #e-commerce input[type="submit"] {
+.archive .page-content #e-commerce input[type="submit"],
+#e-commerce .error404 .page-content input[type="submit"],
+.error404 .page-content #e-commerce input[type="submit"] {
   background-color: #283891;
 }
 
@@ -8855,7 +8913,9 @@ a:active {
 .contact-footer .contact-right a .search .page-content input[type="submit"],
 .search .page-content .contact-footer .contact-right a input[type="submit"],
 .contact-footer .contact-right a .archive .page-content input[type="submit"],
-.archive .page-content .contact-footer .contact-right a input[type="submit"] {
+.archive .page-content .contact-footer .contact-right a input[type="submit"],
+.contact-footer .contact-right a .error404 .page-content input[type="submit"],
+.error404 .page-content .contact-footer .contact-right a input[type="submit"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -9244,7 +9304,9 @@ object {
   .landing .landing-caption .search .page-content input[type="submit"],
   .search .page-content .landing .landing-caption input[type="submit"],
   .landing .landing-caption .archive .page-content input[type="submit"],
-  .archive .page-content .landing .landing-caption input[type="submit"] {
+  .archive .page-content .landing .landing-caption input[type="submit"],
+  .landing .landing-caption .error404 .page-content input[type="submit"],
+  .error404 .page-content .landing .landing-caption input[type="submit"] {
     width: auto;
   }
 
@@ -9304,7 +9366,9 @@ object {
   .contact-footer .contact-right a .search .page-content input[type="submit"],
   .search .page-content .contact-footer .contact-right a input[type="submit"],
   .contact-footer .contact-right a .archive .page-content input[type="submit"],
-  .archive .page-content .contact-footer .contact-right a input[type="submit"] {
+  .archive .page-content .contact-footer .contact-right a input[type="submit"],
+  .contact-footer .contact-right a .error404 .page-content input[type="submit"],
+  .error404 .page-content .contact-footer .contact-right a input[type="submit"] {
     display: block;
     margin-left: auto;
     margin-right: auto;

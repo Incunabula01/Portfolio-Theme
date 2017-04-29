@@ -23,12 +23,8 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: 404.php:40
+#: 404.php:39
 msgid "Most Used Categories"
-msgstr ""
-
-#: 404.php:61
-msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
 #: comments.php:31
