@@ -22,9 +22,10 @@
 		height: 60px;
 		background-color: $red;
 		padding: 15px 0;
-		a button{
+		a{
 			@include center-block;
 			vertical-align: middle;
+			text-align: center;
 		}
 	}
 	
@@ -118,11 +119,12 @@
 			display: inline-table;
 			position: relative;
 			height: 60px;
-			background-color: $red;
-			padding: 15px 0;
-			a button{
+			a{
 				@include center-block;
 				vertical-align: middle;
+				width: 200px;
+				height: 34px;
+				padding: 0.175em 0.5em;
 			}
 			&:before{
 					content: '';
@@ -134,7 +136,7 @@
 					width: 0;
 					height: 0;
 					border-style: solid;
-					border-width: 32px 0 32px 48.5px;
+					border-width: 33px 0 33px 48.5px;
 					border-color: transparent transparent transparent $dark-red;
 			}
 		}

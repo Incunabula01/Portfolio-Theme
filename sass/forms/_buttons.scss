@@ -21,7 +21,7 @@ input[type="submit"] {
 	}
 }
 
-input[type="button"], .clear-button{
+input[type="button"]{
 	@extend button;
 	background: $red;
 	border-radius: 0;
@@ -39,6 +39,23 @@ input[type="button"], .clear-button{
 	&:focus {
 		background: $dark-red;
 		border-color: transparent;
+		border: 2px solid $light-grey;
+	}
+}
+
+.clear-button{
+	background: rgba(255,255,255, 0.6);
+	color: $white;
+	border-radius: 0;
+	@include font-size(1);
+	padding: 0.5em 1em 0.4em 1em;
+	border: 2px solid $white;
+	transition: all 0.25s ease-in;
+	&:hover,
+	&:active,
+	&:focus {
+		background: rgba(255,255,255, 0.2);
+		color: $light-grey;
 		border: 2px solid $light-grey;
 	}
 }

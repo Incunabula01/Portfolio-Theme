@@ -32,7 +32,7 @@ get_header(); ?>
 									?>
 								<?php endwhile; ?>	
 								<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Services' ) ) );  ?>">
-									<button class="clear-button">Learn More</button>
+									<span class="clear-button">Learn More</span>
 								</a>
 								</div>
 							</div>

@@ -3235,10 +3235,6 @@ svg:not(:root) {
 
 button,
 input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"],
 input,
 optgroup,
 select,
@@ -3250,20 +3246,12 @@ textarea {
 }
 
 button,
-input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"] {
+input[type="button"] {
   overflow: visible;
 }
 
 button,
 input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"],
 select {
   text-transform: none;
 }
@@ -3272,10 +3260,6 @@ select {
 [type=submit],
 button,
 input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"],
 html [type=button] {
   -webkit-appearance: button;
 }
@@ -3284,11 +3268,7 @@ html [type=button] {
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner,
 button::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-.clear-button::-moz-focus-inner,
-.search .page-content input[type="submit"]::-moz-focus-inner,
-.archive .page-content input[type="submit"]::-moz-focus-inner,
-.error404 .page-content input[type="submit"]::-moz-focus-inner {
+input[type="button"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -3297,11 +3277,7 @@ input[type="button"]::-moz-focus-inner,
 [type=reset]:-moz-focusring,
 [type=submit]:-moz-focusring,
 button:-moz-focusring,
-input[type="button"]:-moz-focusring,
-.clear-button:-moz-focusring,
-.search .page-content input[type="submit"]:-moz-focusring,
-.archive .page-content input[type="submit"]:-moz-focusring,
-.error404 .page-content input[type="submit"]:-moz-focusring {
+input[type="button"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -3440,11 +3416,7 @@ select {
 }
 
 button,
-input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"] {
+input[type="button"] {
   padding: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3456,14 +3428,7 @@ input[type="button"],
 }
 
 [data-whatinput=mouse] button,
-[data-whatinput=mouse] input[type="button"],
-[data-whatinput=mouse] .clear-button,
-[data-whatinput=mouse] .search .page-content input[type="submit"],
-.search .page-content [data-whatinput=mouse] input[type="submit"],
-[data-whatinput=mouse] .archive .page-content input[type="submit"],
-.archive .page-content [data-whatinput=mouse] input[type="submit"],
-[data-whatinput=mouse] .error404 .page-content input[type="submit"],
-.error404 .page-content [data-whatinput=mouse] input[type="submit"] {
+[data-whatinput=mouse] input[type="button"] {
   outline: 0;
 }
 
@@ -3932,13 +3897,6 @@ label.middle {
 .input-group-button a,
 .input-group-button button,
 .input-group-button input[type="button"],
-.input-group-button .clear-button,
-.input-group-button .search .page-content input[type="submit"],
-.search .page-content .input-group-button input[type="submit"],
-.input-group-button .archive .page-content input[type="submit"],
-.archive .page-content .input-group-button input[type="submit"],
-.input-group-button .error404 .page-content input[type="submit"],
-.error404 .page-content .input-group-button input[type="submit"],
 .input-group-button input,
 .input-group-button label,
 .input-group-field,
@@ -3984,13 +3942,6 @@ label.middle {
 .input-group-button a,
 .input-group-button button,
 .input-group-button input[type="button"],
-.input-group-button .clear-button,
-.input-group-button .search .page-content input[type="submit"],
-.search .page-content .input-group-button input[type="submit"],
-.input-group-button .archive .page-content input[type="submit"],
-.archive .page-content .input-group-button input[type="submit"],
-.input-group-button .error404 .page-content input[type="submit"],
-.error404 .page-content .input-group-button input[type="submit"],
 .input-group-button input,
 .input-group-button label {
   height: 2.5rem;
@@ -4798,13 +4749,6 @@ select[multiple] {
 .menu a,
 .menu button,
 .menu input[type="button"],
-.menu .clear-button,
-.menu .search .page-content input[type="submit"],
-.search .page-content .menu input[type="submit"],
-.menu .archive .page-content input[type="submit"],
-.archive .page-content .menu input[type="submit"],
-.menu .error404 .page-content input[type="submit"],
-.error404 .page-content .menu input[type="submit"],
 .menu input,
 .menu select {
   margin-bottom: 0;
@@ -5743,14 +5687,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 }
 
 .orbit-bullets button,
-.orbit-bullets input[type="button"],
-.orbit-bullets .clear-button,
-.orbit-bullets .search .page-content input[type="submit"],
-.search .page-content .orbit-bullets input[type="submit"],
-.orbit-bullets .archive .page-content input[type="submit"],
-.archive .page-content .orbit-bullets input[type="submit"],
-.orbit-bullets .error404 .page-content input[type="submit"],
-.error404 .page-content .orbit-bullets input[type="submit"] {
+.orbit-bullets input[type="button"] {
   width: 1.2rem;
   height: 1.2rem;
   margin: .1rem;
@@ -5760,22 +5697,8 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 
 .orbit-bullets button.is-active,
 .orbit-bullets input.is-active[type="button"],
-.orbit-bullets .is-active.clear-button,
-.orbit-bullets .search .page-content input.is-active[type="submit"],
-.search .page-content .orbit-bullets input.is-active[type="submit"],
-.orbit-bullets .archive .page-content input.is-active[type="submit"],
-.archive .page-content .orbit-bullets input.is-active[type="submit"],
-.orbit-bullets .error404 .page-content input.is-active[type="submit"],
-.error404 .page-content .orbit-bullets input.is-active[type="submit"],
 .orbit-bullets button:hover,
-.orbit-bullets input[type="button"]:hover,
-.orbit-bullets .clear-button:hover,
-.orbit-bullets .search .page-content input[type="submit"]:hover,
-.search .page-content .orbit-bullets input[type="submit"]:hover,
-.orbit-bullets .archive .page-content input[type="submit"]:hover,
-.archive .page-content .orbit-bullets input[type="submit"]:hover,
-.orbit-bullets .error404 .page-content input[type="submit"]:hover,
-.error404 .page-content .orbit-bullets input[type="submit"]:hover {
+.orbit-bullets input[type="button"]:hover {
   background-color: #8a8a8a;
 }
 
@@ -7352,10 +7275,6 @@ samp {
 
 button,
 input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"],
 input,
 optgroup,
 select,
@@ -7366,30 +7285,18 @@ textarea {
 }
 
 button,
-input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"] {
+input[type="button"] {
   overflow: visible;
 }
 
 button,
 input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"],
 select {
   text-transform: none;
 }
 
 button,
 input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"],
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -7399,20 +7306,12 @@ input[type="submit"] {
 
 button[disabled],
 input[disabled][type="button"],
-[disabled].clear-button,
-.search .page-content input[disabled][type="submit"],
-.archive .page-content input[disabled][type="submit"],
-.error404 .page-content input[disabled][type="submit"],
 html input[disabled] {
   cursor: default;
 }
 
 button::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
-.clear-button::-moz-focus-inner,
-.search .page-content input[type="submit"]::-moz-focus-inner,
-.archive .page-content input[type="submit"]::-moz-focus-inner,
-.error404 .page-content input[type="submit"]::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -7474,10 +7373,6 @@ th {
 body,
 button,
 input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"],
 input,
 select,
 textarea {
@@ -7667,10 +7562,6 @@ table {
 
 button,
 input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"],
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -7687,10 +7578,6 @@ input[type="submit"] {
 
 button:hover,
 input[type="button"]:hover,
-.clear-button:hover,
-.search .page-content input[type="submit"]:hover,
-.archive .page-content input[type="submit"]:hover,
-.error404 .page-content input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
@@ -7699,16 +7586,8 @@ input[type="submit"]:hover {
 
 button:active,
 input[type="button"]:active,
-.clear-button:active,
-.search .page-content input[type="submit"]:active,
-.archive .page-content input[type="submit"]:active,
-.error404 .page-content input[type="submit"]:active,
 button:focus,
 input[type="button"]:focus,
-.clear-button:focus,
-.search .page-content input[type="submit"]:focus,
-.archive .page-content input[type="submit"]:focus,
-.error404 .page-content input[type="submit"]:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -7718,11 +7597,7 @@ input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
 }
 
-input[type="button"],
-.clear-button,
-.search .page-content input[type="submit"],
-.archive .page-content input[type="submit"],
-.error404 .page-content input[type="submit"] {
+input[type="button"] {
   background: #BF1E2E;
   border-radius: 0;
   font-size: 16px;
@@ -7733,18 +7608,38 @@ input[type="button"],
   transition: all 0.25s ease-in;
 }
 
-input[type="button"]:hover,
-.clear-button:hover,
-.search .page-content input[type="submit"]:hover,
-.archive .page-content input[type="submit"]:hover,
-.error404 .page-content input[type="submit"]:hover {
+input[type="button"]:hover {
   background: #510d13;
   border-color: transparent;
   border: 2px solid #f2f2f2;
 }
 
 input[type="button"]:active,
-input[type="button"]:focus,
+input[type="button"]:focus {
+  background: #510d13;
+  border-color: transparent;
+  border: 2px solid #f2f2f2;
+}
+
+.clear-button,
+.search .page-content input[type="submit"],
+.archive .page-content input[type="submit"],
+.error404 .page-content input[type="submit"] {
+  background: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  border-radius: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 0.5em 1em 0.4em 1em;
+  border: 2px solid #ffffff;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+
+.clear-button:hover,
+.search .page-content input[type="submit"]:hover,
+.archive .page-content input[type="submit"]:hover,
+.error404 .page-content input[type="submit"]:hover,
 .clear-button:active,
 .search .page-content input[type="submit"]:active,
 .archive .page-content input[type="submit"]:active,
@@ -7753,8 +7648,8 @@ input[type="button"]:focus,
 .search .page-content input[type="submit"]:focus,
 .archive .page-content input[type="submit"]:focus,
 .error404 .page-content input[type="submit"]:focus {
-  background: #510d13;
-  border-color: transparent;
+  background: rgba(255, 255, 255, 0.2);
+  color: #f2f2f2;
   border: 2px solid #f2f2f2;
 }
 
@@ -7974,7 +7869,7 @@ a:active {
 }
 
 .dropdown.menu > li.is-dropdown-submenu-parent > a:after {
-  border-color: #ffffff transparent transparent;
+  border-color: transparent;
 }
 
 .sub-nav-menu {
@@ -8486,6 +8381,7 @@ a:active {
   margin-right: auto;
   background: rgba(12, 17, 45, 0.2);
   border-color: #283891;
+  text-align: center;
 }
 
 .page-template-page-landing .tag-services .clear-button:hover,
@@ -8716,7 +8612,7 @@ a:active {
   border: 2px solid #ffffff;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
-  width: auto;
+  width: 100%;
   margin: 0.25em 0;
 }
 
@@ -8914,19 +8810,12 @@ a:active {
   padding: 15px 0;
 }
 
-.contact-footer .contact-right a button,
-.contact-footer .contact-right a input[type="button"],
-.contact-footer .contact-right a .clear-button,
-.contact-footer .contact-right a .search .page-content input[type="submit"],
-.search .page-content .contact-footer .contact-right a input[type="submit"],
-.contact-footer .contact-right a .archive .page-content input[type="submit"],
-.archive .page-content .contact-footer .contact-right a input[type="submit"],
-.contact-footer .contact-right a .error404 .page-content input[type="submit"],
-.error404 .page-content .contact-footer .contact-right a input[type="submit"] {
+.contact-footer .contact-right a {
   display: block;
   margin-left: auto;
   margin-right: auto;
   vertical-align: middle;
+  text-align: center;
 }
 
 .nav-links {
@@ -9322,8 +9211,18 @@ object {
     font-size: 5rem;
   }
 
+  .page-template-page-landing .clear-button,
+  .page-template-page-landing .search .page-content input[type="submit"],
+  .search .page-content .page-template-page-landing input[type="submit"],
+  .page-template-page-landing .archive .page-content input[type="submit"],
+  .archive .page-content .page-template-page-landing input[type="submit"],
+  .page-template-page-landing .error404 .page-content input[type="submit"],
+  .error404 .page-content .page-template-page-landing input[type="submit"] {
+    width: 124px;
+  }
+
   .page-header {
-    min-height: 400px;
+    min-height: 350px;
     background: 0 0 no-repeat fixed;
     background-size: 100%;
   }
@@ -9342,6 +9241,10 @@ object {
 
   .breadcrumbs {
     margin: 1rem 0;
+  }
+
+  .contact-wrapper input[type="submit"] {
+    width: auto;
   }
 
   .contact-footer .contact-left {
@@ -9368,23 +9271,16 @@ object {
     display: inline-table;
     position: relative;
     height: 60px;
-    background-color: #BF1E2E;
-    padding: 15px 0;
   }
 
-  .contact-footer .contact-right a button,
-  .contact-footer .contact-right a input[type="button"],
-  .contact-footer .contact-right a .clear-button,
-  .contact-footer .contact-right a .search .page-content input[type="submit"],
-  .search .page-content .contact-footer .contact-right a input[type="submit"],
-  .contact-footer .contact-right a .archive .page-content input[type="submit"],
-  .archive .page-content .contact-footer .contact-right a input[type="submit"],
-  .contact-footer .contact-right a .error404 .page-content input[type="submit"],
-  .error404 .page-content .contact-footer .contact-right a input[type="submit"] {
+  .contact-footer .contact-right a {
     display: block;
     margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
+    width: 200px;
+    height: 34px;
+    padding: 0.175em 0.5em;
   }
 
   .contact-footer .contact-right:before {
@@ -9397,7 +9293,7 @@ object {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 32px 0 32px 48.5px;
+    border-width: 33px 0 33px 48.5px;
     border-color: transparent transparent transparent #510d13;
   }
 

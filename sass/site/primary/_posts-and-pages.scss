@@ -22,7 +22,7 @@
 			line-height: 1.5rem;
 		}
 		.clear-button{
-			width: 100%
+			width: 100%;
 		}
 	}
 }
@@ -71,6 +71,7 @@
 			@include center-block;
 			background: rgba(12, 17, 45, 0.2);
 			border-color: $blue;
+			text-align: center;
 			&:hover,
 			&.focus,
 			&:active{
@@ -242,7 +243,7 @@
 		padding: 0.5em 1em 0.4em 1em;
 		border: 2px solid $white;
 		transition: all 0.25s ease-in;
-		width: auto;
+		width: 100%;
 		margin: 0.25em 0;
 		&:hover {
 			background: $dark-red;
@@ -343,8 +344,13 @@
 			@include font-size(5);
 		}
 	}
+	.page-template-page-landing{
+		.clear-button{
+			width: 124px;
+		}
+	}
 	.page-header{
-		min-height: 400px;
+		min-height: 350px;
 		background: 0 0 no-repeat fixed;
 		background-size: 100%;
 		.page-caption{
@@ -361,6 +367,9 @@
 	}
 	.breadcrumbs{
 		margin: 1rem 0;
+	}
+	.contact-wrapper input[type="submit"]{
+		width: auto;
 	}
 }
 /*-- Universal Styles ---*/

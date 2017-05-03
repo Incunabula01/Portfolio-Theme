@@ -47,8 +47,8 @@ get_header(); ?>
 						
 					</div>
 					<div class="contact-right">
-						<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contact Us' ) ) );?>">
-							<button class="clear-button">Contact Us</button>
+						<a class="clear-button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contact Us' ) ) );?>">
+							Contact Us
 						</a>
 					</div>
 			</footer>
