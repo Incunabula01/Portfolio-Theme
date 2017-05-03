@@ -8735,6 +8735,7 @@ a:active {
 #e-commerce .error404 .page-content input[type="submit"],
 .error404 .page-content #e-commerce input[type="submit"] {
   background-color: #283891;
+  color: #ffffff;
 }
 
 /*-- Universal Styles ---*/
