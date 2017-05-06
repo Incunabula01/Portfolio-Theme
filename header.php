@@ -14,6 +14,8 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cost of Data Breaches is Projected To Reach $2.1 Trillion. At Dnet Security, we can ensure that your Agency or Company is protected from this growing threat.">
+<meta name="keywords" content="Cyber Security Professional, Managed Services, Network Security firms in Washington DC, Maryland, Virgina, Cyber Security, Defensive IT Security, Cloud Security, Cyber Defense, Network Operations Center Management, Security Engineering, Information Security, Cyber Operations, DMV Cyber Security, Security with PaaS, Security with Saas, Security with IaaS, Checkpoint, palo alto, VMWare, Microsoft, Cisco">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro:300,400" rel="stylesheet">
 <?php wp_head(); ?>

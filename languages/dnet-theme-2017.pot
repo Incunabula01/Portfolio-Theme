@@ -86,7 +86,7 @@ msgstr ""
 msgid "Footer-Sidebar-3"
 msgstr ""
 
-#: header.php:24
+#: header.php:26
 msgid "Skip to content"
 msgstr ""
 
