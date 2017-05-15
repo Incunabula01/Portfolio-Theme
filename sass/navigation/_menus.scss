@@ -1,5 +1,5 @@
 .top-bar{
-	background-color: $dark-blue;
+	background-color: $dark-teal;
 	padding: 0;
 	.title-bar{
 		background-color: $light-grey;
@@ -7,7 +7,7 @@
 		padding: 0.5em;
 	}
 	ul{
-		background-color: $dark-blue;
+		background-color: $dark-teal;
 	}
 }
 
@@ -58,7 +58,7 @@
 		border-bottom: 1px solid $white;
 		&:hover > a,
 		&:focus > a {
-			color: lighten($red, 10%);
+			color: lighten($teal, 10%);
 		}
 	}
 	
@@ -73,7 +73,7 @@
 	.current_page_item > a,
 	.current-menu-item > a{
 		color: $white;
-		background-color: $mid-blue;
+		background-color: $teal;
 		&:before{
 			color: $white;
 		}
@@ -82,7 +82,7 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a{
 		color: $white;
-		background-color: darken($mid-blue, 20%);
+		background-color: darken($teal, 20%);
 		&:before{
 			color: $white;
 		}
@@ -95,7 +95,7 @@
 }
 
 .menu > .active > a{
-	background: $mid-blue;
+	background: $teal;
 }
 
 .main-nav-menu{
@@ -159,7 +159,7 @@
 		outline-color: transparent;
 	}
 	i{
-		color: $red;
+		color: $teal;
 		@include font-size(1.5);
 	}
 }
@@ -205,10 +205,10 @@
 			border-bottom: none;
 			width: auto;
 			a{
-				color: $blue;
+				color: $teal;
 			}
 			ul{
-				background-color: lighten($light-blue, 10%);
+				background-color: lighten($cyan, 10%);
 				display: none;
 				li{
 					border-bottom: 1px solid $white;
@@ -222,7 +222,7 @@
 						&:hover,
 						&:focus,
 						&:active{
-							color: lighten($red, 13%);
+							color: lighten($teal, 13%);
 						}
 					}
 				}
@@ -233,16 +233,16 @@
 		.current_page_ancestor > a,
 		.current-menu-ancestor > a {
 			background: $light-grey;
-			color: $red;
+			color: $teal;
 			&:before{
-				color: $red;
+				color: $teal;
 			}
 		}
 	}
 	.dropdown.menu > li.is-dropdown-submenu-parent > a {
 		border-bottom: 0px;
 		&:after{
-		border-color: $dark-blue transparent transparent;
+		border-color: $dark-teal transparent transparent;
 		}
 	}
 		
@@ -252,11 +252,11 @@
 	}
 	.menu > .active> a{
 		background: transparent;
-		color: $red;
+		color: $teal;
 		&:hover,
 		&:focus,
 		&:active{
-			color: $dark-red;
+			color: $dark-teal;
 		}
 	}
 	.main-nav-menu{
@@ -306,13 +306,13 @@
 					top: -2px;
 					padding-right: 0.25em;
 					font-family: $font_icon;
-					color: $blue;
+					color: $teal;
 					@include font-size(1);
 				}
 				&:hover:before,
 				&:focus:before,
 				&:active:before{
-					color: $red;
+					color: $teal;
 				}
 			}
 			form{
@@ -323,16 +323,16 @@
 					position: absolute;
 					padding-right: 0.25em;
 					font-family: $font_icon;
-					color: $blue;
+					color: $teal;
 					@include font-size(1);
 				}
 				input[type="search"]{
 					border-radius: 0px;
 					padding: 5px;
-					border: 1px solid $blue;
+					border: 1px solid $teal;
 					height: 24px;
 					float: left;
-					color: $dark-blue;
+					color: $dark-teal;
 					font-family: $font__main;
 					margin-left: 1.5em;
 				}
@@ -376,7 +376,7 @@
   .breadcrumbs li {
     float: left;
     font-size: 0.6875rem;
-    color: $dark-blue;
+    color: $dark-teal;
     cursor: default;
     text-transform: uppercase; }
     .breadcrumbs li:not(:last-child)::after {
@@ -387,7 +387,7 @@
       content: "";
      }
   .breadcrumbs a {
-    color: $light-blue; 
+    color: $cyan; 
   }
     .breadcrumbs a:hover {
       text-decoration: underline; }

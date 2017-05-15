@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package DnetTheme_2017
+ * @package PortfolioTheme_2017
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses dnet_theme_2017_header_style()
+ * @uses portfolio_theme_2017_header_style()
  */
-function dnet_theme_2017_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'dnet_theme_2017_custom_header_args', array(
+function portfolio_theme_2017_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'portfolio_theme_2017_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'dnet_theme_2017_header_style',
+		'wp-head-callback'       => 'portfolio_theme_2017_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'dnet_theme_2017_custom_header_setup' );
+add_action( 'after_setup_theme', 'portfolio_theme_2017_custom_header_setup' );
 
-if ( ! function_exists( 'dnet_theme_2017_header_style' ) ) :
+if ( ! function_exists( 'portfolio_theme_2017_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see dnet_theme_2017_custom_header_setup().
+ * @see portfolio_theme_2017_custom_header_setup().
  */
-function dnet_theme_2017_header_style() {
+function portfolio_theme_2017_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

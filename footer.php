@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package DnetTheme_2017
+ * @package PortfolioTheme_2017
  */
 
 ?>

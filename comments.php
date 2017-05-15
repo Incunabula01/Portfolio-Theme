@@ -7,7 +7,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package DnetTheme_2017
+ * @package PortfolioTheme_2017
  */
 
 /*

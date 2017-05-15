@@ -1,16 +1,16 @@
 /*---- Color Palete ----*/
-$red: #BF1E2E;
-$blue: #283891;
+$teal: #BF1E2E;
+$teal: #283891;
 $white: #ffffff;
 $grey: #BFBFBF;
 
-$dark-red: darken($red, 25%);
-$light-red: #D97882;
-$pink: lighten($red, 20%);
+$dark-teal: darken($teal, 25%);
+$cyan: #D97882;
+$pink: lighten($teal, 20%);
 
-$dark-blue: darken($blue, 25%);
-$mid-blue: lighten($blue, 10%);
-$light-blue: lighten($blue, 20%);
+$dark-teal: darken($teal, 25%);
+$teal: lighten($teal, 10%);
+$cyan: lighten($teal, 20%);
 
 $dark-grey: darken($grey, 25%);
 $light-grey: lighten($grey, 20%);
@@ -18,18 +18,18 @@ $light-grey: lighten($grey, 20%);
 /*---- System Colors ----*/
 $color__background-body: $light-grey;
 $color__background-screen: $grey;
-$color__background-hr: $red;
-$color__background-button: $dark-red;
+$color__background-hr: $teal;
+$color__background-button: $dark-teal;
 $color__background-pre: $white;
 $color__background-ins: #fff9c0;
 
-$color__text-screen: $dark-blue;
-$color__text-input: $light-red;
-$color__text-input-focus: $dark-red;
-$color__link: $blue;
-$color__link-visited: $light-blue;
-$color__link-hover: $red;
-$color__text-main: $dark-blue;
+$color__text-screen: $dark-teal;
+$color__text-input: $cyan;
+$color__text-input-focus: $dark-teal;
+$color__link: $teal;
+$color__link-visited: $cyan;
+$color__link-hover: $teal;
+$color__text-main: $dark-teal;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

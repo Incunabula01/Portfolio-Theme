@@ -83,7 +83,7 @@ gulp.task('makepot', function () {
     .pipe(wpPot({
       domain: 'dnet-theme-2017',
       destFile: 'dnet-theme-2017.pot',
-      package: 'DnetTheme_2017',
+      package: 'PortfolioTheme_2017',
       bugReport: 'https://example.com/bugreport/',
       team: 'Joe Widener <jwidener08@gmail.com>'
     }))

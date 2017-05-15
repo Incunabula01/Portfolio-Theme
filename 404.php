@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package DnetTheme_2017
+ * @package PortfolioTheme_2017
  */
 
 get_header(); ?>
@@ -31,7 +31,7 @@ get_header(); ?>
 							<?php the_widget( 'WP_Widget_Recent_Posts' );
 
 								// Only show the widget if site has multiple categories.
-								if ( dnet_theme_2017_categorized_blog() ) :
+								if ( portfolio_theme_2017_categorized_blog() ) :
 							?>
 						</div>
 						<div class="columns small-12 medium-4">

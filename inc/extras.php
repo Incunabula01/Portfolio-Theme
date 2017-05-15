@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package DnetTheme_2017
+ * @package PortfolioTheme_2017
  */
 
 /**
@@ -13,7 +13,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function dnet_theme_2017_body_classes( $classes ) {
+function portfolio_theme_2017_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -26,14 +26,14 @@ function dnet_theme_2017_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'dnet_theme_2017_body_classes' );
+add_filter( 'body_class', 'portfolio_theme_2017_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function dnet_theme_2017_pingback_header() {
+function portfolio_theme_2017_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'dnet_theme_2017_pingback_header' );
+add_action( 'wp_head', 'portfolio_theme_2017_pingback_header' );

@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package DnetTheme_2017
+ * @package PortfolioTheme_2017
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @global array $themecolors
  */
-function dnet_theme_2017_wpcom_setup() {
+function portfolio_theme_2017_wpcom_setup() {
 	global $themecolors;
 
 	// Set theme colors for third party services.
@@ -26,4 +26,4 @@ function dnet_theme_2017_wpcom_setup() {
 		);
 	}
 }
-add_action( 'after_setup_theme', 'dnet_theme_2017_wpcom_setup' );
+add_action( 'after_setup_theme', 'portfolio_theme_2017_wpcom_setup' );

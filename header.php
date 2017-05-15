@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package DnetTheme_2017
+ * @package PortfolioTheme_2017
  */
 
 ?><!DOCTYPE html>
@@ -42,10 +42,6 @@
 				<div class="top-bar-right">
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 					
-					<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 
-											  'menu_id' => 'secondary-menu',
-											  'menu_class' => 'menu', 
-											  'container_class' => 'sub-nav-menu') ); ?>
 					
 					<?php wp_nav_menu( array( 'theme_location' => 'menu-1',
 					                           'menu_id' => 'primary-menu', 

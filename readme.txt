@@ -1,4 +1,4 @@
-=== DnetTheme_2017 ===
+=== PortfolioTheme_2017 ===
 
 Contributors: automattic
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments

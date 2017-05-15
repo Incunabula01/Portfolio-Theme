@@ -5,6 +5,7 @@
 
 /*---- Landing Page Styles ----*/
 .landing{
+	height: 550px;
 	background: 0 0 no-repeat fixed;
 	background-size: cover;
 	margin: 0;
@@ -32,7 +33,7 @@
 		color: $color__text-screen;
 		margin: 0;
 		header{
-			background-color: $red;
+			background-color: $teal;
 		}
 		h2{
 			margin: 0.5em 0;
@@ -47,11 +48,11 @@
 	}
 
 	.tag-services{
-		background: lighten($light-blue, 40%);
-		color: $mid-blue;
+		background: lighten($cyan, 40%);
+		color: $teal;
 		margin: 0;
 		header{
-			background-color: $blue;
+			background-color: $teal;
 		}
 		h2{
 			margin: 0.5em 0;
@@ -70,7 +71,7 @@
 		.clear-button{
 			@include center-block;
 			background: rgba(12, 17, 45, 0.2);
-			border-color: $blue;
+			border-color: $teal;
 			text-align: center;
 			&:hover,
 			&.focus,
@@ -196,7 +197,7 @@
 }
 
 .callout{
-		background: $light-red;
+		background: $cyan;
 		padding: 0.5em 0;
 		border: 1px solid $white;
 		margin-top: 0.5em;
@@ -216,17 +217,17 @@
 	padding: 0.5em 1em;
 	color: $white;
 	h3{
-		color: $red;
+		color: $teal;
 	}
 	label{
 		color: $white;
 	}
 	input{
 		border-radius: 0px;
-		color: $blue;
+		color: $teal;
 	}
 	.is-invalid-input:not(:focus){
-		background-color: lighten($light-red, 25%);
+		background-color: lighten($cyan, 25%);
 	}
 	textarea{
 		border-radius: 0px;
@@ -236,7 +237,7 @@
 		font-style: italic;
 	}
 	input[type="submit"]{
-		background: $red;
+		background: $teal;
 		color: $white;
 		border-radius: 0;
 		@include font-size(1);
@@ -246,14 +247,14 @@
 		width: 100%;
 		margin: 0.25em 0;
 		&:hover {
-			background: $dark-red;
+			background: $dark-teal;
 			border-color: transparent;
 			border: 2px solid $light-grey;
 		}
 
 		&:active,
 		&:focus {
-			background: $dark-red;
+			background: $dark-teal;
 			border-color: transparent;
 			border: 2px solid $light-grey;
 		}
@@ -263,14 +264,14 @@
 .search, .archive, .error404{
 	.page-header{
 		min-height: auto;
-		background-color: $blue;
+		background-color: $teal;
 		margin-bottom: 1em;
 		h1{
 			color: $white;
 		}
 	}
 	.hentry{
-		border-bottom: 1px solid $dark-blue;
+		border-bottom: 1px solid $dark-teal;
 		padding: 0.5em 0;
 	}
 	span{
@@ -284,14 +285,14 @@
 		}
 		input[type="submit"]{
 			@extend .clear-button;
-			background-color: $dark-red;
+			background-color: $dark-teal;
 			width: 25%;
 			padding: 0.65em 0;
 			float: right;
 			&:hover,
 			&:active,
 			&:focus{
-				background-color: darken($dark-red, 25%);
+				background-color: darken($dark-teal, 25%);
 			}
 		}
 	}
@@ -299,10 +300,10 @@
 
 #services-tabs{
 	a{
-		color: $blue;
+		color: $teal;
 	}
 	.tabs-title a[aria-selected="true"]{
-		background-color: lighten($light-blue, 25%);
+		background-color: lighten($cyan, 25%);
 	}
 	img{
 		@include center-block;

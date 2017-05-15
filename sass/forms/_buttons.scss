@@ -23,21 +23,21 @@ input[type="submit"] {
 
 input[type="button"]{
 	@extend button;
-	background: $red;
+	background: $teal;
 	border-radius: 0;
 	@include font-size(1);
 	padding: 0.5em 1em 0.4em 1em;
 	border: 2px solid $white;
 	transition: all 0.25s ease-in;
 	&:hover {
-		background: $dark-red;
+		background: $dark-teal;
 		border-color: transparent;
 		border: 2px solid $light-grey;
 	}
 
 	&:active,
 	&:focus {
-		background: $dark-red;
+		background: $dark-teal;
 		border-color: transparent;
 		border: 2px solid $light-grey;
 	}

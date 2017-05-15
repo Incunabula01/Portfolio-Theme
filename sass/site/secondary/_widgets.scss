@@ -18,25 +18,25 @@
 				margin-bottom: 0;
 			}
 				label{
-					color: $red;
+					color: $teal;
 					small{
-						color: $red;
+						color: $teal;
 						padding: 0;
 					}
 				} 
 				input{
 					border-radius: 0px;
-					color: $blue;
+					color: $teal;
 				}
 				input[type="text"]{
 					margin: 0;
 				}
 				input[type="file"]{
 					width: 100%;
-					color: $red;
+					color: $teal;
 				}
 				.is-invalid-input:not(:focus){
-					background-color: lighten($light-red, 25%);
+					background-color: lighten($cyan, 25%);
 				}
 				textarea{
 					border-radius: 0px;
@@ -53,17 +53,17 @@
 				padding: 0.5em 1em 0.4em 1em;
 				width: 100%;
 				transition: all 0.25s ease-in;
-				background-color: $red;
+				background-color: $teal;
 				margin: 0;
 				border: 2px solid $white;
 				&:hover {
-					background: $dark-red;
+					background: $dark-teal;
 					border-color: transparent;
 					border: 2px solid $light-grey;
 				}
 				&:active,
 				&:focus {
-					background: $dark-red;
+					background: $dark-teal;
 					border-color: transparent;
 					border: 2px solid $light-grey;
 				}
@@ -72,7 +72,7 @@
 				border: 0;
 				background-color: $light-grey;
 				margin: 0.5em 0;
-				color: $red;
+				color: $teal;
 			}
 			
 		}
@@ -103,10 +103,10 @@
 				&:hover,
 				&:focus,
 				&:active{
-					color: $red;
+					color: $teal;
 				}
 				&:before{
-					color: $blue;
+					color: $teal;
 					font-family: $font_icon;
 					float: left;
 					position: relative;
@@ -117,7 +117,7 @@
 				&:hover:before,
 				&:focus:before,
 				&:active:before {
-					color: $red;
+					color: $teal;
 				}
 			}
 		}

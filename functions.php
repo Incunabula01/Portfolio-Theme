@@ -1,13 +1,13 @@
 <?php
 /**
- * DnetTheme_2017 functions and definitions
+ * PortfolioTheme_2017 functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package DnetTheme_2017
+ * @package PortfolioTheme_2017
  */
 
-if ( ! function_exists( 'dnet_theme_2017_setup' ) ) :
+if ( ! function_exists( 'portfolio_theme_2017_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,11 +15,11 @@ if ( ! function_exists( 'dnet_theme_2017_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function dnet_theme_2017_setup() {
+function portfolio_theme_2017_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on DnetTheme_2017, use a find and replace
+	 * If you're building a theme based on PortfolioTheme_2017, use a find and replace
 	 * to change 'dnet-theme-2017' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'dnet-theme-2017', get_template_directory() . '/languages' );
@@ -62,7 +62,7 @@ function dnet_theme_2017_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'dnet_theme_2017_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'portfolio_theme_2017_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -71,7 +71,7 @@ function dnet_theme_2017_setup() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
-add_action( 'after_setup_theme', 'dnet_theme_2017_setup' );
+add_action( 'after_setup_theme', 'portfolio_theme_2017_setup' );
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -79,17 +79,17 @@ add_action( 'after_setup_theme', 'dnet_theme_2017_setup' );
  *
  * @global int $content_width
  */
-function dnet_theme_2017_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'dnet_theme_2017_content_width', 640 );
+function portfolio_theme_2017_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'portfolio_theme_2017_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'dnet_theme_2017_content_width', 0 );
+add_action( 'after_setup_theme', 'portfolio_theme_2017_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function dnet_theme_2017_widgets_init() {
+function portfolio_theme_2017_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'dnet-theme-2017' ),
 		'id'            => 'sidebar-1',
@@ -145,12 +145,12 @@ function dnet_theme_2017_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'dnet_theme_2017_widgets_init' );
+add_action( 'widgets_init', 'portfolio_theme_2017_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function dnet_theme_2017_scripts() {
+function portfolio_theme_2017_scripts() {
 	wp_enqueue_style( 'dnet-theme-2017-style', get_stylesheet_uri() );
 
 	wp_enqueue_script("jquery");
@@ -166,7 +166,7 @@ function dnet_theme_2017_scripts() {
 	wp_enqueue_script( 'foundation-6', get_template_directory_uri() . '/js/vendor/foundation.js', array('jquery'), '6', true );
 	wp_enqueue_script( 'dnet-theme-2017-js', get_template_directory_uri() . '/js/app.js', array('jquery'), '1', true );
 }
-add_action( 'wp_enqueue_scripts', 'dnet_theme_2017_scripts' );
+add_action( 'wp_enqueue_scripts', 'portfolio_theme_2017_scripts' );
 
 function add_search_to_wp_menu ( $items, $args ) {
 	if( (!'Secondary' == $args -> theme_location )) 

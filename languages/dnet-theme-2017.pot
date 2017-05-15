@@ -1,8 +1,8 @@
-# Copyright (C) 2017 DnetTheme_2017
-# This file is distributed under the same license as the DnetTheme_2017 package.
+# Copyright (C) 2017 PortfolioTheme_2017
+# This file is distributed under the same license as the PortfolioTheme_2017 package.
 msgid ""
 msgstr ""
-"Project-Id-Version: DnetTheme_2017\n"
+"Project-Id-Version: PortfolioTheme_2017\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -120,10 +120,6 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: template-parts/content-jobs.php:38, template-parts/content.php:33
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
 #: template-parts/content-none.php:16
 msgid "Nothing Found"
 msgstr ""
@@ -142,4 +138,8 @@ msgstr ""
 
 #: template-parts/content-page-sidebar.php:22, template-parts/content-page.php:22, template-parts/content.php:38
 msgid "Pages:"
+msgstr ""
+
+#: template-parts/content.php:33
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
