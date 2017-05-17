@@ -40,18 +40,7 @@ get_header(); ?>
 							</div>
 
 					<?php endwhile; // End of the loop.?>
-			<footer class="contact-footer">
-					<div class="contact-left">
-						
-							<h2>Learn More</h2>
-						
-					</div>
-					<div class="contact-right">
-						<a class="clear-button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contact Us' ) ) );?>">
-							Contact Us
-						</a>
-					</div>
-			</footer>
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

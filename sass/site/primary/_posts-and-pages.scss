@@ -5,61 +5,59 @@
 
 /*---- Landing Page Styles ----*/
 .landing{
-	height: 550px;
+	height: 400px;
 	background: 0 0 no-repeat fixed;
 	background-size: cover;
 	margin: 0;
 	.landing-caption{
-		margin: 3em 0;
+		position: relative;
+		top: 200px;
+		left: 0px;
 		.entry-title{
-			@include font-size(3.5);
+			@include font-size(5);
 			line-height: 1;
 			color: $white;
+			font-weight: 900;
 			margin: 0;
 		}
 		p{
 			color: $white;
-			@include font-size(1.5);
+			@include font-size(2);
 			line-height: 1.5rem;
 		}
 		.clear-button{
 			width: 100%;
 		}
 	}
-}
-.page-template-page-landing{
-	.tag-security{
-		background: $color__background-body;
-		color: $color__text-screen;
-		margin: 0;
-		header{
-			background-color: $teal;
-		}
-		h2{
-			margin: 0.5em 0;
-			color: $white;
-		}
-		.entry-content{
-			padding: 2em 0;
-		}
-		img{
-			margin: 0 auto;
+	.svg-center-container{
+		position: relative; 
+		 height: 20px; 
+		 width: 50%; 
+		 padding: 0;
+		 padding-bottom: 100%; 
+		.svg-center{
+			position: absolute; 
+			height: 100%; 
+			width: 100%; 
+			left: 0; 
+			 top: 0;
 		}
 	}
+}
+
+
+.page-template-page-landing{
 
 	.tag-services{
-		background: lighten($cyan, 40%);
+		background: $dark-teal;
 		color: $teal;
 		margin: 0;
-		header{
-			background-color: $teal;
-		}
 		h2{
 			margin: 0.5em 0;
 			color: $white;
 		}
 		.entry-content{
-			padding: 2em 0;
+			padding: 2.5em 0;
 		}
 		h4{
 			text-align: center;
@@ -71,87 +69,13 @@
 		.clear-button{
 			@include center-block;
 			background: rgba(12, 17, 45, 0.2);
-			border-color: $teal;
+			border-color: $white;
 			text-align: center;
 			&:hover,
 			&.focus,
 			&:active{
 				background: rgba(12, 17, 45, 0.6);
 				border-color: transparent;
-			}
-		}
-	}
-
-	.tag-staffing{
-		background: url('images/Staffing-Image.jpg') 0 0 no-repeat fixed;
-		background-size: cover;
-		margin: 0;
-		header{
-			background-color: rgba(0, 0, 0, 0.8);
-		}
-		.entry-content{
-			padding: 2em 0;
-		}
-		h2{
-			margin: 0.5em 0;
-			color: $white;
-		}
-		p{
-			color: $white;
-		}
-		li{
-			color: $white;
-		}
-	}
-
-	.tag-microsoft{
-		@extend .tag-staffing;
-		background: $color__background-body;
-		.entry-content{
-			padding: 2em 0;
-			img{
-				margin: 0 auto;
-			}
-			p{
-				color: $color__text-screen;
-			}
-		}
-	}
-	.tag-contact{
-		background: url('images/Contact-Us-Image.jpg') 0 0 no-repeat fixed;
-		background-size: cover;
-		header{
-			background-color: rgba(191, 30, 46, 0.8);
-		}
-		h2{
-			margin: 0.5em 0;
-			color: $white;
-		}
-		.contact-form{
-			padding: 2em 0;
-			color: $white;
-			input{
-				background-color: rgba(191, 30, 46, 0.8);
-				color: $white;
-			}
-			input::placeholder{
-					padding: 0.5em;
-			}
-			label{
-				color: $white;
-			}
-			textarea{
-				min-height: 200px;
-				width: 100%;
-				background: rgba(255,255,255, 0.8);
-				padding: 0.25em;
-			}
-			input[type="submit"]{
-				background-color: rgba(191, 30, 46, 0.8);
-				margin: 0.5em 0;
-				border: 2px solid $white;
-				padding: 0.5em 1em 0.5em 1em;
-				width: 100%;
 			}
 		}
 	}
@@ -178,23 +102,7 @@
 		}
 	}
 }
-.page-template-page-careers{
-	.page-header{
-		margin-bottom: 1.5em;
-	}
-}
 
-.career-list{
-	list-style: none;
-	margin: 0 0 1.5em 0;
-	li{
-		border-bottom: 1px solid $grey;
-		padding-top: 0.5em;
-		&:first-child{
-			border-top: 1px solid $grey;
-		}
-	}
-}
 
 .callout{
 		background: $cyan;
@@ -298,52 +206,18 @@
 	}
 }
 
-#services-tabs{
-	a{
-		color: $teal;
-	}
-	.tabs-title a[aria-selected="true"]{
-		background-color: lighten($cyan, 25%);
-	}
-	img{
-		@include center-block;
-	}
-	h2{
-		text-align: center;
-	}
-}
 
-.tabs-content{
-	img{
-		@include center-block;
-	}
-	h2{
-		text-align: center;
-		line-height: 1em;
-	}
-}
 
-.client-list li > a img{
-	max-width: 100px;
-}
-
-.partner-list li > a img{
-	max-width: 200px;
-}
-
-#e-commerce .clear-button{
-	background-color: #283891;
-	color: $white;
-}
 
 @media screen and (min-width: 39.9375em) {
 	.landing{
 		background-size: cover;
+		height: 700px;
 		.landing-caption .clear-button{
 			width: auto;
 		}
 		.landing-caption .entry-title{
-			@include font-size(5);
+			@include font-size(10);
 		}
 	}
 	.page-template-page-landing{

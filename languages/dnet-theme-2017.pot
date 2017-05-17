@@ -50,43 +50,7 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:47
-msgid "Primary"
-msgstr ""
-
-#: functions.php:48
-msgid "Secondary"
-msgstr ""
-
-#: functions.php:94
-msgid "Sidebar"
-msgstr ""
-
-#: functions.php:96, functions.php:105, functions.php:114, functions.php:123, functions.php:132, functions.php:141
-msgid "Add widgets here."
-msgstr ""
-
-#: functions.php:103
-msgid "Contact-Sidebar"
-msgstr ""
-
-#: functions.php:112
-msgid "Careers-Sidebar"
-msgstr ""
-
-#: functions.php:121
-msgid "Footer-Sidebar-1"
-msgstr ""
-
-#: functions.php:130
-msgid "Footer-Sidebar-2"
-msgstr ""
-
-#: functions.php:139
-msgid "Footer-Sidebar-3"
-msgstr ""
-
-#: header.php:26
+#: header.php:34
 msgid "Skip to content"
 msgstr ""
 

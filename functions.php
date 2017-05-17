@@ -20,9 +20,9 @@ function portfolio_theme_2017_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on PortfolioTheme_2017, use a find and replace
-	 * to change 'dnet-theme-2017' to the name of your theme in all the template files.
+	 * to change 'portfolio-theme-2017' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'dnet-theme-2017', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'portfolio-theme-2017', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,8 +44,7 @@ function portfolio_theme_2017_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'dnet-theme-2017' ),
-		'menu-2' => esc_html__( 'Secondary', 'dnet-theme-2017'),
+		'menu-1' => esc_html__( 'Primary', 'portfolio-theme-2017' )
 	) );
 
 
@@ -91,54 +90,36 @@ add_action( 'after_setup_theme', 'portfolio_theme_2017_content_width', 0 );
  */
 function portfolio_theme_2017_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'dnet-theme-2017' ),
+		'name'          => esc_html__( 'Sidebar', 'portfolio-theme-2017' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'dnet-theme-2017' ),
+		'description'   => esc_html__( 'Add widgets here.', 'portfolio-theme-2017' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Contact-Sidebar', 'dnet-theme-2017' ),
-		'id'            => 'contact-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'dnet-theme-2017' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Careers-Sidebar', 'dnet-theme-2017' ),
-		'id'            => 'careers-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'dnet-theme-2017' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer-Sidebar-1', 'dnet-theme-2017' ),
+		'name'          => esc_html__( 'Footer-Sidebar-1', 'portfolio-theme-2017' ),
 		'id'            => 'footer-sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'dnet-theme-2017' ),
+		'description'   => esc_html__( 'Add widgets here.', 'portfolio-theme-2017' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer-Sidebar-2', 'dnet-theme-2017' ),
+		'name'          => esc_html__( 'Footer-Sidebar-2', 'portfolio-theme-2017' ),
 		'id'            => 'footer-sidebar-2',
-		'description'   => esc_html__( 'Add widgets here.', 'dnet-theme-2017' ),
+		'description'   => esc_html__( 'Add widgets here.', 'portfolio-theme-2017' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer-Sidebar-3', 'dnet-theme-2017' ),
+		'name'          => esc_html__( 'Footer-Sidebar-3', 'portfolio-theme-2017' ),
 		'id'            => 'footer-sidebar-3',
-		'description'   => esc_html__( 'Add widgets here.', 'dnet-theme-2017' ),
+		'description'   => esc_html__( 'Add widgets here.', 'portfolio-theme-2017' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -151,20 +132,20 @@ add_action( 'widgets_init', 'portfolio_theme_2017_widgets_init' );
  * Enqueue scripts and styles.
  */
 function portfolio_theme_2017_scripts() {
-	wp_enqueue_style( 'dnet-theme-2017-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'portfolio-theme-2017-style', get_stylesheet_uri() );
 
 	wp_enqueue_script("jquery");
 
-	wp_enqueue_script( 'dnet-theme-2017-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'portfolio-theme-2017-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'dnet-theme-2017-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'portfolio-theme-2017-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	wp_enqueue_script( 'foundation-6', get_template_directory_uri() . '/js/vendor/foundation.js', array('jquery'), '6', true );
-	wp_enqueue_script( 'dnet-theme-2017-js', get_template_directory_uri() . '/js/app.js', array('jquery'), '1', true );
+	wp_enqueue_script( 'portfolio-theme-2017-js', get_template_directory_uri() . '/js/app.js', array('jquery'), '1', true );
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_theme_2017_scripts' );
 

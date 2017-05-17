@@ -14,18 +14,26 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cost of Data Breaches is Projected To Reach $2.1 Trillion. At Dnet Security, we can ensure that your Agency or Company is protected from this growing threat.">
-<meta name="keywords" content="Cyber Security Professional, Managed Services, Network Security firms in Washington DC, Maryland, Virgina, Cyber Security, Defensive IT Security, Cloud Security, Cyber Defense, Network Operations Center Management, Security Engineering, Information Security, Cyber Operations, DMV Cyber Security, Security with PaaS, Security with Saas, Security with IaaS, Checkpoint, palo alto, VMWare, Microsoft, Cisco">
+<!-- add SEO content here -->
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- End -->
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900,900i|Raleway:500,800" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+	<div style="display: none">
+		<svg version="1.1" id="chevronDown" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="20px" viewBox="0 0 198 27.284"  xml:space="preserve">
+		<polygon fill="#FFFFFF" points="99,21.284 0,-0.284 0,5.716 99,27.284 198,5.716 198,-0.284 "/>
+		</svg>
+	</div>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dnet-theme-2017' ); ?></a>
-	<div class="sticky-container" data-sticky-container>
-		<header id="masthead" class="site-header sticky" role="banner"  data-sticky data-margin-top="0" data-options="stickyOn:small;">
+	
+		<header id="masthead" class="site-header">
 			<div class="top-bar" data-topbar>
 				<div class="top-bar-left">
 					<div class="title-bar">
@@ -35,7 +43,7 @@
 							</a>
 						</div>
 						<div data-responsive-toggle="primary-menu" data-hide-for="large">
-							<button class="menu-toggle" type="button" data-toggle="primary-menu"><i class="fa fa-navicon"></i></button>
+							<a class="menu-toggle" type="button" data-toggle="primary-menu"><i class="fa fa-navicon"></i></a>
 						</div>
 					</div>
 				</div>
@@ -54,7 +62,6 @@
 				</div>
 			</div>	
 		</header><!-- #masthead -->
-	</div>
 	
 
 	<div id="content" class="site-content">

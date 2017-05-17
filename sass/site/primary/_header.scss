@@ -1,6 +1,6 @@
 .site-header{
-	background: $light-grey;
-	box-shadow: 0 4px 0 0 $dark-grey;
+	background: transparent;
+	position: fixed;
 	width: 100%;
 	z-index: 9000;
 	min-height: 50px;
@@ -17,6 +17,10 @@
   .main-navigation{
   	display: none;
   }
+}
+
+.top-bar{
+	background: transparent;
 }
 
 @media screen and (min-width: 40em) {
@@ -38,6 +42,9 @@
 }
 
 @media screen and (min-width: 49em) {
+	.top-bar{
+		background: transparent;
+	}
 	.site-header{
 		min-height: 80px;
 		.logo{

@@ -1,13 +1,9 @@
 .top-bar{
-	background-color: $dark-teal;
 	padding: 0;
 	.title-bar{
-		background-color: $light-grey;
+		background-color: transparent;
 		height: 50px;
 		padding: 0.5em;
-	}
-	ul{
-		background-color: $dark-teal;
 	}
 }
 
@@ -73,7 +69,6 @@
 	.current_page_item > a,
 	.current-menu-item > a{
 		color: $white;
-		background-color: $teal;
 		&:before{
 			color: $white;
 		}
@@ -82,7 +77,6 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a{
 		color: $white;
-		background-color: darken($teal, 20%);
 		&:before{
 			color: $white;
 		}
@@ -177,7 +171,7 @@
 /*--- Desktop Styles ---*/
 @media screen and (min-width: 49em) {
 	.top-bar{
-		background: $light-grey;
+		background: transparent;
 		.site-branding{
 			display: block;
 		}
@@ -205,7 +199,7 @@
 			border-bottom: none;
 			width: auto;
 			a{
-				color: $teal;
+				color: $white;
 			}
 			ul{
 				background-color: lighten($cyan, 10%);

@@ -1,8 +1,9 @@
 /*---- Color Palete ----*/
-$teal: #BF1E2E;
-$teal: #283891;
+$teal: #1e97bf;
+$blue: #283891;
 $white: #ffffff;
 $grey: #BFBFBF;
+$magenta: #ea1183;
 
 $dark-teal: darken($teal, 25%);
 $cyan: #D97882;
@@ -27,8 +28,8 @@ $color__text-screen: $dark-teal;
 $color__text-input: $cyan;
 $color__text-input-focus: $dark-teal;
 $color__link: $teal;
-$color__link-visited: $cyan;
-$color__link-hover: $teal;
+$color__link-visited: lighten($magenta, 10%);
+$color__link-hover: $magenta;
 $color__text-main: $dark-teal;
 
 $color__border-button: #ccc #ccc #bbb;
