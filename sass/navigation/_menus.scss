@@ -5,6 +5,9 @@
 		height: 50px;
 		padding: 0.5em;
 	}
+	ul{
+		background-color: $transparent-dark-teal;
+	}
 }
 
 .main-navigation {
@@ -13,6 +16,7 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		width: 100%;
 		ul {
 			ul {
 				left: -999em;
@@ -54,7 +58,7 @@
 		border-bottom: 1px solid $white;
 		&:hover > a,
 		&:focus > a {
-			color: lighten($teal, 10%);
+			color: $magenta;
 		}
 	}
 	
@@ -68,7 +72,7 @@
 
 	.current_page_item > a,
 	.current-menu-item > a{
-		color: $white;
+		color: $magenta;
 		&:before{
 			color: $white;
 		}
@@ -76,7 +80,7 @@
 
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a{
-		color: $white;
+		color: darken($magenta, 10%);
 		&:before{
 			color: $white;
 		}
@@ -95,6 +99,7 @@
 .main-nav-menu{
 	position: relative;
 	top: 0px;
+	right: 0px;
 	ul{
 		li.search{
 			form {
@@ -136,25 +141,26 @@
 .menu-toggle{
 	background-color: transparent;
 	position: absolute;
-	top: 5px;
-	right: 0;
+	top: 17.5px;
+	right: 17.5px;
 	border-color: transparent;
+	border: 0px;
 	float: right;
 	vertical-align: middle;
-	outline-color: $light-grey;
-	&:focus,
-	&:active{
-		background-color: darken($light-grey, 10%);
-		border-color: transparent;
-		outline-color: $light-grey;
-	}
-	&:visited{
-		background-color: $light-grey;
-		outline-color: transparent;
-	}
 	i{
-		color: $teal;
+		color: $white;
 		@include font-size(1.5);
+		&:focus,
+		&:active{
+			color: $magenta;
+			border-color: transparent;
+			outline-color: transparent;
+			border: 0px;
+		}
+		&:visited{
+			color: darken($white, 25%);
+			outline-color: none;
+		}
 	}
 }
 
@@ -172,11 +178,12 @@
 @media screen and (min-width: 49em) {
 	.top-bar{
 		background: transparent;
+		min-height: 135px;
 		.site-branding{
 			display: block;
 		}
 		ul{
-			background-color: $light-grey;
+			background-color: transparent;
 		}
 		.main-navigation{
 			background-color: $light-grey;
@@ -200,6 +207,13 @@
 			width: auto;
 			a{
 				color: $white;
+				transition: all 0.25s ease-in;
+				&:hover,
+				&:focus,
+				&:active{
+					color: $magenta;
+					border-bottom: 4px solid $magenta;
+				}
 			}
 			ul{
 				background-color: lighten($cyan, 10%);
@@ -216,7 +230,8 @@
 						&:hover,
 						&:focus,
 						&:active{
-							color: lighten($teal, 13%);
+							color: $magenta;
+							border-bottom: 4px solid $magenta;
 						}
 					}
 				}
@@ -226,10 +241,10 @@
 		.current-menu-item > a,
 		.current_page_ancestor > a,
 		.current-menu-ancestor > a {
-			background: $light-grey;
-			color: $teal;
+			color: $magenta;
+			border-bottom: 4px solid $magenta;
 			&:before{
-				color: $teal;
+				color: $magenta;
 			}
 		}
 	}
@@ -246,16 +261,19 @@
 	}
 	.menu > .active> a{
 		background: transparent;
-		color: $teal;
+		color: $magenta;
 		&:hover,
 		&:focus,
 		&:active{
-			color: $dark-teal;
+			color: darken($magenta, 10%);
 		}
 	}
 	.main-nav-menu{
 		background-color: transparent;
 		float: right;
+		.menu{
+			margin-top: 15%;
+		}
 		li.search{
 			display: none;
 		}

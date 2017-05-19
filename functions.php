@@ -149,13 +149,6 @@ function portfolio_theme_2017_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_theme_2017_scripts' );
 
-function add_search_to_wp_menu ( $items, $args ) {
-	if( (!'Secondary' == $args -> theme_location )) 
-		return $items;
-
-		return $items . '<li class="menu-item menu-item-search search">' . get_search_form(false) . '</li>';		
-}
-add_filter('wp_nav_menu_items','add_search_to_wp_menu',10,2);
 
 
 /**

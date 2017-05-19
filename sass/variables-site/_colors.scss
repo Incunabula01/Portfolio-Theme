@@ -6,11 +6,10 @@ $grey: #BFBFBF;
 $magenta: #ea1183;
 
 $dark-teal: darken($teal, 25%);
-$cyan: #D97882;
-$pink: lighten($teal, 20%);
 
-$dark-teal: darken($teal, 25%);
-$teal: lighten($teal, 10%);
+$transparent-teal: rgba(30, 151, 191, 0.9);
+$transparent-dark-teal: rgba(19, 96, 122, 0.8);
+
 $cyan: lighten($teal, 20%);
 
 $dark-grey: darken($grey, 25%);

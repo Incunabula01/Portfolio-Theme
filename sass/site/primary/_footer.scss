@@ -1,35 +1,4 @@
-.contact-footer{
-	display: block;
-	width: 100%;
-	@include clearfix;
-	.contact-left{
-		width: 100%;
-		height: 60px;
-		display: inline-table;
-		background-color: $dark-teal;
-		h2{
-			color: $white;
-			@include center-block;
-			padding: 16px 0.9375rem;
-			margin-bottom: 0;
-			text-align: center;
-		}
-	}
-	.contact-right{
-		width: 100%;
-		display: inline-table;
-		position: relative;
-		height: 60px;
-		background-color: $teal;
-		padding: 15px 0;
-		a{
-			@include center-block;
-			vertical-align: middle;
-			text-align: center;
-		}
-	}
-	
-}
+
 
 .nav-links{
 	border-top: 1px solid $teal;
@@ -38,28 +7,14 @@
 
 .site-footer{
 	background-color: $dark-teal;
-	min-height: 200px;
 	width: 100%;
+	position: relative;
+	top: -135px;
 	.widget{
 		margin: 0;
 		ul{
 			padding-left: 2px;
 			// Social Media Icons 
-			.facebook > a:before{
-				content: '\f082';
-			}
-			.linkedin > a:before{
-				content: '\f08c';
-			}
-			.twitter > a:before{
-				content: '\f081';
-			}
-			.email > a:before{
-				content: '\f199';
-			}
-			.blog > a:before{
-				content: '\f02d';
-			}
 			li{
 				display: block;
 				font-family: $font__main;
@@ -75,20 +30,6 @@
 					&:hover,
 					&:focus,
 					&:active{
-						color: $cyan;
-					}
-					&:before{
-						color: $white;
-						font-family: $font_icon;
-						float: left;
-						position: relative;
-						top: -5px;
-						padding-right: 0.5em;
-						@include font-size(1.5);
-					}
-					&:hover:before,
-					&:focus:before,
-					&:active:before{
 						color: $cyan;
 					}
 				}

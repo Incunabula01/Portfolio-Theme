@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="landing post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<section class="landing-section">
 		<header class="entry-header">
 			<div class="row">

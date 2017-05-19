@@ -26,25 +26,28 @@ get_header(); ?>
 					<!-- Updates CTA Section -->
 						<div class="row">
 							<div class="columns small-12">
+
 								<div class="landing-caption">
 									<?php the_title( '<h1 class="entry-title">', '</h1>' ); 
 									the_content(); ?>
-								<?php endwhile; ?>	
-								<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Work' ) ) );  ?>">
-									<span class="clear-button">View Work</span>
-								</a>
-								<div class="svg-center-container aligncenter">
-									<a href="">
-										<svg class="svg-center"  style="padding-bottom: 50%;">
-											<use xlink:href="#chevronDown"></use>
-										</svg>
+			<?php endwhile; ?>
+								<div class="aligncenter">
+									<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Work' ) ) );  ?>">
+										<span class="clear-button">View Work</span>
 									</a>
 								</div>
-								
+		
 								</div>
 							</div>
 						</div>
 				</section>
+				<div class="svg-container">
+						<div class="svg-center">
+								<svg class="icon" height="40px" width="90px">
+									<use class="chevron-icon" xlink:href="#chevronDown"></use>
+								</svg>
+						</div>
+				</div>
 				<!-- Display Posts with Landing category -->			
 					<?php
 
@@ -62,9 +65,10 @@ get_header(); ?>
 						get_template_part( 'template-parts/content', 'landing' );
 
 					endwhile; ?>
-				<section class="landing-section">
+				<section class="landing-section featured">
 						<div class="row">
 							<div class="columns small-12">
+								<h2 class="entry-title">Featured Projects</h2>
 								<ul class="menu vertical">
 									<?php rewind_posts(); 
 
@@ -78,8 +82,8 @@ get_header(); ?>
 									while ( $featured_query -> have_posts() ) : $featured_query -> the_post(); ?>
 										<?php $background_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 										<li>
-											<a class="featured-link" href="<?php echo get_post_permalink(); ?>" style="background-image: url('<?php echo $background_img[0]; ?>');">
-											<?php the_title( '<h4 class="entry-title">', '</h4>' );  ?>
+											<a class="featured-link" href="<?php echo get_post_permalink(); ?>" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6),rgba(255, 255, 255, 0.8)), url('<?php echo $background_img[0]; ?>');">
+											<?php the_title();  ?>
 											</a>
 										</li>
 									<?php endwhile; ?>
