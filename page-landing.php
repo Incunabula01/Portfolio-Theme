@@ -22,7 +22,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php $background_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-				<section class="landing" style="background-image: url('<?php echo $background_img[0]; ?>');">
+				<section id="heroImage" class="landing" style="background-image: url('<?php echo $background_img[0]; ?>');">
 					<!-- Updates CTA Section -->
 						<div class="row">
 							<div class="columns small-12">
@@ -31,11 +31,6 @@ get_header(); ?>
 									<?php the_title( '<h1 class="entry-title">', '</h1>' ); 
 									the_content(); ?>
 			<?php endwhile; ?>
-								<div class="aligncenter">
-									<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Work' ) ) );  ?>">
-										<span class="clear-button">View Work</span>
-									</a>
-								</div>
 		
 								</div>
 							</div>
@@ -43,9 +38,11 @@ get_header(); ?>
 				</section>
 				<div class="svg-container">
 						<div class="svg-center">
+							<a href="#belowFold">
 								<svg class="icon" height="40px" width="90px">
 									<use class="chevron-icon" xlink:href="#chevronDown"></use>
 								</svg>
+							</a>
 						</div>
 				</div>
 				<!-- Display Posts with Landing category -->			
@@ -60,11 +57,15 @@ get_header(); ?>
 						);
 					$landing_query = new WP_Query($args);
 
-					while ( $landing_query -> have_posts() ) : $landing_query -> the_post();
+					while ( $landing_query -> have_posts() ) : $landing_query -> the_post(); ?>
 
-						get_template_part( 'template-parts/content', 'landing' );
+					<div id="belowFold">
 
-					endwhile; ?>
+							<?php  get_template_part( 'template-parts/content', 'landing' ); ?>	
+
+					</div>
+
+					<?php endwhile; ?>
 				<section class="landing-section featured">
 						<div class="row">
 							<div class="columns small-12">

@@ -27,10 +27,19 @@ get_header(); ?>
 						</div>
 					</div>
 				</section>
+				<div class="svg-container">
+						<div class="svg-center">
+							<a href="#belowFold">
+								<svg class="icon" height="40px" width="90px">
+									<use class="chevron-icon" xlink:href="#chevronDown"></use>
+								</svg>
+							</a>
+						</div>
+				</div>
 		<div class="row">
 			<div class="columns small-12 medium-8">
+				<div id="belowFold">
 					<?php 
-
 						get_template_part( 'template-parts/content', 'breadcrumb-page' );
 
 							$args = array(
@@ -41,7 +50,8 @@ get_header(); ?>
 							the_post_navigation($args);
 
 						endwhile; // End of the loop.
-						?>
+					?>
+				</div>
 			</div>
 			<div class="columns small-12 medium-4">
 					<?php get_sidebar(); ?>

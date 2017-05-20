@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="landing post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<section class="landing-section">
 		<header class="entry-header">
 			<div class="row">
@@ -21,9 +21,7 @@
 		<div class="entry-content">
 			<div class="row">
 				<div class="columns small-12">
-					<?php
-						the_content();
-					?>
+					<?php the_content(); ?>
 				</div>
 			</div>	
 		</div><!-- .entry-content -->

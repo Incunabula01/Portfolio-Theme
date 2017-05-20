@@ -9017,6 +9017,14 @@ body {
   display: block;
 }
 
+.bgheight {
+  height: 100%;
+}
+
+.bgwidth {
+  width: 100%;
+}
+
 /*---- Landing Page Styles ----*/
 
 .landing {
@@ -9028,7 +9036,7 @@ body {
 
 .landing .landing-caption {
   position: relative;
-  top: 250px;
+  top: 200px;
   text-align: center;
 }
 
@@ -9070,6 +9078,7 @@ body {
   position: absolute;
   bottom: 10px;
   text-align: center;
+  z-index: 90001;
 }
 
 .page-template-page-landing .tag-services {
@@ -9155,7 +9164,7 @@ body {
 
 .page-template-page-landing .featured .menu > li > a {
   padding: 1.5em 1em;
-  background: 0 100px no-repeat;
+  background: 0 200px no-repeat;
   transition: background 0.5s ease-in;
   color: #ffffff;
   font-size: 1.5625rem;
