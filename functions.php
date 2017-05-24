@@ -39,14 +39,15 @@ function portfolio_theme_2017_setup() {
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
+	*/
+
 	add_theme_support( 'post-thumbnails' );
+
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'portfolio-theme-2017' )
 	) );
-
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -135,6 +136,8 @@ function portfolio_theme_2017_scripts() {
 	wp_enqueue_style( 'portfolio-theme-2017-style', get_stylesheet_uri() );
 
 	wp_enqueue_script("jquery");
+
+    wp_enqueue_script("masonry");
 
 	wp_enqueue_script( 'portfolio-theme-2017-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -439,5 +442,48 @@ function foundation_breadcrumbs() {
        
 }
 
+// apply tags to attachments
+function wptp_add_tags_to_attachments() {
+    register_taxonomy_for_object_type( 'post_tag', 'attachment' );
+}
+add_action( 'init' , 'wptp_add_tags_to_attachments' );
+
+function get_images_for_slider($post_id){
+ 
+     $thumbnail_ID = get_post_thumbnail_id();
+ 
+     $images = get_children( array('post_parent' => $post_id, 
+                                   'post_status' => 'inherit', 
+                                   'post_type' => 'attachment', 
+                                   'post_mime_type' => 'image', 
+                                   'order' => 'ASC', 
+                                   'orderby' => 'menu_order ID') );
+ 
+     if ($images) :
+ 
+         foreach ($images as $attachment_id => $image) :
+ 
+         if ( $image->ID != $thumbnail_ID ) :
+ 
+             $img_alt = get_post_meta($attachment_id, '_wp_attachment_image_alt', true); //alt
+             if ($img_alt == '') : $img_alt = $image->post_title; endif;
+ 
+             $big_array = image_downsize( $image->ID, 'large' );
+             $img_url = $big_array[0];
+ 
+             echo '<li class="orbit-slide">';
+             echo '<img class="orbit-image" src="';
+             echo $img_url;
+             echo '" alt="';
+             echo $img_alt;
+             echo '" />';
+             echo '</li>';
+ 
+     endif; endforeach; endif;
+}
+
+add_filter('get_the_archive_title', function ($title) {
+    return preg_replace('/^\w+: /', '', $title);
+});
 
 ?>

@@ -33,3 +33,21 @@ ul.check-list{
 		padding-right: 0.5rem;
 	}
 }
+
+.post-meta{
+	margin: 0;
+	list-style-type: none;
+	padding-left: 50px;
+	li{
+		color: $white;
+		@include font-size(0.8);
+		text-indent: -50px;
+		line-height: 1;
+		margin-bottom: 1rem;
+		.post-meta-key{
+			font-weight: 600;
+			color: $teal;
+			padding-right: 0.5em;
+		}
+	}
+}

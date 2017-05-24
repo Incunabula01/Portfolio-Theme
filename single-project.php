@@ -18,7 +18,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 			<?php $background_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-				<section class="page-header" style="background-image: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8)), url('<?php echo $background_img[0]; ?>');">
+				<section id="heroImage" class="page-header" style="background-image: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8)), url('<?php echo $background_img[0]; ?>');">
 					<div class="row">
 						<div class="columns small-12 ">
 							<div class="page-caption">
@@ -36,29 +36,30 @@ get_header(); ?>
 							</a>
 						</div>
 				</div>
-		<div class="row">
-			<div class="columns small-12 medium-8">
-				<div id="belowFold">
+		<div id="belowFold" class="row">
+			<div class="columns small-12 medium-2">
+				<div class="meta-sidebar">
+					<h2 class="widget-title">Info</h2>
+					<?php the_meta(); ?>
+				</div>
+			</div>
+			<div class="columns small-12 medium-10">
+				
 					<?php 
-						get_template_part( 'template-parts/content', 'breadcrumb-page' );
+						get_template_part( 'template-parts/content', 'gallery-page' );
 
 							$args = array(
 									'in_same_term' => true,
 									'screen_reader_text' => 'Project Navigation'
 								);
 							
-							the_post_navigation($args);
+							 ?>
 
-						endwhile; // End of the loop.
-					?>
-				</div>
-			</div>
-			<div class="columns small-12 medium-4">
-					<?php get_sidebar(); ?>
+					<?php endwhile; // End of the loop. ?>
+				
 			</div>
 		</div>
-	
-		
+			
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

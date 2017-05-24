@@ -29,6 +29,8 @@ get_header(); ?>
 				<div class="row">
 					<div class="columns small-12 medium-8">
 							<?php
+
+							foundation_breadcrumbs();
 							/* Start the Loop */
 							while ( have_posts() ) : the_post();
 
@@ -41,7 +43,6 @@ get_header(); ?>
 
 							endwhile;
 
-							the_posts_navigation();
 
 						else :
 

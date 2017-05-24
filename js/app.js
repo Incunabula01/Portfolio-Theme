@@ -31,13 +31,22 @@ $(document).ready(function(){
             if((topWindow.width() / topWindow.height()) <= aspectRatio ) {
                $frontImage.css('height', windowHeight );
             } else {
-               $frontImage.css('width', '100%');
+               $frontImage.css('height', 600);
             }
         } 
 
        topWindow.resize(resizeBg);
     });
+
+    var $container = $('#gallery-container');
+ 
+    $container.imagesLoaded( function(){
+        $container.masonry({
+            itemSelector: '.item'
+        });
+    });
     
+    $('.orbit-container > li:first-child').addClass('is-active');
 });
 
 

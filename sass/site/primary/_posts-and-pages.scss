@@ -117,6 +117,65 @@
 	}
 }
 
+#gallery-container{
+	margin: 0 auto;
+	.item{
+		margin: 1em;
+		a{ 
+			padding: 5% 0;
+			.item-title {
+				opacity: 0;
+				background-color: $transparent-teal;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				padding: 25% 10%;
+				display: inline-block;
+				text-align: center;
+				&:hover{
+					opacity: 1;
+					transition: opacity 0.5s ease-in;
+				}
+				&:active{
+					opacity: 1;
+				}
+				i{
+					position: relative;
+					@include font-size(3);
+					color: $white;
+				}
+				h2{
+					color: $white;
+					@include font-size(1.5);
+					position: relative;
+					text-align: center;
+					line-height: 1;
+				}
+			}
+		}
+	}
+	.UI-UX{
+		i:before{
+			content: "\f10a";
+		}
+	}
+	.Web{
+		i:before{
+			content: "\f13b";
+			}
+	}
+	.Print {
+		i:before{
+			content: "\f02d";
+		}
+	}
+	.Identity {
+		i:before{
+			content: "\f1c5";
+		}
+	}
+}
+
 
 
 
@@ -205,13 +264,19 @@
 	}
 }
 
+
+
 .search, .archive, .error404{
 	.page-header{
 		min-height: auto;
-		background-color: $teal;
+		background-color: lighten($teal, 25%);
 		margin-bottom: 1em;
+		height: 270px;
+		position: relative;
 		h1{
 			color: $white;
+			position: absolute;
+			bottom: 0px;
 		}
 	}
 	.hentry{
@@ -244,7 +309,6 @@
 
 
 
-
 @media screen and (min-width: 39.9375em) {
 	.landing{
 		background-size: cover;
@@ -268,10 +332,38 @@
 		background: 0 0 no-repeat fixed;
 		background-size: 100%;
 		.page-caption{
-			bottom: 0px;
+			bottom: 50px;
 			.entry-title{
-				color: $white
+				color: $white;
+				@include font-size(4);
 			}
+		}
+	}
+	.category-web{
+		.page-header{
+			background: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8)), url('images/web_bg.jpg') center 0 no-repeat fixed;
+			background-size: 100%;
+		}
+	}
+
+	.category-print{
+		.page-header{
+			background: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8)), url('images/print_bg.jpg') center 0 no-repeat fixed;
+			background-size: 100%;
+		}
+	}
+
+	.category-uiux{
+		.page-header{
+			background: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8)), url('images/uiux_bg.jpg') center 0 no-repeat fixed;
+			background-size: 100%;
+		}
+	}
+
+	.category-identity{
+		.page-header{
+			background: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8)), url('images/identity_bg.jpg') center 0 no-repeat fixed;
+			background-size: 100%;
 		}
 	}
 	.breadcrumbs{
@@ -279,6 +371,9 @@
 	}
 	.contact-wrapper input[type="submit"]{
 		width: auto;
+	}
+	.orbit-container{
+		 max-height: 500vh;
 	}
 }
 /*-- Universal Styles ---*/
@@ -290,6 +385,9 @@
 
 .breadcrumbs{
 	margin: 0.5rem 0;
+	li{
+		color: lighten($teal, 40%);
+	}
 }
 .hentry {
 	margin: 0 0 1.5em;
@@ -313,6 +411,7 @@
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+	color: $white;
 }
 
 .page-links {
