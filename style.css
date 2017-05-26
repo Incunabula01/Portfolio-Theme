@@ -8391,6 +8391,30 @@ input[type="button"]:focus {
   fill: #d9d9d9;
 }
 
+.orbit-bullets button,
+.orbit-bullets input[type="button"] {
+  padding: 0;
+  background-color: #5dc4e6;
+  margin: 0 0.5rem;
+  outline: none;
+  border: 0;
+}
+
+.orbit-bullets button:hover,
+.orbit-bullets input[type="button"]:hover,
+.orbit-bullets button:active,
+.orbit-bullets input[type="button"]:active,
+.orbit-bullets button:focus,
+.orbit-bullets input[type="button"]:focus {
+  background-color: #21a8d5;
+}
+
+.orbit-bullets button.is-active,
+.orbit-bullets input.is-active[type="button"] {
+  padding: 0;
+  background-color: #D20F75;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -9988,7 +10012,7 @@ object {
   }
 
   .orbit-container {
-    max-height: 500vh;
+    max-height: 600px;
   }
 
   .svg-container,
@@ -11075,10 +11099,6 @@ object {
 
   .contact-wrapper input[type="submit"] {
     width: auto;
-  }
-
-  .orbit-container {
-    max-height: 500px;
   }
 }
 

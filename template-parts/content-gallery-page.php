@@ -28,9 +28,13 @@
 					<span class="show-for-sr">Next Slide</span>
 				</button>
 			<?php 
-			$post_id = $post->ID;
-			get_images_for_slider($post_id); ?>
+				$post_id = $post->ID;
+				get_images_for_slider($post_id); 
+			?>
 			</ul>
+			<nav class="orbit-bullets">
+				<?php get_bullets_for_slider($post_id); ?>
+			</nav>
 			
 		</div>
 	</div><!-- .entry-content -->

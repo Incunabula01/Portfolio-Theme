@@ -92,7 +92,7 @@ get_header(); ?>
 									while ( $featured_query -> have_posts() ) : $featured_query -> the_post(); ?>
 										<?php $background_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
 										<li>
-											<a class="featured-link" href="<?php echo get_post_permalink(); ?>" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6),rgba(255, 255, 255, 0.8)), url('<?php echo $background_img[0]; ?>');">
+											<a class="featured-link" href="<?php echo get_post_permalink(); ?>" style="background-image: linear-gradient(rgba(255, 255, 255, 0.6),rgba(255, 255, 255, 0.6)), url('<?php echo $background_img[0]; ?>');">
 											<?php the_title();  ?>
 											</a>
 										</li>

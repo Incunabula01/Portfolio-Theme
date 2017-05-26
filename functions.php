@@ -442,12 +442,6 @@ function foundation_breadcrumbs() {
        
 }
 
-// apply tags to attachments
-function wptp_add_tags_to_attachments() {
-    register_taxonomy_for_object_type( 'post_tag', 'attachment' );
-}
-add_action( 'init' , 'wptp_add_tags_to_attachments' );
-
 function get_images_for_slider($post_id){
  
      $thumbnail_ID = get_post_thumbnail_id();
@@ -460,14 +454,14 @@ function get_images_for_slider($post_id){
                                    'orderby' => 'menu_order ID') );
  
      if ($images) :
- 
+        
          foreach ($images as $attachment_id => $image) :
  
          if ( $image->ID != $thumbnail_ID ) :
- 
+             
              $img_alt = get_post_meta($attachment_id, '_wp_attachment_image_alt', true); //alt
              if ($img_alt == '') : $img_alt = $image->post_title; endif;
- 
+            
              $big_array = image_downsize( $image->ID, 'large' );
              $img_url = $big_array[0];
  
@@ -480,6 +474,35 @@ function get_images_for_slider($post_id){
              echo '</li>';
  
      endif; endforeach; endif;
+}
+
+function get_bullets_for_slider($post_id){
+     $thumbnail_ID = get_post_thumbnail_id();
+ 
+     $images = get_children( array('post_parent' => $post_id, 
+                                   'post_status' => 'inherit', 
+                                   'post_type' => 'attachment', 
+                                   'post_mime_type' => 'image', 
+                                   'order' => 'ASC', 
+                                   'orderby' => 'menu_order ID') );
+ 
+     if ($images) :
+         $count = 0;
+         foreach ($images as $attachment_id => $image) :
+ 
+         if ( $image->ID != $thumbnail_ID ) :
+             
+             $bullet_number = $count++;
+             
+            echo '<button data-slide="';
+             echo $bullet_number;
+             echo '">';
+             echo '<span class="show-for-sr">';
+             echo 'Slide'.' '. $bullet_number .' '. 'details';
+             echo '</span>';
+             echo '</button>';
+
+      endif; endforeach; endif;
 }
 
 add_filter('get_the_archive_title', function ($title) {

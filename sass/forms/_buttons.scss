@@ -66,3 +66,21 @@ input[type="button"]{
 		fill: darken($white, 15%);
 	}
 }
+
+.orbit-bullets button{
+	padding: 0;
+	background-color: $cyan;
+	margin: 0 0.5rem;
+	outline: none;
+	border: 0;
+	&:hover,
+	&:active,
+	&:focus{
+		background-color: darken($cyan, 15%);
+	}
+}
+
+.orbit-bullets button.is-active{
+	padding: 0;
+	background-color: $magenta;
+}
