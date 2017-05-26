@@ -30,20 +30,25 @@ get_header(); ?>
 				<div class="svg-container">
 						<div class="svg-center">
 							<a href="#belowFold">
-								<svg class="icon" height="40px" width="90px">
+								<svg class="icon" height="40px" width="60px">
 									<use class="chevron-icon" xlink:href="#chevronDown"></use>
 								</svg>
 							</a>
 						</div>
 				</div>
 		<div id="belowFold" class="row">
-			<div class="columns small-12 medium-2">
+			<div class="column small-12">
+				<nav aria-label="Home:" role="navigation">
+					<?php foundation_breadcrumbs(); ?>
+				</nav>
+			</div>
+			<div class="columns small-12 medium-3">
 				<div class="meta-sidebar">
 					<h2 class="widget-title">Info</h2>
 					<?php the_meta(); ?>
 				</div>
 			</div>
-			<div class="columns small-12 medium-10">
+			<div class="columns small-12 medium-9">
 				
 					<?php 
 						get_template_part( 'template-parts/content', 'gallery-page' );

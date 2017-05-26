@@ -66,6 +66,7 @@
 		display: block;
 		text-decoration: none;
 		@include font-size(1.25);
+		font-weight: 800;
 		color: $white;
 		text-align: center;
 	}

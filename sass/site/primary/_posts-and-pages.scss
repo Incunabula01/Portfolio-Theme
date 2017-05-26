@@ -15,22 +15,24 @@
 	background: 0 0 no-repeat fixed;
 	background-size: cover;
 	margin: 0;
-	height: 600px;
+	width: 100%;
+	height: 80vh;
 	.landing-caption{
 		position: relative;
-		top: 200px;
+		top: 35vh;
 		text-align: center;
 		.entry-title{
-			@include font-size(5);
-			line-height: 1;
+			@include font-size(2.3);
+			line-height: 1.1;
 			color: $white;
 			font-weight: 900;
 			margin: 0;
+			margin-bottom: 0.5em;
 		}
 		p{
 			color: $white;
-			@include font-size(2);
-			line-height: 1.5rem;
+			@include font-size(1.5);
+			line-height: 1;
 		}
 		.clear-button{
 			width: 100%;
@@ -38,33 +40,55 @@
 	}
 }
 
+
 .svg-container{
-		position: relative;
+	display: none;
+	position: relative;
 		width: 100%;
 		height: 0px;
 		margin: 0 auto;
 		.svg-center{
 			width: 100%;
 			 position: absolute;
-			 bottom: 10px;
+			 bottom: 10vh;
 			 text-align: center;
 			 z-index: 90001;
+			 .chevron-icon{
+			 	color: $white;
+			 	transition: all 0.25s ease-in;
+			 	&:hover,
+			 	&:active,
+			 	&:focus{
+			 		color: $magenta;
+			}
 		}
 	}
+}
+
+.svg-container-bottom{
+	@extend .svg-container;
+	.svg-center{
+		bottom: 0;
+	}
+}
+
 
 .page-template-page-landing{
-
+	.landing-section{
+		.entry-title{
+			margin: 0.5em 0;
+			color: $white;
+			@include font-size(2);
+			text-align: center;
+		}
+	}
 	.tag-services{
 		background: $dark-teal;
 		color: $teal;
 		margin: 0;
-		padding: 3em 0;
-		h2{
-			margin: 0.5em 0;
-			color: $white;
-		}
+		padding: 1em 0;
 		.entry-content{
-			padding: 2.5em 0;
+			padding: 0.5em 0;
 		}
 		h4{
 			text-align: center;
@@ -73,6 +97,7 @@
 		}
 		p{
 			color: $cyan;
+			text-align: center;
 		}
 		img{
 			@include center-block;
@@ -91,9 +116,11 @@
 		}
 	}
 
+
+
 	.featured{
 		background: darken($cyan, 10%);
-		padding: 3em 0;
+		padding: 3em 0 5em 0;
 		h2{
 			color: $white;
 		}
@@ -123,13 +150,12 @@
 		margin: 1em;
 		a{ 
 			padding: 5% 0;
-			.item-title {
+			.item-title-wrapper {
 				opacity: 0;
 				background-color: $transparent-teal;
 				position: absolute;
 				width: 100%;
 				height: 100%;
-				padding: 25% 10%;
 				display: inline-block;
 				text-align: center;
 				&:hover{
@@ -139,17 +165,24 @@
 				&:active{
 					opacity: 1;
 				}
-				i{
-					position: relative;
-					@include font-size(3);
-					color: $white;
-				}
-				h2{
-					color: $white;
-					@include font-size(1.5);
-					position: relative;
-					text-align: center;
-					line-height: 1;
+				.item-title{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					i{
+						position: relative;
+						@include font-size(3);
+						color: $white;
+						line-height: 1;
+					}
+					h2{
+						color: $white;
+						@include font-size(1.5);
+						position: relative;
+						text-align: center;
+						line-height: 1;
+					}
 				}
 			}
 		}
@@ -182,18 +215,21 @@
 
 /*-- Page Styles ---*/
 .page-header{
-	min-height: 200px;
+	height: 60vh;
 	width: 100%;
-	background: 50% 50px no-repeat fixed;
-	background-size: 100%;
+	background: 50% 0 no-repeat fixed;
+	background-size: cover;
 	position: relative;
 	z-index: 1;
 	.page-caption{
 		position: absolute;
-		bottom: 0px;
-		left: 1rem;
+		left: 50%;
+		top: 65%;
+		transform: translate(-50%, -65%);
 		.entry-title{
 			color: $white;
+			text-align: center;
+			line-height: 1;
 		}
 	}
 }
@@ -216,7 +252,8 @@
 	}
 
 .contact-wrapper{
-	background-color: $grey;
+	border: 1px solid $teal;
+	margin: 1rem 0;
 	padding: 0.5em 1em;
 	color: $white;
 	h3{
@@ -270,6 +307,8 @@
 	.page-header{
 		min-height: auto;
 		background-color: lighten($teal, 25%);
+		background: 50% 0 no-repeat fixed;
+		background-size: 100%;
 		margin-bottom: 1em;
 		height: 270px;
 		position: relative;
@@ -280,76 +319,93 @@
 		}
 	}
 	.hentry{
-		border-bottom: 1px solid $dark-teal;
 		padding: 0.5em 0;
+		.entry-title{
+			margin: 0;
+		}
 	}
 	span{
 		margin: 0.5em;
 	}
-	.page-content{
-		margin-bottom: 1em;
-		input[type="search"]{
-			width: 75%;
-			float: left;
-		}
-		input[type="submit"]{
-			@extend .clear-button;
-			background-color: $dark-teal;
-			width: 25%;
-			padding: 0.65em 0;
-			float: right;
-			&:hover,
-			&:active,
-			&:focus{
-				background-color: darken($dark-teal, 25%);
-			}
-		}
-	}
 }
 
-
-
+// Tablet
 @media screen and (min-width: 39.9375em) {
 	.landing{
 		background-size: cover;
-		height: 700px;
+		height: 110vh;
 		.landing-caption{
-			top: 275px;
-			text-align: left;
+			top: 40vh;
 			.entry-title{
-				@include font-size(10);
+				@include font-size(4);
 			}
 		}
 	}
 
-	.page-template-page-landing{
+	.tag-services{
+		.landing-section{
+			padding: 2em 0;
+			height: 100vh;
+			.entry-title{
+				@include font-size(3);
+			}
+			h4{
+				margin: 1.5em 0;
+			}
+		}
 		.clear-button{
 			width: 124px;
 		}
 	}
+
+
+	.landing-section{
+		height: 100%;
+		.entry-title{
+			@include font-size(3);
+		}
+	}
+	
+
 	.page-header{
-		min-height: 550px;
-		background: 0 0 no-repeat fixed;
-		background-size: 100%;
+		height: 70vh;
+		background: center 0 no-repeat fixed;
+		background-size: cover;
 		.page-caption{
-			bottom: 50px;
+			left: 50%;
+			bottom: 30%;
+			transform: translate(-50%, -30%);
 			.entry-title{
 				color: $white;
 				@include font-size(4);
 			}
 		}
 	}
+	.post-template-single-project{
+		.page-header{
+			height: 110vh;
+			.page-caption{
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				.entry-title{
+					color: $white;
+					@include font-size(4);
+				}
+			}
+		}
+	}
 	.category-web{
 		.page-header{
 			background: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8)), url('images/web_bg.jpg') center 0 no-repeat fixed;
-			background-size: 100%;
+			background-size: cover;
 		}
 	}
 
 	.category-print{
 		.page-header{
 			background: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8)), url('images/print_bg.jpg') center 0 no-repeat fixed;
-			background-size: 100%;
+			background-size: cover;
 		}
 	}
 
@@ -366,8 +422,13 @@
 			background-size: 100%;
 		}
 	}
+	.gallery{
+		width: 800px;
+		margin: 0 auto;
+		padding-bottom: 135px;
+	}
 	.breadcrumbs{
-		margin: 1rem 0;
+		margin: 2rem 0;
 	}
 	.contact-wrapper input[type="submit"]{
 		width: auto;
@@ -375,7 +436,104 @@
 	.orbit-container{
 		 max-height: 500vh;
 	}
+	.svg-container, .svg-container-bottom{
+		display: block;	
+	}
 }
+
+// Desktop
+@media screen and (min-width: 49em) {
+	.landing{
+		background-size: cover;
+		height: 100vh;
+		.landing-caption{
+			text-align: left;
+			.entry-title{
+				@include font-size(5);
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.page-template-page-landing{
+		.landing-section{
+			padding: 3em 0;
+			.entry-title{
+				text-align: left;
+				@include font-size(3);
+			}
+			h4{
+				margin: 1.5em 0;
+			}
+		}
+		.featured{
+			padding: 3em 0 5em 0;
+			.entry-title{
+				text-align: left;
+				@include font-size(3);
+			}
+			h4{
+				margin: 1.5em 0;
+			}
+		}
+	}
+	.page-header{
+		height: 60vh;
+		background: 0 0 no-repeat fixed;
+		background-size: 100%;
+		.page-caption{
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			.entry-title{
+				color: $white;
+				@include font-size(4);
+			}
+		}
+	}
+	.post-template-single-project{
+		.page-header{
+			height: 100vh;
+			.page-caption{
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				.entry-title{
+					color: $white;
+					@include font-size(4);
+				}
+			}
+		}
+	}
+	.category-web{
+		.page-header{
+			background-size: 100%;
+		}
+	}
+
+	.category-print{
+		.page-header{
+			background-size: 100%;
+		}
+	}
+	.gallery{
+		width: 1024px;
+	}
+	.breadcrumbs{
+		margin: 2rem 0;
+	}
+	.contact-wrapper input[type="submit"]{
+		width: auto;
+	}
+	.orbit-container{
+		 max-height: 500px;
+	}
+}
+
+#chevronDown, #chevronUp{
+	fill: currentColor;
+}
+
 /*-- Universal Styles ---*/
 
 .site-content{
@@ -384,7 +542,7 @@
 }
 
 .breadcrumbs{
-	margin: 0.5rem 0;
+	margin: 1em 0 0.5em 0;
 	li{
 		color: lighten($teal, 40%);
 	}

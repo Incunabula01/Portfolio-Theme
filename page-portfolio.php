@@ -22,7 +22,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 					<?php while ( have_posts() ) : the_post(); ?>
 					<?php $background_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-						<section class="page-header" style="background-image: linear-gradient(rgba(30, 151, 191, 0.5), rgba(19, 96, 122, 0.9)), url('<?php echo $background_img[0]; ?>');">
+						<section class="page-header" style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(19, 96, 122, 0.8), rgba(19, 96, 122, 1)), url('<?php echo $background_img[0]; ?>');">
 							<div class="row">
 								<div class="columns small-12 ">
 									<div class="page-caption">
@@ -46,7 +46,7 @@ get_header(); ?>
 											<?php
 												global $post;
 												$tmp_post = $post;
-												$args = array( 'category_name' => 'identiy, print, type, ui-ux, web', 'numberposts' => -1);
+												$args = array( 'category_name' => 'identiy, print, type, uiux, web', 'numberposts' => -1);
 												$myposts = get_posts( $args );
 												foreach( $myposts as $post ) :	setup_postdata($post); 
 													$post_thumbnail_id = get_post_thumbnail_id();
@@ -59,13 +59,15 @@ get_header(); ?>
 													 echo $category[0]->cat_name; 
 												} ?>">
 												<a href="<?php echo get_permalink(); ?>" >
-													<div class="item-title">
-														<i class="fa <?php if( in_category( 'Featured') ){
+													<div class="item-title-wrapper">
+														<div class="item-title">
+															<i class="fa <?php if( in_category( 'Featured') ){
 																 echo $category[1]->cat_name; 
 															}else {
 																 echo $category[0]->cat_name; 
 															} ?>"></i>
-														<h2><?php echo get_the_title(); ?></h2>
+															<h2><?php echo get_the_title(); ?></h2>
+														</div>
 													</div>
 													<img src="<?php echo $featured_src[0]; ?>"/>
 												</a>
@@ -78,6 +80,15 @@ get_header(); ?>
 							</div>
 							
 						</section>
+						<div class="svg-container-bottom">
+								<div class="svg-center">
+									<a href="#page">
+										<svg class="icon" height="40px" width="80px">
+											<use class="chevron-icon" xlink:href="#chevronUp"></use>
+										</svg>
+									</a>
+								</div>
+						</div>
 
 					<?php endwhile; // End of the loop.?>
 			

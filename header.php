@@ -27,8 +27,11 @@
 
 <!-- svg icons -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-		<symbol id="chevronDown" viewBox="0 0 90 55" preserveAspectRatio="xMaxYMax meet">
-			<polygon fill="#FFF" points="45,12.177 0,0 0,7.859 45,20.037 90,7.859 90,0 "/>
+		<symbol id="chevronDown" viewBox="0 0 100 55" preserveAspectRatio="xMaxYMax meet">
+			<polygon  points="45,12.177 0,0 0,7.859 45,20.037 90,7.859 90,0 "/>
+		</symbol>
+		<symbol id="chevronUp" viewBox="0 0 100 55" preserveAspectRatio="xMaxYMax meet">
+			<polygon points="39.936,8.085 79.871,18.891 79.871,11.917 39.936,1.109 0,11.917 0,18.891 "/>
 		</symbol>
 </svg>
 

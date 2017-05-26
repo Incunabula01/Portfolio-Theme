@@ -38,8 +38,8 @@ get_header(); ?>
 				</section>
 				<div class="svg-container">
 						<div class="svg-center">
-							<a href="#belowFold">
-								<svg class="icon" height="40px" width="90px">
+							<a href="#section1">
+								<svg class="icon" height="40px" width="80px">
 									<use class="chevron-icon" xlink:href="#chevronDown"></use>
 								</svg>
 							</a>
@@ -59,14 +59,23 @@ get_header(); ?>
 
 					while ( $landing_query -> have_posts() ) : $landing_query -> the_post(); ?>
 
-					<div id="belowFold">
+					<div id="section1">
 
 							<?php  get_template_part( 'template-parts/content', 'landing' ); ?>	
 
 					</div>
 
 					<?php endwhile; ?>
-				<section class="landing-section featured">
+				<div class="svg-container">
+						<div class="svg-center">
+							<a href="#section2">
+								<svg class="icon" height="40px" width="80px">
+									<use class="chevron-icon" xlink:href="#chevronDown"></use>
+								</svg>
+							</a>
+						</div>
+				</div>
+				<section id="section2" class="landing-section featured">
 						<div class="row">
 							<div class="columns small-12">
 								<h2 class="entry-title">Featured Projects</h2>
@@ -95,6 +104,15 @@ get_header(); ?>
 			
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<div class="svg-container-bottom">
+			<div class="svg-center">
+				<a href="#page">
+					<svg class="icon" height="40px" width="80px">
+						<use class="chevron-icon" xlink:href="#chevronUp"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
 
 <?php
 

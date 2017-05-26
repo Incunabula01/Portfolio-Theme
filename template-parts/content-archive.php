@@ -10,29 +10,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		
+			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+	
+	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		
 		<?php
-			the_content();
+			$content = get_the_content(); echo mb_strimwidth($content, 0, 200, '...');
 		?>
-
-		<div class="orbit" aria-label="Project Images" data-orbit data-auto-play="false" data-options="navigation_arrows:true">
-			<ul class="orbit-container">
-				<button class="orbit-previous">
-					<i class="fa fa-2x fa-angle-left"></i>
-					<span class="show-for-sr">Previous Slide</span>
-				</button>
-				<button class="orbit-next">
-					<i class="fa fa-2x fa-angle-right"></i>
-					<span class="show-for-sr">Next Slide</span>
-				</button>
-			<?php 
-			$post_id = $post->ID;
-			get_images_for_slider($post_id); ?>
-			</ul>
-			
-		</div>
+		 &nbsp;<a href="<?php the_permalink(); ?>"><i class="fa fa-chevron-circle-right"></i></a>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
@@ -41,7 +29,7 @@
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'portfolio-theme-2017' ),
+						esc_html__( 'Edit %s', 'dnet-theme-2017' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',

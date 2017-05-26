@@ -8,7 +8,7 @@ $(document).ready(function(){
 	$('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
 
-        var target = $('#belowFold');
+        var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
            if (target.length) {
              $('html,body').animate({
@@ -19,24 +19,6 @@ $(document).ready(function(){
       }
     });
 
-    $(window).load(function(){
-        var topWindow = $(window),
-            $frontImage = $('#heroImage'),
-            aspectRatio =  $frontImage.width() / $frontImage.height(),
-            windowHeight = topWindow.height();
-
-        $frontImage.css('height', windowHeight );
-        
-        function resizeBg(){
-            if((topWindow.width() / topWindow.height()) <= aspectRatio ) {
-               $frontImage.css('height', windowHeight );
-            } else {
-               $frontImage.css('height', 600);
-            }
-        } 
-
-       topWindow.resize(resizeBg);
-    });
 
     var $container = $('#gallery-container');
  

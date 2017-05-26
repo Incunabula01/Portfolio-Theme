@@ -59,3 +59,10 @@ input[type="button"]{
 		border: 2px solid $light-grey;
 	}
 }
+
+.icon{
+	cursor: pointer;
+	use.chevron-icon:hover{
+		fill: darken($white, 15%);
+	}
+}

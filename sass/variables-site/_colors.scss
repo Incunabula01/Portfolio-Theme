@@ -3,7 +3,7 @@ $teal: #1e97bf;
 $blue: #283891;
 $white: #ffffff;
 $grey: #BFBFBF;
-$magenta: #ea1183;
+$magenta: #D20F75;
 
 $dark-teal: darken($teal, 25%);
 
@@ -27,7 +27,7 @@ $color__text-screen: $dark-teal;
 $color__text-input: $cyan;
 $color__text-input-focus: $dark-teal;
 $color__link: $teal;
-$color__link-visited: lighten($magenta, 10%);
+$color__link-visited: lighten($teal, 15%);
 $color__link-hover: $magenta;
 $color__text-main: $dark-teal;
 
