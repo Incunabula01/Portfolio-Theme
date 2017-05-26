@@ -442,8 +442,10 @@ function foundation_breadcrumbs() {
        
 }
 
+// Show Attached Images in Foundation Orbit Slider
+
 function get_images_for_slider($post_id){
- 
+        
      $thumbnail_ID = get_post_thumbnail_id();
  
      $images = get_children( array('post_parent' => $post_id, 
@@ -456,25 +458,23 @@ function get_images_for_slider($post_id){
      if ($images) :
         
          foreach ($images as $attachment_id => $image) :
- 
+        $count = 0;
          if ( $image->ID != $thumbnail_ID ) :
-             
+             $img_number = $count++;
              $img_alt = get_post_meta($attachment_id, '_wp_attachment_image_alt', true); //alt
              if ($img_alt == '') : $img_alt = $image->post_title; endif;
             
-             $big_array = image_downsize( $image->ID, 'large' );
+             
+            $big_array = image_downsize( $image->ID, 'large' );
              $img_url = $big_array[0];
  
              echo '<li class="orbit-slide">';
-             echo '<img class="orbit-image" src="';
-             echo $img_url;
-             echo '" alt="';
-             echo $img_alt;
-             echo '" />';
+             echo '<img class="orbit-image" src="' . $img_url . '" alt="' . $img_alt . '" />';
              echo '</li>';
  
      endif; endforeach; endif;
 }
+
 
 function get_bullets_for_slider($post_id){
      $thumbnail_ID = get_post_thumbnail_id();

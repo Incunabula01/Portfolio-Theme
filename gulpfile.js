@@ -81,13 +81,13 @@ gulp.task('makepot', function () {
   return gulp.src(['**/*.php'])
     .pipe(sort())
     .pipe(wpPot({
-      domain: 'dnet-theme-2017',
-      destFile: 'dnet-theme-2017.pot',
+      domain: 'portfolio-theme-2017',
+      destFile: 'portfolio-theme-2017.pot',
       package: 'PortfolioTheme_2017',
       bugReport: 'https://example.com/bugreport/',
       team: 'Joe Widener <jwidener08@gmail.com>'
     }))
-    .pipe(gulp.dest('languages/dnet-theme-2017.pot'))
+    .pipe(gulp.dest('languages/portfolio-theme-2017.pot'))
     .pipe(browserSync.reload({stream:true}));
 });
 
@@ -113,17 +113,17 @@ gulp.task('build-clean', function() {
 
 gulp.task('build-copy', function() {
   return gulp.src(build_files)
-    .pipe(gulp.dest('dist/dnet-theme-2017'));
+    .pipe(gulp.dest('dist/portfolio-theme-2017'));
 });
 
 gulp.task('build-zip', function() {
   return gulp.src('dist/**/*')
-    .pipe(zip('dnet-theme-2017.zip'))
+    .pipe(zip('portfolio-theme-2017.zip'))
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('build-delete', function() {
-  del(['dist/**/*', '!dist/dnet-theme-2017.zip']);
+  del(['dist/**/*', '!dist/portfolio-theme-2017.zip']);
 });
 
 gulp.task('build', function(callback) {

@@ -1,0 +1,44 @@
+# Copyright (C) 2017 PortfolioTheme_2017
+# This file is distributed under the same license as the PortfolioTheme_2017 package.
+msgid ""
+msgstr ""
+"Project-Id-Version: PortfolioTheme_2017\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Joe Widener <jwidener08@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://example.com/bugreport/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: functions.php:49
+msgid "Primary"
+msgstr ""
+
+#: functions.php:94
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:96, functions.php:105, functions.php:114, functions.php:123
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:103
+msgid "Footer-Sidebar-1"
+msgstr ""
+
+#: functions.php:112
+msgid "Footer-Sidebar-2"
+msgstr ""
+
+#: functions.php:121
+msgid "Footer-Sidebar-3"
+msgstr ""
+
+#: template-parts/content-gallery-page.php:45
+msgid "Edit %s"
+msgstr ""

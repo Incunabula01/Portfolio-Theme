@@ -28,7 +28,7 @@ $(document).ready(function(){
         });
     });
     
-    $('.orbit-container > li:first-child').addClass('is-active');
+    $('.orbit-container > li:first-child, .orbit-bullets > button:first-child').addClass('is-active');
 });
 
 
