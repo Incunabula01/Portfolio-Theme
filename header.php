@@ -15,8 +15,8 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- add SEO content here -->
-<meta name="description" content="">
-<meta name="keywords" content="">
+<meta name="description" content="I am a web designer/developer with a passion to create great user experiences for the web. I offer web design and development services for non-profit, small businesses and start-ups.">
+<meta name="keywords" content="web design for startups, web design for small businesses and individuals, web design services for nonprofits, logo design services, ui-ux design services, ui-ux design, wordpress,  infographics design services, wordpress design services,  brand identity design, landing page design services, print design services, adobe photoshop, adobe illustrator">
 <!-- End -->
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900,900i|Raleway:500,800" rel="stylesheet">

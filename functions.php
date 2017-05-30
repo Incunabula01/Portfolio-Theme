@@ -152,6 +152,9 @@ function portfolio_theme_2017_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_theme_2017_scripts' );
 
+// Add Image Size for post slider
+
+add_image_size( 'slider_image', 870, 550, true);
 
 
 /**
@@ -215,7 +218,7 @@ class top_bar_walker extends Walker_Nav_Menu {
 function foundation_breadcrumbs() {
        
     // Settings
-    $separator          = '<i class="fa fa-chevron-right"></i>';
+    $separator          = '<i class="fa fa-angle-right"></i>';
     $breadcrumbs_id      = 'page-breadcrumbs';
     $breadcrumbs_class   = 'breadcrumbs';
     $home_title         = 'Home';
@@ -457,22 +460,28 @@ function get_images_for_slider($post_id){
  
      if ($images) :
         
-         foreach ($images as $attachment_id => $image) :
-        $count = 0;
-         if ( $image->ID != $thumbnail_ID ) :
-             $img_number = $count++;
+        foreach ($images as $attachment_id => $image) :
+       
+          if ( $image->ID != $thumbnail_ID ) :
+             
              $img_alt = get_post_meta($attachment_id, '_wp_attachment_image_alt', true); //alt
-             if ($img_alt == '') : $img_alt = $image->post_title; endif;
+             
+             if ($img_alt == '') : 
+                $img_alt = $image->post_title; 
+             endif;
             
              
-            $big_array = image_downsize( $image->ID, 'large' );
-             $img_url = $big_array[0];
+             $img_array = image_downsize( $image->ID, 'slider_image' );
+             $img_url = $img_array[0];
  
              echo '<li class="orbit-slide">';
              echo '<img class="orbit-image" src="' . $img_url . '" alt="' . $img_alt . '" />';
              echo '</li>';
  
-     endif; endforeach; endif;
+           endif; 
+        endforeach; 
+
+     endif;
 }
 
 
@@ -494,9 +503,7 @@ function get_bullets_for_slider($post_id){
              
              $bullet_number = $count++;
              
-            echo '<button data-slide="';
-             echo $bullet_number;
-             echo '">';
+             echo '<button data-slide="' . $bullet_number . '">';
              echo '<span class="show-for-sr">';
              echo 'Slide'.' '. $bullet_number .' '. 'details';
              echo '</span>';

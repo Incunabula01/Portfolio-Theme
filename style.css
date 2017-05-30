@@ -8983,6 +8983,11 @@ a:active {
   content: '\f02d';
 }
 
+.widget .menu li.current-menu-item > a,
+.meta-sidebar .menu li.current-menu-item > a {
+  color: #b6e4f3;
+}
+
 .widget .menu li,
 .meta-sidebar .menu li {
   display: block;
@@ -9038,7 +9043,7 @@ a:active {
 --------------------------------------------------------------*/
 
 body {
-  background-color: #0d4051;
+  background-color: #0c112d;
 }
 
 .site-header {
@@ -9157,6 +9162,11 @@ body {
   z-index: 90001;
 }
 
+.svg-container .svg-center a:focus,
+.svg-container-bottom .svg-center a:focus {
+  outline: none;
+}
+
 .svg-container .svg-center .chevron-icon,
 .svg-container-bottom .svg-center .chevron-icon {
   color: #ffffff;
@@ -9240,12 +9250,17 @@ body {
 .page-template-page-landing .featured .menu > li > a {
   padding: 1.5em 1em;
   background: 0 200px no-repeat;
-  transition: background 0.5s ease-in;
+  transition: background 0.75s ease-in;
   color: #ffffff;
   font-size: 1.5625rem;
   line-height: 1;
   font-family: "Raleway", Verdana, sans-serif;
   font-weight: 400;
+  border-top: 1px solid #ffffff;
+}
+
+.page-template-page-landing .featured .menu > li > a:last-child {
+  border-bottom: 1px solid #ffffff;
 }
 
 .page-template-page-landing .featured .menu > li > a:hover,
@@ -9317,11 +9332,11 @@ body {
 }
 
 #gallery-container .Web i:before {
-  content: "\f13b";
+  content: "\f121";
 }
 
 #gallery-container .Print i:before {
-  content: "\f02d";
+  content: "\f02f";
 }
 
 #gallery-container .Identity i:before {
@@ -9478,6 +9493,7 @@ body {
 .site-content {
   position: relative;
   top: -135px;
+  background-color: #0d4051;
 }
 
 .breadcrumbs {
@@ -9528,7 +9544,7 @@ body {
 }
 
 .site-footer {
-  background-color: #0d4051;
+  background-color: inherit;
   width: 100%;
   position: relative;
   top: -135px;
@@ -9537,6 +9553,11 @@ body {
 .site-footer .widget,
 .site-footer .meta-sidebar {
   margin: 0;
+}
+
+.site-footer .widget .textwidget,
+.site-footer .meta-sidebar .textwidget {
+  color: #1e97bf;
 }
 
 .site-footer .widget ul,
@@ -9732,6 +9753,11 @@ body {
 .widget .menu .blog > a:before,
 .meta-sidebar .menu .blog > a:before {
   content: '\f02d';
+}
+
+.widget .menu li.current-menu-item > a,
+.meta-sidebar .menu li.current-menu-item > a {
+  color: #b6e4f3;
 }
 
 .widget .menu li,

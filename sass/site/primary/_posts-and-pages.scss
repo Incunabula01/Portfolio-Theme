@@ -53,6 +53,9 @@
 			 bottom: 10vh;
 			 text-align: center;
 			 z-index: 90001;
+			 a:focus{
+			 	outline: none;
+			 }
 			 .chevron-icon{
 			 	color: $white;
 			 	transition: all 0.25s ease-in;
@@ -127,12 +130,16 @@
 		.menu > li > a {
 			padding: 1.5em 1em;
 			background: 0 200px no-repeat;
-			transition: background 0.5s ease-in;
+			transition: background 0.75s ease-in;
 			color: $white;
 			font-size: 1.5625rem;
 			line-height: 1;
     		font-family: "Raleway", Verdana, sans-serif;
     		font-weight: 400;
+    		border-top: 1px solid $white;
+    		&:last-child{
+    			border-bottom: 1px solid $white;
+    		}
 			&:hover,
 			&:active,
 			&:focus {
@@ -194,12 +201,12 @@
 	}
 	.Web{
 		i:before{
-			content: "\f13b";
+			content: "\f121";
 			}
 	}
 	.Print {
 		i:before{
-			content: "\f02d";
+			content: "\f02f";
 		}
 	}
 	.Identity {
@@ -536,6 +543,7 @@
 .site-content{
 	position: relative;
 	top: -135px;
+	background-color: $dark-teal;
 }
 
 .breadcrumbs{

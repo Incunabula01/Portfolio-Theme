@@ -95,6 +95,9 @@
 		.blog > a:before{
 				content: '\f02d';
 		}
+		li.current-menu-item > a{
+			color: lighten($teal, 40%);
+		}
 		li{
 			display: block;
 			a{

@@ -6,12 +6,15 @@
 }
 
 .site-footer{
-	background-color: $dark-teal;
+	background-color: inherit;
 	width: 100%;
 	position: relative;
 	top: -135px;
 	.widget{
 		margin: 0;
+		.textwidget{
+			color: $teal;
+		}
 		ul{
 			padding-left: 2px;
 			// Social Media Icons 
