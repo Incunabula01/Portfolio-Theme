@@ -402,6 +402,12 @@
 			}
 		}
 	}
+	.category-featured{
+		.page-header{
+			background: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8)), url('images/featured_bg.jpg') center 0 no-repeat fixed;
+			background-size: cover;
+		}
+	}
 	.category-web{
 		.page-header{
 			background: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8)), url('images/web_bg.jpg') center 0 no-repeat fixed;

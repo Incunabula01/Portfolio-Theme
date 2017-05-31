@@ -22,7 +22,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 					<?php while ( have_posts() ) : the_post(); ?>
 					<?php $background_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-						<section class="page-header" style="background-image: url('<?php echo $background_img[0]; ?>');">
+						<section class="page-header" style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(19, 96, 122, 0.8), rgba(19, 96, 122, 1)), url('<?php echo $background_img[0]; ?>');">
 							<div class="row">
 								<div class="columns small-12 ">
 									<div class="page-caption">

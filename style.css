@@ -8861,13 +8861,13 @@ a:active {
 
 .widget .textwidget form,
 .meta-sidebar .textwidget form {
-  background-color: #BFBFBF;
   padding: 0.5em;
 }
 
 .widget .textwidget form p,
 .meta-sidebar .textwidget form p {
   margin-bottom: 0;
+  color: #ffffff;
 }
 
 .widget .textwidget form label,
@@ -9633,13 +9633,13 @@ body {
 
 .widget .textwidget form,
 .meta-sidebar .textwidget form {
-  background-color: #BFBFBF;
   padding: 0.5em;
 }
 
 .widget .textwidget form p,
 .meta-sidebar .textwidget form p {
   margin-bottom: 0;
+  color: #ffffff;
 }
 
 .widget .textwidget form label,
@@ -10001,6 +10001,11 @@ object {
     color: #ffffff;
     font-size: 64px;
     font-size: 4rem;
+  }
+
+  .category-featured .page-header {
+    background: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8)), url("images/featured_bg.jpg") center 0 no-repeat fixed;
+    background-size: cover;
   }
 
   .category-web .page-header {

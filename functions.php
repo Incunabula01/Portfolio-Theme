@@ -99,6 +99,15 @@ function portfolio_theme_2017_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Contact-Sidebar', 'portfolio-theme-2017' ),
+        'id'            => 'contact-sidebar',
+        'description'   => esc_html__( 'Add widgets here.', 'portfolio-theme-2017' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer-Sidebar-1', 'portfolio-theme-2017' ),
 		'id'            => 'footer-sidebar-1',
