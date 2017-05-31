@@ -43,7 +43,7 @@
 				<div class="top-bar-left">
 					<div class="title-bar">
 						<div class="title-bar-title">
-							<a href="/">
+							<a href="/" alt="<?php echo get_bloginfo('title'); ?>" title="<?php echo get_bloginfo('title'); ?>">
 								<div class="logo">
 									<svg class="logo-icon" id="logo" viewBox="0 0 135 135" preserveAspectRatio="none">
 										<circle fill="#70E1FC" cx="67.5" cy="67.5" r="66.094"/>

@@ -22,7 +22,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php $background_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-				<section id="heroImage" class="landing" style="background-image: url('<?php echo $background_img[0]; ?>');">
+				<section id="heroImage" class="landing" style="background-image: linear-gradient(rgba(19, 96, 122, 0.6), rgba(19, 96, 122, 0.8), rgba(19, 96, 122, 1)), url('<?php echo $background_img[0]; ?>');">
 					<!-- Updates CTA Section -->
 						<div class="row">
 							<div class="columns small-12">
